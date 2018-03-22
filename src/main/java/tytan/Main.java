@@ -11,8 +11,8 @@ import java.util.Locale;
 import java.util.ResourceBundle;
 
 public class Main extends Application {
-    ResourceBundle rb;
-    Stage primaryStage;
+    private ResourceBundle rb;
+    private Stage primaryStage;
 
     public static void main(String[] args) {
         launch(args);

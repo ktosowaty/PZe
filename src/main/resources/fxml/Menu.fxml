@@ -20,8 +20,9 @@
             </rowConstraints>
             <children>
                 <JFXButton fx:id="mapaButton" alignment="CENTER" contentDisplay="CENTER" layoutX="137.0" layoutY="46.0"
-                           mnemonicParsing="false" onMouseClicked="#click" prefHeight="120.0" prefWidth="120.0"
-                           text="%menu.mapa" textAlignment="CENTER">
+                           maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="120.0"
+                           minWidth="120.0" mnemonicParsing="false" onMouseClicked="#click" text="%menu.mapa"
+                           textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                     <graphic>
                         <!--<ImageView fitHeight="96.0" fitWidth="96.0" opacity="0.85" pickOnBounds="true" preserveRatio="true">-->
                         <!--<image>-->
@@ -31,8 +32,10 @@
                     </graphic>
                 </JFXButton>
                 <JFXButton fx:id="chattButton" alignment="CENTER" contentDisplay="CENTER" layoutX="342.0" layoutY="46.0"
-                           mnemonicParsing="false" onMouseClicked="#click" prefHeight="120.0" prefWidth="120.0"
-                           text="%menu.chat" textAlignment="CENTER" GridPane.columnIndex="1">
+                           maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="120.0"
+                           minWidth="120.0" mnemonicParsing="false" onMouseClicked="#click" text="%menu.chat"
+                           textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER"
+                           GridPane.valignment="CENTER">
                     <graphic>
                         <!--<ImageView fitHeight="96.0" fitWidth="96.0" opacity="0.85" pickOnBounds="true" preserveRatio="true">-->
                         <!--<image>-->
@@ -42,8 +45,10 @@
                     </graphic>
                 </JFXButton>
                 <JFXButton fx:id="videochatButton" alignment="CENTER" contentDisplay="CENTER" layoutX="137.0"
-                           layoutY="173.0" mnemonicParsing="false" onMouseClicked="#click" prefHeight="120.0"
-                           prefWidth="120.0" text="%menu.videochat" textAlignment="CENTER" GridPane.rowIndex="1">
+                           layoutY="173.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                           minHeight="120.0" minWidth="120.0" mnemonicParsing="false" onMouseClicked="#click"
+                           text="%menu.videochat" textAlignment="CENTER" GridPane.halignment="CENTER"
+                           GridPane.rowIndex="1" GridPane.valignment="CENTER">
                     <graphic>
                         <!--<ImageView fitHeight="96.0" fitWidth="96.0" opacity="0.85" pickOnBounds="true" preserveRatio="true">-->
                         <!--<image>-->
@@ -53,9 +58,10 @@
                     </graphic>
                 </JFXButton>
                 <JFXButton fx:id="meldunkiiButton" alignment="CENTER" contentDisplay="CENTER" layoutX="342.0"
-                           layoutY="173.0" mnemonicParsing="false" onMouseClicked="#click" prefHeight="120.0"
-                           prefWidth="120.0" text="%menu.meldunki" textAlignment="CENTER" GridPane.columnIndex="1"
-                           GridPane.rowIndex="1">
+                           layoutY="173.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                           minHeight="120.0" minWidth="120.0" mnemonicParsing="false" onMouseClicked="#click"
+                           text="%menu.meldunki" textAlignment="CENTER" GridPane.columnIndex="1"
+                           GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                     <graphic>
                         <!--<ImageView fitHeight="96.0" fitWidth="96.0" opacity="0.85" pickOnBounds="true" preserveRatio="true">-->
                         <!--<image>-->

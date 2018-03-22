@@ -45,9 +45,9 @@
     -jfx-button-type: RAISED;
     -fx-background-color: rgb(66, 70, 45);
     -fx-font-weight: bold;
-    -fx-pref-width: 200;
+    /*-fx-pref-width: 200;*/
     -fx-text-fill: WHITE;
-    -fx-background-image: url("../images/camo3.jpg");
+    -fx-background-image: url("../images/camo50.jpg");
 }
 
 .jfx-button-settings {
