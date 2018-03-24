@@ -1,9 +1,11 @@
 package tytan.mapa;
 
 import com.jfoenix.controls.JFXDrawer;
+import com.jfoenix.controls.events.JFXDrawerEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
@@ -15,6 +17,8 @@ import java.util.ResourceBundle;
 
 public class MapaController implements Initializable {
 
+    @FXML
+    private Button settingsButton;
     @FXML
     private JFXDrawer drawer;
     @FXML
@@ -33,12 +37,24 @@ public class MapaController implements Initializable {
         }
 
         //web.getEngine().load("https://www.google.pl/maps/@52.2534883,20.8954443,15z?hl=pl");
+        //web.getEngine().load(String.valueOf(getClass().getResource("/html/myMap.html")));
 
     }
 
     @FXML
     private void openSettings(MouseEvent mouseEvent) {
-        if (drawer.isShown()) drawer.close();
-        else drawer.open();
+        drawer.toggle();
     }
+
+    @FXML
+    private void drawerClosed(JFXDrawerEvent jfxDrawerEvent) {
+        drawer.toBack();
+    }
+
+    @FXML
+    private void drawerOpening(JFXDrawerEvent jfxDrawerEvent) {
+        drawer.toFront();
+        settingsButton.toFront();
+    }
+
 }

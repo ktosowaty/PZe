@@ -1,9 +1,11 @@
 package tytan.chat;
 
 import com.jfoenix.controls.JFXDrawer;
+import com.jfoenix.controls.events.JFXDrawerEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
@@ -14,6 +16,8 @@ import java.util.ResourceBundle;
 
 public class ChatController implements Initializable {
 
+    @FXML
+    private Button settingsButton;
     @FXML
     private JFXDrawer drawer;
     @FXML
@@ -32,8 +36,18 @@ public class ChatController implements Initializable {
 
     @FXML
     private void openSettings(MouseEvent mouseEvent) {
-        if (drawer.isShown()) drawer.close();
-        else drawer.open();
+        drawer.toggle();
+    }
+
+    @FXML
+    private void drawerClosed(JFXDrawerEvent jfxDrawerEvent) {
+        drawer.toBack();
+    }
+
+    @FXML
+    private void drawerOpening(JFXDrawerEvent jfxDrawerEvent) {
+        drawer.toFront();
+        settingsButton.toFront();
     }
 
 }
