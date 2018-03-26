@@ -16,42 +16,36 @@ public class MockConnection implements AbstractConnection {
 	public Message inputMessage;
 	ByteArrayOutputStream buffer;
 	ObjectOutputStream out;
+	ByteArrayInputStream bis;
+	ObjectInputStream in;
 
-	public MockConnection() {
+	public MockConnection(Message messageToSend) {
 		buffer = new ByteArrayOutputStream();
 		try {
 			out = new ObjectOutputStream(buffer);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-	}
-
-	public void sendMessage(Message m) {
-		try {
-			out.writeObject(m);
+			out.writeObject(messageToSend);
 			out.flush();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-	}
+			
+			bis = new ByteArrayInputStream(buffer.toByteArray());
+			in = new ObjectInputStream(bis);
 
-	@Override
-	public Message readMessage() {
-		ByteArrayInputStream bis = new ByteArrayInputStream(buffer.toByteArray());
-		Message m = null;
-		try {
-			ObjectInput in = new ObjectInputStream(bis);
-			m = (Message) in.readObject();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return m;
-
 	}
 
 	@Override
-	public void writeMessage(Message message) {
-		inputMessage = message;
+	public ObjectInputStream getIn() {
+		return in;
+	}
+
+	@Override
+	public ObjectOutputStream getOut() {
+		return out;
+	}
+
+	@Override
+	public void closeConnection() {
 
 	}
 

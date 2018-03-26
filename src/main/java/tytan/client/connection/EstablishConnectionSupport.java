@@ -44,25 +44,14 @@ public class EstablishConnectionSupport implements AbstractConnection {
 	}
 
 	@Override
-	public Message readMessage() {
-		try {
-			return (Message) in.readObject();
-		} catch (ClassNotFoundException | IOException e) {
-			closeConnection();
-			e.printStackTrace();
-		}
-		return null;
-
+	public ObjectInputStream getIn() {
+		return in;
 	}
 
 	@Override
-	public void writeMessage(Message message) {
-		try {
-			out.writeObject(message);
-			out.flush();
-		} catch (IOException e) {
-			closeConnection();
-			e.printStackTrace();
-		}
+	public ObjectOutputStream getOut() {
+		return out;
 	}
+
+	
 }

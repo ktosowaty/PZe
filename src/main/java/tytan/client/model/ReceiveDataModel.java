@@ -1,24 +1,30 @@
 package tytan.client.model;
 
+import java.io.ObjectInputStream;
+
 import tytan.client.beans.Message;
 import tytan.client.connection.AbstractConnection;
 
 public class ReceiveDataModel extends AbstractModel implements Runnable {
 
 	private AbstractConnection connectionModel;
-
+	private ObjectInputStream in;
+	
 	public ReceiveDataModel(AbstractConnection connectionModel) {
 		this.connectionModel = connectionModel;
+		this.in = connectionModel.getIn();
 	}
 
 	@Override
 	public void run() {
-		do {
-			Message message = (Message) connectionModel.readMessage();
-			if (message == null)
-				break;
-			this.firePropertyChange("newMessageFromReceiveDataModel", null, message);
-
-		} while (true);
+		do{
+			try {
+				Message message = (Message) in.readObject();                             
+				this.firePropertyChange("newMessageFromReceiveDataModel", null, message);  
+			} catch (Exception e){ 
+				connectionModel.closeConnection();
+				break;                                                                   
+			}
+		}while (true);
 	}
 }
