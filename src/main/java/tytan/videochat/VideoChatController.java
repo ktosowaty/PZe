@@ -29,6 +29,8 @@ public class VideoChatController implements Initializable {
             loader.setResources(resources);
             Pane vBox = loader.load(getClass().getResource("/fxml/videochat/VideochatSettings.fxml").openStream());
             drawer.setSidePane(vBox);
+            VideoChatSettingsController settings = loader.getController();
+            settings.setVideoChat(this);
         } catch (IOException e) {
             e.printStackTrace();
         }
