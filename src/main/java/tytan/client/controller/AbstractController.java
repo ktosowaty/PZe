@@ -3,7 +3,7 @@ package tytan.client.controller;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 
-import client.model.AbstractModel;
+import tytan.client.model.AbstractModel;
 
 public abstract class AbstractController implements PropertyChangeListener {
 

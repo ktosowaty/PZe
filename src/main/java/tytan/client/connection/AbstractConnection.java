@@ -1,6 +1,6 @@
 package tytan.client.connection;
 
-import client.beans.Message;
+import tytan.client.beans.Message;
 
 public interface AbstractConnection {
 	

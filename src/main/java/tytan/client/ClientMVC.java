@@ -5,14 +5,14 @@ import java.io.IOException;
 import java.util.logging.FileHandler;
 import java.util.logging.Logger;
 
-import client.connection.AbstractConnection;
-import client.connection.EstablishConnectionSupport;
-import client.controller.AbstractController;
-import client.controller.Controller;
-import client.model.ReceiveDataModel;
-import client.model.SendDataModel;
-import client.model.UsersListModel;
-import client.view.TextDemo;
+import tytan.client.connection.AbstractConnection;
+import tytan.client.connection.EstablishConnectionSupport;
+import tytan.client.controller.AbstractController;
+import tytan.client.controller.Controller;
+import tytan.client.model.ReceiveDataModel;
+import tytan.client.model.SendDataModel;
+import tytan.client.model.UsersListModel;
+import tytan.client.view.TextDemo;
 
 public class ClientMVC {
 	private final static Logger LOGGER = Logger.getLogger(ClientMVC.class.getName());

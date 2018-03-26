@@ -1,5 +1,5 @@
-package tytan.client.view;
 
+package tytan.client.view;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 
@@ -8,8 +8,8 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 
-import client.controller.AbstractController;
-import client.controller.Controller;
+import tytan.client.controller.AbstractController;
+import tytan.client.controller.Controller;
 
 public class TextDemo extends JPanel {
 	private Controller controller;

@@ -8,8 +8,8 @@ import java.io.PrintStream;
 import org.junit.Before;
 import org.junit.Test;
 
-import client.ClientMVC;
-import client.beans.Message;
+import tytan.client.ClientMVC;
+import tytan.client.beans.Message;
 
 public class ConnectionTest {
 	MockConnection connection;

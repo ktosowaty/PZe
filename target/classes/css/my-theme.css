@@ -1,0 +1,59 @@
+.root {
+    -fx-background-color: #FFFFFF;
+}
+
+.tab-header-background {
+    -fx-background-image: url("../images/camo3.jpg");
+}
+
+.tab-label {
+    -fx-alignment: CENTER;
+    -fx-text-fill: #272727;
+}
+
+.tab {
+    -fx-background-color: #FFFFFF;
+    -fx-opacity: 0.8;
+    -fx-background-insets: 0.0;
+    -fx-background-radius: 0.0;
+    /*-fx-padding: 0 20 0 20;*/
+    -fx-pref-width: 100;
+    -fx-pref-height: 100;
+    -fx-rotate: 90;
+}
+
+.tab .label {
+    -fx-font-size: 16;
+    -fx-font-weight: bold;
+}
+
+.tab:selected {
+    -fx-background-color: #c9c9c9;
+    -fx-opacity: 0.8;
+    /*-fx-background-radius: 0;*/
+    /*-fx-background-insets: 0;*/
+    /*-fx-border-width: 5 0 0 0;*/
+    /*-fx-border-color: #2E7D32;*/
+}
+
+.jfx-tab-pane .tab-selected-line {
+    -fx-background-color: #2E7D32;
+}
+
+.jfx-button {
+    -fx-font-size: 28px;
+    -jfx-button-type: RAISED;
+    -fx-background-color: rgb(66, 70, 45);
+    -fx-font-weight: bold;
+    /*-fx-pref-width: 200;*/
+    -fx-text-fill: WHITE;
+    -fx-background-image: url("../images/camo50.jpg");
+}
+
+.jfx-button-settings {
+    -fx-pref-width: 24;
+    -fx-pref-height: 24;
+    -fx-background-color: transparent;
+}
+
+

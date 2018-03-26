@@ -7,8 +7,8 @@ import java.io.ObjectInput;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
-import client.beans.Message;
-import client.connection.AbstractConnection;
+import tytan.client.beans.Message;
+import tytan.client.connection.AbstractConnection;
 
 public class MockConnection implements AbstractConnection {
 

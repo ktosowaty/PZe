@@ -2,8 +2,8 @@ package tytan.client.test;
 
 import java.beans.PropertyChangeEvent;
 
-import client.controller.AbstractController;
-import client.model.AbstractModel;
+import tytan.client.controller.AbstractController;
+import tytan.client.model.AbstractModel;
 
 public class MockController extends AbstractController {
 

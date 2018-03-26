@@ -1,18 +1,17 @@
 package tytan.client.controller;
 
 import java.beans.PropertyChangeEvent;
-import java.beans.PropertyChangeListener;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 import java.util.logging.Logger;
 
-import client.ClientMVC;
-import client.beans.Message;
-import client.model.AbstractModel;
-import client.model.SendDataModel;
-import client.model.UsersListModel;
-import client.view.TextDemo;
+import tytan.client.ClientMVC;
+import tytan.client.beans.Message;
+import tytan.client.model.AbstractModel;
+import tytan.client.model.SendDataModel;
+import tytan.client.model.UsersListModel;
+import tytan.client.view.TextDemo;
 
 public class Controller extends AbstractController {
 	private final String usernick;

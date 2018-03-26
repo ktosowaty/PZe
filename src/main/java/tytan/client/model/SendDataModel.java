@@ -1,7 +1,7 @@
 package tytan.client.model;
 
-import client.beans.Message;
-import client.connection.AbstractConnection;
+import tytan.client.beans.Message;
+import tytan.client.connection.AbstractConnection;
 
 public class SendDataModel extends AbstractModel{
 

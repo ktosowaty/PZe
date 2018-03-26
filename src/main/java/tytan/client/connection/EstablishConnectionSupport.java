@@ -6,7 +6,7 @@ import java.io.ObjectOutputStream;
 import java.net.Socket;
 import java.net.UnknownHostException;
 
-import client.beans.Message;
+import tytan.client.beans.Message;
 
 public class EstablishConnectionSupport implements AbstractConnection {
 
