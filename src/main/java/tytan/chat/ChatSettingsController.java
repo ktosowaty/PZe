@@ -1,7 +1,11 @@
 package tytan.chat;
 
-import javafx.fxml.FXML;
+public class ChatSettingsController {
+    private ChatController chat;
 
-public class ChatSettingsController  {
+    public void setChat(ChatController chat) {
+        this.chat = chat;
+    }
+
 
 }

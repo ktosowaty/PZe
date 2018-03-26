@@ -29,6 +29,8 @@ public class ChatController implements Initializable {
             loader.setResources(resources);
             Pane vBox = loader.load(getClass().getResource("/fxml/chat/ChatSettings.fxml").openStream());
             drawer.setSidePane(vBox);
+            ChatSettingsController settings = loader.getController();
+            settings.setChat(this);
         } catch (IOException e) {
             e.printStackTrace();
         }
