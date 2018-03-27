@@ -2,8 +2,8 @@ package tytan.client.model;
 
 import java.io.ObjectInputStream;
 
-import tytan.client.beans.Message;
 import tytan.client.connection.AbstractConnection;
+import tytan.serwer.beans.Message;
 
 public class ReceiveDataModel extends AbstractModel implements Runnable {
 

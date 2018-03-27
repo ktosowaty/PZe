@@ -3,8 +3,8 @@ package tytan.client.model;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 
-import tytan.client.beans.Message;
 import tytan.client.connection.AbstractConnection;
+import tytan.serwer.beans.Message;
 
 public class SendDataModel extends AbstractModel{
 

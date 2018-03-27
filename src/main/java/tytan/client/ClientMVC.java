@@ -18,13 +18,14 @@ public class ClientMVC {
 	private final static Logger LOGGER = Logger.getLogger(ClientMVC.class.getName());
 	private final static String host = "localhost";
 	private final static int port = 8000;
-
+	public SendDataModel sendDataModel;
+	
 	public ClientMVC(AbstractConnection connection, AbstractController controller) {
 
 		try {
 			AbstractConnection establishConnectionModel = connection;
 
-			SendDataModel sendDataModel = new SendDataModel(establishConnectionModel);
+			sendDataModel = new SendDataModel(establishConnectionModel);
 			controller.addModel("sendDataModel", sendDataModel);
 
 			ReceiveDataModel receiveDataModel = new ReceiveDataModel(establishConnectionModel);
@@ -64,5 +65,5 @@ public class ClientMVC {
 		}
 
 	}
-
+	
 }

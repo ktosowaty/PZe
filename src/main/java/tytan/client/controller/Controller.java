@@ -7,11 +7,11 @@ import java.util.Random;
 import java.util.logging.Logger;
 
 import tytan.client.ClientMVC;
-import tytan.client.beans.Message;
 import tytan.client.model.AbstractModel;
 import tytan.client.model.SendDataModel;
 import tytan.client.model.UsersListModel;
 import tytan.client.view.TextDemo;
+import tytan.serwer.beans.Message;
 
 public class Controller extends AbstractController {
 	private final String usernick;

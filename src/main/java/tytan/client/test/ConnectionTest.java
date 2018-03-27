@@ -2,14 +2,11 @@ package tytan.client.test;
 
 import static org.junit.Assert.assertEquals;
 
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
-
 import org.junit.Before;
 import org.junit.Test;
 
 import tytan.client.ClientMVC;
-import tytan.client.beans.Message;
+import tytan.serwer.beans.Message;
 
 public class ConnectionTest {
 	MockConnection connection;
@@ -22,7 +19,7 @@ public class ConnectionTest {
 	}
 
 	@Test
-	public void test() {
+	public void testReceiveDataModel() {
 		connection = new MockConnection(new Message("1", "2", "Eloszka"));
 		controller = new MockController();
 		clientMVC = new ClientMVC(connection, controller);

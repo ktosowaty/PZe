@@ -3,7 +3,7 @@ package tytan.client.model;
 import java.util.HashSet;
 import java.util.Set;
 
-import tytan.client.beans.Message;
+import tytan.serwer.beans.Message;
 
 public class UsersListModel extends AbstractModel{
 	private Set<String> usersList;

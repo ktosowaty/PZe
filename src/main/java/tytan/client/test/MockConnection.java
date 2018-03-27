@@ -2,13 +2,12 @@ package tytan.client.test;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-import java.io.ObjectInput;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.io.PipedInputStream;
 
-import tytan.client.beans.Message;
 import tytan.client.connection.AbstractConnection;
+import tytan.serwer.beans.Message;
 
 public class MockConnection implements AbstractConnection {
 
@@ -22,10 +21,12 @@ public class MockConnection implements AbstractConnection {
 	public MockConnection(Message messageToSend) {
 		buffer = new ByteArrayOutputStream();
 		try {
+			PipedInputStream pipeInput = new PipedInputStream();
+			
 			out = new ObjectOutputStream(buffer);
 			out.writeObject(messageToSend);
 			out.flush();
-			
+
 			bis = new ByteArrayInputStream(buffer.toByteArray());
 			in = new ObjectInputStream(bis);
 
