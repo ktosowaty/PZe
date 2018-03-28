@@ -29,6 +29,8 @@ public class MeldunkiController implements Initializable {
             loader.setResources(resources);
             Pane vBox = loader.load(getClass().getResource("/fxml/meldunki/MeldunkiSettings.fxml").openStream());
             drawer.setSidePane(vBox);
+            MeldunkiSettingsController settings = loader.getController();
+            settings.setMeldunki(this);
         } catch (IOException e) {
             e.printStackTrace();
         }
