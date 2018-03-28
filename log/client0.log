@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="windows-1250" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2018-03-27T20:20:51</date>
+  <millis>1522174851974</millis>
+  <sequence>0</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.ClientMVC</class>
+  <method>&lt;init&gt;</method>
+  <thread>1</thread>
+  <message>Starting client program</message>
+</record>
+</log>
