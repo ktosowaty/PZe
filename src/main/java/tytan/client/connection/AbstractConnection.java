@@ -5,9 +5,9 @@ import java.io.ObjectOutputStream;
 
 public interface AbstractConnection {
 
-	public ObjectInputStream getIn();
+    public ObjectInputStream getIn();
 
-	public ObjectOutputStream getOut();
+    public ObjectOutputStream getOut();
 
-	public void closeConnection();
+    public void closeConnection();
 }

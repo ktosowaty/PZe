@@ -51,5 +51,4 @@ public class ChatController implements Initializable {
         drawer.toFront();
         settingsButton.toFront();
     }
-
 }
