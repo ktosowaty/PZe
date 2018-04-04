@@ -1,14 +1,17 @@
 package tytan.mapa;
 
 import com.lynden.gmapsfx.GoogleMapView;
+import com.lynden.gmapsfx.javascript.event.GMapMouseEvent;
+import com.lynden.gmapsfx.javascript.event.UIEventType;
 import com.lynden.gmapsfx.javascript.object.*;
 
 import java.util.ArrayList;
+import java.util.Set;
 
 public class MapaModel {
     public GoogleMap googleMap;
-    private ArrayList<Marker> locationMarkers;
-    private ArrayList<Marker> placeMarkers;
+    private Set<Marker> locationMarkers;
+    private Set<Marker> placeMarkers;
     private boolean locationMarkersVisible;
     private boolean placeMarkersVisible;
 
@@ -21,16 +24,20 @@ public class MapaModel {
     }
 
     public void setLocationVisable(boolean visible) {
-        locationMarkersVisible = visible;
-        for (Marker m : locationMarkers) {
-            m.setVisible(visible);
+        if (!locationMarkers.isEmpty()) {
+            locationMarkersVisible = visible;
+            for (Marker m : locationMarkers) {
+                m.setVisible(visible);
+            }
         }
     }
 
     public void setPlaceVisable(boolean visable) {
         placeMarkersVisible = visable;
-        for (Marker m : placeMarkers) {
-            m.setVisible(visable);
+        if (!placeMarkers.isEmpty()) {
+            for (Marker m : placeMarkers) {
+                m.setVisible(visable);
+            }
         }
     }
 
@@ -63,8 +70,16 @@ public class MapaModel {
                 .streetViewControl(false);
         googleMapView.setKey("AIzaSyC5U5zdeCQ-i0JjG6TV1lbiWiA98LASJ2E");
         googleMap = googleMapView.createMap(mapOptions, false);
-        addLocationMarker(new LatLong(52.13, 21.00));
-        addPlaceMarker(new LatLong(52.20, 21.10));
+        googleMap.addMouseEventHandler(UIEventType.dblclick, (GMapMouseEvent event) -> {
+            LatLong latLong = event.getLatLong();
+            addLocationMarker(latLong);
+        });
+        googleMap.addMouseEventHandler(UIEventType.rightclick, (GMapMouseEvent event) -> {
+            LatLong latLong = event.getLatLong();
+            addPlaceMarker(latLong);
+        });
+        //addLocationMarker(new LatLong(52.13, 21.00));
+        //addPlaceMarker(new LatLong(52.20, 21.10));
     }
 
 }
