@@ -23,12 +23,11 @@ public class ClientMVC {
     public ClientMVC(AbstractConnection connection, AbstractController controller) {
 
         try {
-            AbstractConnection establishConnectionModel = connection;
 
-            sendDataModel = new SendDataModel(establishConnectionModel);
+            sendDataModel = new SendDataModel(connection);
             controller.addModel("sendDataModel", sendDataModel);
 
-            ReceiveDataModel receiveDataModel = new ReceiveDataModel(establishConnectionModel);
+            ReceiveDataModel receiveDataModel = new ReceiveDataModel(connection);
             controller.addModel("receiveDataModel", receiveDataModel);
             Thread thread = new Thread(receiveDataModel);
             thread.start();
@@ -36,12 +35,7 @@ public class ClientMVC {
             UsersListModel userListModel = new UsersListModel();
             controller.addModel("userListModel", userListModel);
 
-            Runnable runnable = new Runnable() {
-                @Override
-                public void run() {
-                    TextDemo.createAndShowGUI(controller);
-                }
-            };
+            Runnable runnable = () -> TextDemo.createAndShowGUI(controller);
             EventQueue.invokeLater(runnable);
             LOGGER.info("Starting client program");
 

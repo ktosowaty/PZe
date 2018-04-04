@@ -16,7 +16,7 @@ public class ConnectionHandler implements Runnable {
 
     private final static Logger LOGGER = Logger.getLogger(Server.class.getName());
     private static Map<String, ObjectOutputStream> usersOutputMap = Collections
-            .synchronizedMap(new HashMap<String, ObjectOutputStream>());
+            .synchronizedMap(new HashMap<>());
     private static AtomicInteger usersCount = new AtomicInteger();
     private ObjectInputStream inputObject;
     private ObjectOutputStream outputObject;
@@ -56,7 +56,7 @@ public class ConnectionHandler implements Runnable {
 
     private void setConnectionParameters() throws ClassNotFoundException, IOException {
 
-        boolean isRegistered = true;
+        boolean isRegistered;
         LOGGER.info("Seting connection parametrs");
         do {
 
@@ -65,12 +65,12 @@ public class ConnectionHandler implements Runnable {
 
             isRegistered = loginUser(registrationMessage.getNickFrom(), outputObject);
 
-            if (isRegistered == false)
+            if (!isRegistered)
                 outputObject.writeObject(new Message("empty", "empty", "wrongNick"));
 
             outputObject.flush();
 
-        } while (isRegistered == false);
+        } while (!isRegistered);
     }
 
     private void messageListenerAndSender() throws ClassNotFoundException, IOException {

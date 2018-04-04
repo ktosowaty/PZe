@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.media.MediaView?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:id="chatLabel" prefHeight="400.0" prefWidth="600.0"
+            stylesheets="@/css/my-theme.css" xmlns="http://javafx.com/javafx/8.0.121"
+            fx:controller="tytan.videochat.VideoChatClientController">
+    <children>
+        <JFXDrawer fx:id="drawer" defaultDrawerSize="250.0" direction="RIGHT" onDrawerClosed="#drawerClosed"
+                   onDrawerOpening="#drawerOpening" resizableOnDrag="true" resizeContent="true"
+                   AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+        <SplitPane dividerPositions="0.25" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                   AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                    <children>
+                        <JFXListView fx:id="personListView" prefHeight="400.0" prefWidth="200.0"
+                                     AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                     AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0"/>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="25.0" prefWidth="147.0"
+                               text="%chat.activePerson" textAlignment="CENTER" AnchorPane.leftAnchor="0.0"
+                               AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+                    </children>
+                </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0"
+                            styleClass="jfx-list-view">
+                    <children>
+                        <MediaView fitHeight="300.0" fitWidth="300.0" AnchorPane.bottomAnchor="0.0"
+                                   AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+                    </children>
+                </AnchorPane>
+            </items>
+        </SplitPane>
+        <Button fx:id="settingsButton" contentDisplay="GRAPHIC_ONLY" layoutX="542.0" layoutY="14.0"
+                mnemonicParsing="false" onMouseClicked="#openSettings" prefHeight="34.0" prefWidth="31.0"
+                styleClass="jfx-button-settings" stylesheets="@/css/my-theme.css" text=" " AnchorPane.rightAnchor="5.0"
+                AnchorPane.topAnchor="5.0">
+            <graphic>
+                <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@/images/settings_24.png"/>
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <Button fx:id="backButton" contentDisplay="GRAPHIC_ONLY" layoutX="542.0" layoutY="14.0" mnemonicParsing="false"
+                onMouseClicked="#back" prefHeight="34.0" prefWidth="31.0" styleClass="jfx-button-settings"
+                stylesheets="@/css/my-theme.css" text=" " AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0">
+            <graphic>
+                <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@/images/back_24.png"/>
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+    </children>
+</AnchorPane>

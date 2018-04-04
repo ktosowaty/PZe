@@ -21,7 +21,7 @@ public class Controller extends AbstractController {
 
     public Controller() {
         Random rand = new Random();
-        modelsMap = new HashMap<String, AbstractModel>();
+        modelsMap = new HashMap<>();
         usernick = new Integer(rand.nextInt(10000)).toString();
     }
 
@@ -48,43 +48,49 @@ public class Controller extends AbstractController {
     public void propertyChange(PropertyChangeEvent evt) {
         String propertyName = evt.getPropertyName();
 
-        if (propertyName.equals("newMessageFromReceiveDataModel")) {
+        switch (propertyName) {
+            case "newMessageFromReceiveDataModel":
 
-            Message message = (Message) evt.getNewValue();
-            String nickTo = message.getNickTo();
-            String messageContent = (String) message.getMessage();
+                Message message = (Message) evt.getNewValue();
+                String nickTo = message.getNickTo();
+                String messageContent = (String) message.getMessage();
 
-            if (nickTo.equals("addNewUser")) {
-                LOGGER.info("Adding new user");
-                ((UsersListModel) modelsMap.get("userListModel")).addNewUser(message);
+                if (nickTo.equals("addNewUser")) {
+                    LOGGER.info("Adding new user");
+                    ((UsersListModel) modelsMap.get("userListModel")).addNewUser(message);
 
-            } else if (messageContent.equals("uniqueNick")) {
-                LOGGER.info("User register successfully");
-                String username = message.getNickFrom();
-                demoView.printMessage("New user registered " + username);
+                } else if (messageContent.equals("uniqueNick")) {
+                    LOGGER.info("User register successfully");
+                    String username = message.getNickFrom();
+                    demoView.printMessage("New user registered " + username);
 
-            } else if (messageContent.equals("wrongNick")) {
-                LOGGER.info("User nick is not unique");
-                demoView.printMessage("Nickname already in use");
+                } else if (messageContent.equals("wrongNick")) {
+                    LOGGER.info("User nick is not unique");
+                    demoView.printMessage("Nickname already in use");
 
-            } else if (messageContent.equals("removeUserFromList")) {
-                LOGGER.info("User removed from list model");
-                ((UsersListModel) modelsMap.get("userListModel")).removeUser(message);
+                } else if (messageContent.equals("removeUserFromList")) {
+                    LOGGER.info("User removed from list model");
+                    ((UsersListModel) modelsMap.get("userListModel")).removeUser(message);
 
-            } else if (!nickTo.equals("empty") && !message.getNickFrom().equals("empty")) {
-                LOGGER.info("Showing message from " + message.getNickFrom());
-                demoView.printMessage(
-                        String.format("Revived message from %s to %s", message.getNickFrom(), message.getNickTo()));
+                } else if (!nickTo.equals("empty") && !message.getNickFrom().equals("empty")) {
+                    LOGGER.info("Showing message from " + message.getNickFrom());
+                    demoView.printMessage(
+                            String.format("Revived message from %s to %s", message.getNickFrom(), message.getNickTo()));
+                }
+                break;
+            case "removeUserFromList": {
+                String username = (String) evt.getNewValue();
+                LOGGER.info("User removed from list");
+                demoView.printMessage("Removing user " + username);
+
+                break;
             }
-        } else if (propertyName.equals("removeUserFromList")) {
-            String username = (String) evt.getNewValue();
-            LOGGER.info("User removed from list");
-            demoView.printMessage("Removing user " + username);
-
-        } else if (propertyName.equals("addNewUserToList")) {
-            String username = (String) evt.getNewValue();
-            LOGGER.info("Adding new user to list " + username);
-            demoView.printMessage("Adding user " + username);
+            case "addNewUserToList": {
+                String username = (String) evt.getNewValue();
+                LOGGER.info("Adding new user to list " + username);
+                demoView.printMessage("Adding user " + username);
+                break;
+            }
         }
     }
 

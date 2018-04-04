@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
-import java.net.UnknownHostException;
 
 public class EstablishConnectionSupport implements AbstractConnection {
 
@@ -17,7 +16,7 @@ public class EstablishConnectionSupport implements AbstractConnection {
         getStreams();
     }
 
-    private void connectToServer(String host, int port) throws UnknownHostException, IOException {
+    private void connectToServer(String host, int port) throws IOException {
         clientSocket = new Socket(host, port);
     }
 

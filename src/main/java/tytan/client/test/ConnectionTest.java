@@ -13,7 +13,7 @@ public class ConnectionTest {
     ClientMVC clientMVC;
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
 
     }
 

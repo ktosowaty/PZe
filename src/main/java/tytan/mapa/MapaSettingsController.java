@@ -11,7 +11,7 @@ public class MapaSettingsController {
     @FXML
     private JFXToggleButton visibleLocationsBtn;
     @FXML
-    private JFXToggleButton visiblePlacesBtn;;
+    private JFXToggleButton visiblePlacesBtn;
     private MapaController mapa;
 
     public void setMapa(MapaController mapa) {

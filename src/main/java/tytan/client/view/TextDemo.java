@@ -33,7 +33,7 @@ public class TextDemo extends JPanel {
 
     public static void createAndShowGUI(Controller controller) {
         JFrame frame = new JFrame("TextDemo");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
         frame.add(new TextDemo(controller));
 

@@ -24,8 +24,8 @@ public class Server {
         portNumber = 8000;
         threadsNumber = 30;
         clientsThreads = Executors.newFixedThreadPool(threadsNumber);
-        ServerSocketfactory = (ServerSocketFactory) ServerSocketFactory.getDefault();
-        ServerSocket = (ServerSocket) ServerSocketfactory.createServerSocket(portNumber);
+        ServerSocketfactory = ServerSocketFactory.getDefault();
+        ServerSocket = ServerSocketfactory.createServerSocket(portNumber);
     }
 
     public static Server getInstance() throws IOException {

@@ -9,7 +9,7 @@ public class UsersListModel extends AbstractModel {
     private Set<String> usersList;
 
     public UsersListModel() {
-        usersList = new HashSet<String>();
+        usersList = new HashSet<>();
     }
 
     public void addNewUser(Message message) {

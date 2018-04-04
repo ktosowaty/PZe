@@ -5,7 +5,6 @@ import com.lynden.gmapsfx.javascript.event.GMapMouseEvent;
 import com.lynden.gmapsfx.javascript.event.UIEventType;
 import com.lynden.gmapsfx.javascript.object.*;
 
-import java.util.ArrayList;
 import java.util.Set;
 
 public class MapaModel {
@@ -16,9 +15,7 @@ public class MapaModel {
     private boolean placeMarkersVisible;
 
     public MapaModel(GoogleMapView googleMapView) {
-        googleMapView.addMapInializedListener(() -> {
-            configureMap(googleMapView);
-        });
+        googleMapView.addMapInializedListener(() -> configureMap(googleMapView));
         locationMarkersVisible = true;
         placeMarkersVisible = true;
     }
