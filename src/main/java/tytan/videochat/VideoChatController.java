@@ -23,25 +23,39 @@ public class VideoChatController implements Initializable {
     @FXML
     private AnchorPane menuPane;
 
+    private VideoChatOperatorController mVideoChatOperatorController = null;
+    private VideoChatClientController mVideoChatClientController = null;
+
     public void initialize(URL location, ResourceBundle resources) {
+        loadClientPane(resources);
+        loadOperatorPane(resources);
+    }
+
+    private void loadClientPane(ResourceBundle resources) {
         try {
-            FXMLLoader loader = new FXMLLoader();
-            loader.setResources(resources);
+            FXMLLoader clientLoader = new FXMLLoader();
+            clientLoader.setResources(resources);
             menuPane.toFront();
 
-            AnchorPane pane1 = loader.load(getClass().getResource("/fxml/videochat/VideoChatClient.fxml").openStream());
-            clientPane.setCenter(pane1);
-            VideoChatClientController vcc1 = loader.getController();
-            vcc1.setMenuPane(menuPane);
+            AnchorPane clientAnchorPane = clientLoader.load(getClass().getResource("/fxml/videochat/VideoChatClient.fxml").openStream());
+            clientPane.setCenter(clientAnchorPane);
+            mVideoChatClientController = clientLoader.getController();
+            mVideoChatClientController.setMenuPane(menuPane);
+        } catch (IOException exception) {
+            exception.printStackTrace();
+        }
+    }
 
-            FXMLLoader loader2 = new FXMLLoader();
-            loader2.setResources(resources);
-            AnchorPane pane2 = loader2.load(getClass().getResource("/fxml/videochat/VideoChatOperator.fxml").openStream());
-            operatorPane.setCenter(pane2);
-            VideoChatOperatorController vcc2 = loader2.getController();
-            vcc2.setMenuPane(menuPane);
-        } catch (IOException e) {
-            e.printStackTrace();
+    private void loadOperatorPane(ResourceBundle resources) {
+        try {
+            FXMLLoader operatorLoader = new FXMLLoader();
+            operatorLoader.setResources(resources);
+            AnchorPane operatorAnchorPane = operatorLoader.load(getClass().getResource("/fxml/videochat/VideoChatOperator.fxml").openStream());
+            operatorPane.setCenter(operatorAnchorPane);
+            mVideoChatOperatorController = operatorLoader.getController();
+            mVideoChatOperatorController.setMenuPane(menuPane);
+        } catch (IOException exception) {
+            exception.printStackTrace();
         }
     }
 

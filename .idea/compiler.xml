@@ -9,5 +9,8 @@
         <module name="PZe" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="PZe" target="8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

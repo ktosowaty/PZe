@@ -4,8 +4,10 @@ import com.jfoenix.controls.JFXDrawer;
 import com.jfoenix.controls.JFXListCell;
 import com.jfoenix.controls.JFXListView;
 import com.jfoenix.controls.events.JFXDrawerEvent;
+import io.reactivex.Scheduler;
+import io.reactivex.disposables.Disposable;
+import io.reactivex.schedulers.Schedulers;
 import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -20,6 +22,9 @@ import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import javafx.util.Callback;
+import tytan.data.rdp.entity.Client;
+import tytan.data.rdp.repository.web_socket.ClientWebSocketRepository;
+import tytan.data.rdp.specification.web_socket.ConnectAndGetListOfClientsSpecification;
 
 import java.io.IOException;
 import java.net.URL;
@@ -27,13 +32,19 @@ import java.util.ResourceBundle;
 
 public class VideoChatClientController implements Initializable {
 
+    private Disposable clientsListDisposable = null;
+
     @FXML
-    private JFXListView<Person> personListView;
+    private JFXListView<Client> personListView;
     @FXML
     private Button settingsButton;
     @FXML
     private JFXDrawer drawer;
     private AnchorPane menuPane;
+
+    public void subscribe() {
+
+    }
 
     public void initialize(URL location, ResourceBundle resources) {
         try {
@@ -47,25 +58,27 @@ public class VideoChatClientController implements Initializable {
             e.printStackTrace();
         }
 
+        clientsListDisposable = new ClientWebSocketRepository().streamQuery(new ConnectAndGetListOfClientsSpecification())
+                .observeOn(Schedulers.newThread())
+                .subscribeOn(Schedulers.io())
+                .subscribe(onNext -> {
+                    personListView.setItems(FXCollections.observableList(onNext));
+                }, error -> {
+                    error.printStackTrace();
+                    System.out.println("Getting exception: " + error.getMessage());
+                });
 
-        //TODO USUN_TO
-        ObservableList<Person> items = FXCollections.observableArrayList(
-                new Person("Mirek"), new Person("Andrzej"), new Person("Włodek"), new Person("Janusz"));
-        personListView.setItems(items);
-
-        personListView.setCellFactory(new Callback<ListView<Person>, ListCell<Person>>() {
+        personListView.setCellFactory(new Callback<ListView<Client>, ListCell<Client>>() {
             @Override
-            public ListCell<Person> call(ListView<Person> param) {
-                return new JFXListCell<Person>() {
+            public ListCell<Client> call(ListView<Client> param) {
+                return new JFXListCell<Client>() {
                     @Override
-                    protected void updateItem(Person item, boolean empty) {
+                    protected void updateItem(Client item, boolean empty) {
                         super.updateItem(item, empty);
                         setText(null);
                         if (item != null) {
                             VBox vBox = new VBox(new Text(item.getName()), new Text("dostepny"));
-                            HBox hBox = new HBox(new ImageView(item.getIcon()), vBox);
-                            hBox.setSpacing(10);
-                            setGraphic(hBox);
+                            setGraphic(vBox);
                         }
                     }
                 };
