@@ -8,48 +8,48 @@ import java.net.UnknownHostException;
 
 public class EstablishConnectionSupport implements AbstractConnection {
 
-	private ObjectInputStream in;
-	private ObjectOutputStream out;
-	private Socket clientSocket;
+    private ObjectInputStream in;
+    private ObjectOutputStream out;
+    private Socket clientSocket;
 
-	public EstablishConnectionSupport(String host, int port) throws IOException {
-		connectToServer(host, port);
-		getStreams();
-	}
+    public EstablishConnectionSupport(String host, int port) throws IOException {
+        connectToServer(host, port);
+        getStreams();
+    }
 
-	private void connectToServer(String host, int port) throws UnknownHostException, IOException {
-		clientSocket = new Socket(host, port);
-	}
+    private void connectToServer(String host, int port) throws UnknownHostException, IOException {
+        clientSocket = new Socket(host, port);
+    }
 
-	private void getStreams() throws IOException {
+    private void getStreams() throws IOException {
 
-		out = new ObjectOutputStream(clientSocket.getOutputStream());
-		in = new ObjectInputStream(clientSocket.getInputStream());
-	}
+        out = new ObjectOutputStream(clientSocket.getOutputStream());
+        in = new ObjectInputStream(clientSocket.getInputStream());
+    }
 
-	public void closeConnection() {
-		try {
-			out.close();
-			in.close();
-			clientSocket.close();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-	}
+    public void closeConnection() {
+        try {
+            out.close();
+            in.close();
+            clientSocket.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
-	public Socket getClientSocket() {
-		return clientSocket;
-	}
+    public Socket getClientSocket() {
+        return clientSocket;
+    }
 
-	@Override
-	public ObjectInputStream getIn() {
-		return in;
-	}
+    @Override
+    public ObjectInputStream getIn() {
+        return in;
+    }
 
-	@Override
-	public ObjectOutputStream getOut() {
-		return out;
-	}
+    @Override
+    public ObjectOutputStream getOut() {
+        return out;
+    }
 
-	
+
 }

@@ -3,12 +3,10 @@ package tytan.mapa;
 import com.jfoenix.controls.JFXDrawer;
 import com.jfoenix.controls.events.JFXDrawerEvent;
 import com.lynden.gmapsfx.GoogleMapView;
-import com.lynden.gmapsfx.javascript.object.GoogleMap;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 
@@ -18,18 +16,13 @@ import java.util.ResourceBundle;
 
 public class MapaController implements Initializable {
 
+    MapaModel mapaModel;
     @FXML
     private GoogleMapView googleMapView;
-    private GoogleMap googleMap;
     @FXML
     private Button settingsButton;
     @FXML
     private JFXDrawer drawer;
-    //    @FXML
-//    private WebView webView;
-    @FXML
-    private Label mapaLabel;
-
 
     public void initialize(URL location, ResourceBundle resources) {
         try {
@@ -39,19 +32,20 @@ public class MapaController implements Initializable {
             drawer.setSidePane(vBox);
             MapaSettingsController settings = loader.getController();
             settings.setMapa(this);
+            mapaModel = new MapaModel(googleMapView);
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-        //webView.getEngine().load("https://www.google.pl/maps/@52.2534883,20.8954443,15z?hl=pl");
-        //webView.getEngine().load(String.valueOf(getClass().getResource("/html/myMap.html")));
-
-
     }
 
     @FXML
     private void openSettings(MouseEvent mouseEvent) {
         drawer.toggle();
+    }
+
+    @FXML
+    public void setMapVisible(boolean visible) {
+        googleMapView.setVisible(visible);
     }
 
     @FXML
@@ -64,5 +58,4 @@ public class MapaController implements Initializable {
         drawer.toFront();
         settingsButton.toFront();
     }
-
 }
