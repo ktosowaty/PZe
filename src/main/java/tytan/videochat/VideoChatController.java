@@ -1,13 +1,20 @@
 package tytan.videochat;
 
+import javafx.application.Platform;
+import javafx.beans.property.ObjectProperty;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.StackPane;
+import javafx.stage.Stage;
+import sun.plugin2.ipc.windows.WindowsEvent;
 
+import java.beans.EventHandler;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -22,6 +29,7 @@ public class VideoChatController implements Initializable {
     private BorderPane clientPane;
     @FXML
     private AnchorPane menuPane;
+    private Stage secondStage = new Stage();
 
     private VideoChatOperatorController mVideoChatOperatorController = null;
     private VideoChatClientController mVideoChatClientController = null;
@@ -51,7 +59,8 @@ public class VideoChatController implements Initializable {
             FXMLLoader operatorLoader = new FXMLLoader();
             operatorLoader.setResources(resources);
             AnchorPane operatorAnchorPane = operatorLoader.load(getClass().getResource("/fxml/videochat/VideoChatOperator.fxml").openStream());
-            operatorPane.setCenter(operatorAnchorPane);
+            //operatorPane.setCenter(operatorAnchorPane);
+            secondStage.setScene(new Scene(operatorAnchorPane));
             mVideoChatOperatorController = operatorLoader.getController();
             mVideoChatOperatorController.setMenuPane(menuPane);
         } catch (IOException exception) {
@@ -62,7 +71,8 @@ public class VideoChatController implements Initializable {
     @FXML
     private void openOperatorPanel(MouseEvent mouseEvent) {
         System.out.println("openOperator");
-        operatorPane.toFront();
+        //operatorPane.toFront();
+        secondStage.show();
     }
 
     @FXML
