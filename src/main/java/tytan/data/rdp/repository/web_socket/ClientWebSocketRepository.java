@@ -8,10 +8,11 @@ import tytan.data.rdp.mapper.ClientsListResponseMapper;
 import tytan.data.rdp.repository.Repository;
 import tytan.data.rdp.specification.Specification;
 import tytan.data.rdp.specification.web_socket.ConnectAndGetListOfClientsSpecification;
+import tytan.data.rdp.specification.web_socket.CreateClientConnectionSpecification;
 import tytan.data.rdp.specification.web_socket.WebSocketSpecification;
 
 import java.util.ArrayList;
-
+//TODO NEEDS REFACTOR
 public class ClientWebSocketRepository implements Repository<Client> {
 
     @Override
@@ -21,6 +22,8 @@ public class ClientWebSocketRepository implements Repository<Client> {
                 ClientsListResponseMapper mapper = new ClientsListResponseMapper();
                 return mapper.mapResponseToClientsList(new JSONObject(response));
             });
+        } else if (specification instanceof CreateClientConnectionSpecification) {
+            return ((CreateClientConnectionSpecification) specification).getResults().map(response -> new ArrayList<>());
         } else {
             return Observable.fromArray();
         }

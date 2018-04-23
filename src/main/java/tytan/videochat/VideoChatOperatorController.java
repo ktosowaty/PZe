@@ -1,6 +1,8 @@
 package tytan.videochat;
 
 import com.github.sarxos.webcam.Webcam;
+import com.github.sarxos.webcam.WebcamEvent;
+import com.github.sarxos.webcam.WebcamListener;
 import com.jfoenix.controls.JFXDrawer;
 import com.jfoenix.controls.events.JFXDrawerEvent;
 import javafx.application.Platform;
@@ -21,14 +23,29 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
+import tytan.data.rdp.repository.web_socket.ClientWebSocketRepository;
+import tytan.data.rdp.repository.web_socket.StreamWebSocketRepository;
+import tytan.data.rdp.specification.web_socket.CreateClientConnectionSpecification;
+import tytan.data.rdp.specification.web_socket.StreamVideoSpecification;
 
+import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.net.URL;
+import java.nio.ByteBuffer;
 import java.util.ResourceBundle;
 import java.util.concurrent.TimeUnit;
 
+//TODO NEEDS REFACTOR
 public class VideoChatOperatorController implements Initializable {
+
+    private StreamWebSocketRepository streamWebSocketRepository = new StreamWebSocketRepository();
+    private ClientWebSocketRepository clientWebSocketRepository = new ClientWebSocketRepository();
+
+    private AnchorPane menuPane;
+    private boolean isStreaming = false;
+
 
     @FXML
     private Button settingsButton;
@@ -43,9 +60,6 @@ public class VideoChatOperatorController implements Initializable {
 
     @FXML
     Button streamingButton;
-
-    private AnchorPane menuPane;
-    private boolean isStreaming = false;
 
     @FXML
     private void openSettings(MouseEvent mouseEvent) {
@@ -63,18 +77,6 @@ public class VideoChatOperatorController implements Initializable {
         settingsButton.toFront();
     }
 
-    @FXML
-    private void startStreaming(MouseEvent mouseEvent) {
-        //TODO
-        System.out.println("startStreaming");
-    }
-
-    @FXML
-    private void stopStreaming(MouseEvent mouseEvent) {
-        //TODO
-        System.out.println("stopStreaming");
-    }
-
     public void back(MouseEvent mouseEvent) {
         if (selWebCam != null) {
             selWebCam.close();
@@ -90,8 +92,7 @@ public class VideoChatOperatorController implements Initializable {
     private Webcam selWebCam = null;
     private boolean stopCamera = false;
     private ObjectProperty<Image> imageProperty = new SimpleObjectProperty<Image>();
-
-    private String cameraListPromptText = "Choose Camera";
+    private StreamVideoSpecification streamVideoSpecification;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -102,18 +103,23 @@ public class VideoChatOperatorController implements Initializable {
             drawer.setSidePane(vBox);
             VideoChatOperatorSettingsController settings = loader.getController();
             settings.setVideoChat(this);
+            clientWebSocketRepository.streamQuery(new CreateClientConnectionSpecification()).subscribe(onNext -> {
+                streamVideoSpecification = new StreamVideoSpecification("Klient1");
+            }, error -> {
+                error.printStackTrace();
+                System.out.println("Getting exception: " + error.getMessage());
+            });
+            Platform.runLater(new Runnable() {
+
+                @Override
+                public void run() {
+//                setImageViewSize();
+                    initializeWebCam();
+                }
+            });
         } catch (IOException e) {
             e.printStackTrace();
         }
-        Platform.runLater(new Runnable() {
-
-            @Override
-            public void run() {
-//                setImageViewSize();
-                initializeWebCam();
-            }
-        });
-
     }
 
     protected void initializeWebCam() {
@@ -124,6 +130,41 @@ public class VideoChatOperatorController implements Initializable {
             protected Void call() throws Exception {
                 if (selWebCam == null) {
                     selWebCam = Webcam.getDefault(10, TimeUnit.SECONDS);
+                    selWebCam.addWebcamListener(new WebcamListener() {
+                        @Override
+                        public void webcamOpen(WebcamEvent webcamEvent) {
+
+                        }
+
+                        @Override
+                        public void webcamClosed(WebcamEvent webcamEvent) {
+
+                        }
+
+                        @Override
+                        public void webcamDisposed(WebcamEvent webcamEvent) {
+
+                        }
+
+                        @Override
+                        public void webcamImageObtained(WebcamEvent webcamEvent) {
+                            if (isStreaming) {
+                                try {
+                                    BufferedImage image = webcamEvent.getImage();
+                                    ByteArrayOutputStream baos = new ByteArrayOutputStream();
+                                    ImageIO.write(image, "jpg", baos);
+                                    byte[] bytes = baos.toByteArray();
+                                    ByteBuffer byteBuffer = ByteBuffer.wrap(bytes);
+//                                    streamWebSocketRepository.streamQuery().subscribe();
+                                    if (streamVideoSpecification != null)
+                                        streamVideoSpecification.sendMessage(byteBuffer);
+                                    System.out.println("Bytes length: " + bytes.length);
+                                } catch (IOException exception) {
+                                    exception.printStackTrace();
+                                }
+                            }
+                        }
+                    });
                     selWebCam.open();
                 }
                 startWebCamStream();
@@ -169,34 +210,20 @@ public class VideoChatOperatorController implements Initializable {
             }
 
         };
-        Thread th = new Thread(task);
-        th.setDaemon(true);
-        th.start();
+        Thread webCamStream = new Thread(task);
+        webCamStream.setDaemon(true);
+        webCamStream.start();
         imgWebCamCapturedImage.imageProperty().bind(imageProperty);
 
-    }
-
-    private void closeCamera() {
-        if (selWebCam != null) {
-            selWebCam.close();
-        }
-    }
-
-    public void stopCamera(ActionEvent event) {
-        stopCamera = true;
-//        btnStartCamera.setDisable(false);
-//        btnStopCamera.setDisable(true);
     }
 
     public void startCamera(ActionEvent event) {
         if (isStreaming) {
             streamingButton.setText("Start stream");
         } else {
-            streamingButton.setText("stop stream");
+            streamingButton.setText("Stop stream");
         }
         isStreaming = !isStreaming;
-//        btnStartCamera.setDisable(true);
-//        btnStopCamera.setDisable(false);
     }
 
 }
