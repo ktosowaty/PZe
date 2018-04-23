@@ -7,6 +7,7 @@ import com.jfoenix.controls.events.JFXDrawerEvent;
 import io.reactivex.Scheduler;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
+import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -62,7 +63,11 @@ public class VideoChatClientController implements Initializable {
                 .observeOn(Schedulers.newThread())
                 .subscribeOn(Schedulers.io())
                 .subscribe(onNext -> {
-                    personListView.setItems(FXCollections.observableList(onNext));
+                    Platform.runLater(new Runnable() {
+                        @Override public void run() {
+                            personListView.setItems(FXCollections.observableList(onNext));
+                        }
+                    });
                 }, error -> {
                     error.printStackTrace();
                     System.out.println("Getting exception: " + error.getMessage());

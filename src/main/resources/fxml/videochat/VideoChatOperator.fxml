@@ -7,6 +7,7 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
@@ -14,18 +15,25 @@
 <AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@/css/my-theme.css" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tytan.videochat.VideoChatOperatorController">
     <children>
         <JFXDrawer fx:id="drawer" defaultDrawerSize="250.0" direction="RIGHT" onDrawerClosed="#drawerClosed" onDrawerOpening="#drawerOpening" resizableOnDrag="true" resizeContent="true" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-        <GridPane alignment="CENTER" hgap="50.0" maxHeight="400.0" maxWidth="400.0" vgap="50.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <BorderPane fx:id="bpWebCamPaneHolder" maxHeight="400.0" maxWidth="600.0" minHeight="246.0" minWidth="600.0" prefHeight="246.0" prefWidth="600.0">
+            <BorderPane.margin>
+                <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+            </BorderPane.margin>
+            <center>
+                <ImageView fx:id="imgWebCamCapturedImage" fitHeight="230.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
+            </center>
+        </BorderPane>
+        <GridPane alignment="CENTER" hgap="50.0" maxHeight="200.0" maxWidth="600.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="70.0" prefWidth="600.0" vgap="50.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
             <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" />
                 <ColumnConstraints hgrow="SOMETIMES" />
+            <ColumnConstraints hgrow="SOMETIMES" />
             </columnConstraints>
             <rowConstraints>
                 <RowConstraints vgrow="SOMETIMES" />
             </rowConstraints>
             <children>
-                <JFXButton fx:id="stopStreamingButton" alignment="CENTER" contentDisplay="CENTER" layoutX="137.0" layoutY="46.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="120.0" minWidth="120.0" mnemonicParsing="false" onMouseClicked="#startStreaming" text="%videochat.start" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
-                </JFXButton>
-                <JFXButton fx:id="klientButton" alignment="CENTER" contentDisplay="CENTER" layoutX="342.0" layoutY="46.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="120.0" minWidth="120.0" mnemonicParsing="false" onMouseClicked="#stopStreaming" text="%videochat.stop" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                <JFXButton fx:id="streamingButton" alignment="CENTER" contentDisplay="CENTER" layoutX="137.0" layoutY="46.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onAction="#startCamera" text="%videochat.start" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                 </JFXButton>
             </children>
             <padding>
