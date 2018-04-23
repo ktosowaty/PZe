@@ -16,7 +16,7 @@ public class StreamVideoSpecification implements StreamWebSocketSpecification {
 
     public StreamVideoSpecification(String clientId) {
         this.clientId = clientId;
-        String url = Config.getInstance().getApiUrl() + "/clients/list/" + clientId;
+        String url = Config.getInstance().getApiUrl() + "/clients/list/" + clientId + "?operator=";
         try {
             clientsListEndpoint = new ClientsListEndpoint(new URI(url));
         } catch (URISyntaxException e) {

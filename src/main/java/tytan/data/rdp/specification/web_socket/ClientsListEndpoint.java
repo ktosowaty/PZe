@@ -42,12 +42,23 @@ public class ClientsListEndpoint {
     }
 
     public void sendMessage(ByteBuffer message) {
-        String bytesString = message.toString();
-        this.userSession.getAsyncRemote().sendText(bytesString);
+//        String bytesString = message.array();
+        this.userSession.getAsyncRemote().sendText(byteBuffer2String(message, Charset.forName("UTF-8")));
     }
 
 
     public void addMessageHandler(MessageHandler msgHandler) {
         this.messageHandler = msgHandler;
+    }
+
+    public static String byteBuffer2String(ByteBuffer buf, Charset charset) {
+        byte[] bytes;
+        if (buf.hasArray()) {
+            bytes = buf.array();
+        } else {
+            buf.rewind();
+            bytes = new byte[buf.remaining()];
+        }
+        return new String(bytes, charset);
     }
 }

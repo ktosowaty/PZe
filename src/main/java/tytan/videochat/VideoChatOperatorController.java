@@ -92,7 +92,7 @@ public class VideoChatOperatorController implements Initializable {
     private Webcam selWebCam = null;
     private boolean stopCamera = false;
     private ObjectProperty<Image> imageProperty = new SimpleObjectProperty<Image>();
-    private StreamVideoSpecification streamVideoSpecification;
+    private StreamVideoSpecification streamVideoSpecification = new StreamVideoSpecification("Klient1");;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -104,7 +104,7 @@ public class VideoChatOperatorController implements Initializable {
             VideoChatOperatorSettingsController settings = loader.getController();
             settings.setVideoChat(this);
             clientWebSocketRepository.streamQuery(new CreateClientConnectionSpecification()).subscribe(onNext -> {
-                streamVideoSpecification = new StreamVideoSpecification("Klient1");
+//                streamVideoSpecification =
             }, error -> {
                 error.printStackTrace();
                 System.out.println("Getting exception: " + error.getMessage());
