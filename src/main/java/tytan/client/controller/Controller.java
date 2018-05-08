@@ -18,6 +18,11 @@ public class Controller extends AbstractController {
 	
 	private final static Logger LOGGER = Logger.getLogger(ClientMVC.class.getName());
 	private Map<String, AbstractModel> modelsMap;
+
+	public void setMeldunkiHandler(MeldunkiController meldunkiHandler) {
+		this.meldunkiHandler = meldunkiHandler;
+	}
+
 	private MeldunkiController meldunkiHandler;
 
 
@@ -35,8 +40,8 @@ public class Controller extends AbstractController {
 	
 	public void sendBrodcastMessage(Object messageContent) {
 		LOGGER.info("Sending brodcast message");
-		Message message = new Message("brodcast", usernick, messageContent);
-		((SendDataModel)modelsMap.get("sendDataModel")).sendData(message);
+		Message message = new Message("broadcast", usernick, messageContent);
+		((SendDataModel) modelsMap.get("sendDataModel")).sendData(message);
 	}
 	
 	
@@ -48,6 +53,11 @@ public class Controller extends AbstractController {
 
 	}
 
+	public void registerUser() {
+		Message message = new Message("empty", usernick, "empty");
+		LOGGER.info("Sending register message from " + usernick);
+		((SendDataModel) modelsMap.get("sendDataModel")).sendData(message);
+	}
 	@Override
 	public void propertyChange(PropertyChangeEvent evt) {
 		String propertyName = evt.getPropertyName();
@@ -57,7 +67,7 @@ public class Controller extends AbstractController {
 			Message message = (Message) evt.getNewValue();
 			String nickTo = message.getNickTo();
 			String messageContent = (String) message.getMessage();
-
+			meldunkiHandler.printMessage("Reviced message from " + nickTo);
 			if (nickTo.equals("addNewUser")) {
 				LOGGER.info("Adding new user");
 				((UsersListModel) modelsMap.get("userListModel")).addNewUser(message);

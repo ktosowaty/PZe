@@ -3,6 +3,7 @@
 <?import com.jfoenix.controls.JFXDrawer?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -20,6 +21,7 @@
                 </ImageView>
             </graphic>
         </Button>
-      <Button fx:id="sendButton" layoutX="267.0" layoutY="271.0" mnemonicParsing="false" onAction="#sendMessage" text="Send Meldunek" />
+      <Button fx:id="sendButton" layoutX="251.0" layoutY="329.0" mnemonicParsing="false" onAction="#sendMessage" text="Send Meldunek" />
+      <TextArea fx:id="messageField" layoutX="201.0" layoutY="63.0" prefHeight="200.0" prefWidth="200.0" />
     </children>
 </AnchorPane>

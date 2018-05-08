@@ -57,30 +57,38 @@ public class ConnectionHandler implements Runnable {
     private void setConnectionParameters() throws ClassNotFoundException, IOException {
 
         boolean isRegistered = true;
-        LOGGER.info("Seting connection parametrs");
+        LOGGER.info("Setting connection parametrs");
         do {
 
             Message registrationMessage = (Message) inputObject.readObject();
+            LOGGER.info("Registered new user " + registrationMessage.getNickFrom());
             setUserNick(registrationMessage.getNickFrom());
 
             isRegistered = loginUser(registrationMessage.getNickFrom(), outputObject);
-
             if (isRegistered == false)
                 outputObject.writeObject(new Message("empty", "empty", "wrongNick"));
 
             outputObject.flush();
 
         } while (isRegistered == false);
+
     }
 
     private void messageListenerAndSender() throws ClassNotFoundException, IOException {
         LOGGER.info("Waiting for client data...");
         do {
             Message clientMessageObject = (Message) inputObject.readObject();
+            LOGGER.info("Received new message from " +clientMessageObject.getNickFrom());
             String receiptNick = clientMessageObject.getNickTo();
             ObjectOutputStream recipientObjectOutputStream = usersOutputMap.get(receiptNick);
             try {
-                if (recipientObjectOutputStream != null) {
+                if (receiptNick.equals("broadcast") || clientMessageObject.getNickFrom().equals("broadcast")) {
+                    for (Map.Entry<String, ObjectOutputStream> userStream : usersOutputMap.entrySet()) {
+                        if (!userStream.getKey().equals(clientMessageObject.getNickFrom())) {
+                            userStream.getValue().writeObject(clientMessageObject);
+                        }
+                    }
+                } else if (recipientObjectOutputStream != null) {
                     recipientObjectOutputStream.writeObject(clientMessageObject);
                     recipientObjectOutputStream.flush();
                 }

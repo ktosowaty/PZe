@@ -10,11 +10,6 @@ import tytan.client.model.UsersListModel;
 import java.util.logging.FileHandler;
 import java.util.logging.Logger;
 
-import java.awt.*;
-import java.io.IOException;
-import java.util.logging.FileHandler;
-import java.util.logging.Logger;
-
 public class ClientMVC {
 	private final static Logger LOGGER = Logger.getLogger(ClientMVC.class.getName());
 	private final static String host = "localhost";
@@ -22,6 +17,7 @@ public class ClientMVC {
 	private SendDataModel sendDataModel;
 	public ReceiveDataModel receiveDataModel;
 	private Controller controller;
+	private UsersListModel userListModel;
 	
 	public ClientMVC() {
 
@@ -35,10 +31,14 @@ public class ClientMVC {
 			sendDataModel = new SendDataModel(connection);
 			controller.addModel("sendDataModel", sendDataModel);
 
+			userListModel = new UsersListModel();
+			controller.addModel("userListModel", userListModel);
+
 			receiveDataModel = new ReceiveDataModel(connection);
 			controller.addModel("receiveDataModel", receiveDataModel);
 			Thread thread = new Thread(receiveDataModel);
 			thread.start();
+			controller.registerUser();
 
         } catch (Exception e) {
             LOGGER.warning("Failed to start client");
