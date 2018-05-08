@@ -9,6 +9,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
+import tytan.client.ClientMVC;
 
 import java.io.IOException;
 import java.net.URL;
@@ -23,6 +24,8 @@ public class MeldunkiController implements Initializable {
     @FXML
     private Label meldunkiLabel;
 
+    ClientMVC client;
+
     public void initialize(URL location, ResourceBundle resources) {
         try {
             FXMLLoader loader = new FXMLLoader();
@@ -31,6 +34,7 @@ public class MeldunkiController implements Initializable {
             drawer.setSidePane(vBox);
             MeldunkiSettingsController settings = loader.getController();
             settings.setMeldunki(this);
+            client = new ClientMVC();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -50,5 +54,14 @@ public class MeldunkiController implements Initializable {
     private void drawerOpening(JFXDrawerEvent jfxDrawerEvent) {
         drawer.toFront();
         settingsButton.toFront();
+    }
+
+    @FXML
+    private void sendMessage() {
+        client.getController().sendMessageTo("test", "test");
+    }
+
+    public void printMessage() {
+
     }
 }
