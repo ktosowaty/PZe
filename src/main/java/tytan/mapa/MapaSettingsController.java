@@ -1,11 +1,16 @@
 package tytan.mapa;
 
+import com.jfoenix.controls.JFXSlider;
 import com.jfoenix.controls.JFXToggleButton;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.input.DragEvent;
 
 public class MapaSettingsController {
 
+    @FXML
+    public JFXSlider opacitySlider;
+    public JFXToggleButton fireLinesBtn;
     @FXML
     private JFXToggleButton visibleButton;
     @FXML
@@ -16,6 +21,9 @@ public class MapaSettingsController {
 
     public void setMapa(MapaController mapa) {
         this.mapa = mapa;
+    }
+
+    public MapaSettingsController() {
     }
 
     @FXML
@@ -42,6 +50,22 @@ public class MapaSettingsController {
             mapa.mapaModel.setPlaceVisable(true);
         } else {
             mapa.mapaModel.setPlaceVisable(false);
+        }
+    }
+
+    private void setCirclesOpacity(){
+
+    }
+
+    public void changeOpacity(DragEvent dragEvent) {
+//        mapa.mapaModel.
+    }
+
+    public void changeFireVisible(ActionEvent actionEvent) {
+        if (fireLinesBtn.isSelected()) {
+            mapa.mapaModel.setFireLinesVisable(true);
+        } else {
+            mapa.mapaModel.setFireLinesVisable(false);
         }
     }
 }

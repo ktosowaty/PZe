@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXSlider?>
 <?import com.jfoenix.controls.JFXToggleButton?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
@@ -11,6 +12,9 @@
         <JFXToggleButton fx:id="visibleButton" mnemonicParsing="false" onAction="#setVisibleMap" selected="true" text="%map.visibilityMap" toggleColor="#2e7d32" toggleLineColor="#78c285" />
       <JFXToggleButton fx:id="visibleLocationsBtn" mnemonicParsing="false" onAction="#setVisibleLocations" selected="true" text="Widocznosc ludzi" />
       <JFXToggleButton fx:id="visiblePlacesBtn" mnemonicParsing="false" onAction="#setVisiblePlaces" selected="true" text="Widocznosc miejsc" />
+      <JFXToggleButton fx:id="fireLinesBtn" mnemonicParsing="false" onAction="#changeFireVisible" selected="true" text="%map.visibilityFireLines" />
+      <Label text="\%map.opacity" />
+      <JFXSlider fx:id="opacitySlider" indicatorPosition="RIGHT" onDragDone="#changeOpacity" value="50.0" />
     </children>
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
