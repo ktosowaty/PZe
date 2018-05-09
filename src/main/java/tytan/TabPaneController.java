@@ -26,7 +26,7 @@ public class TabPaneController implements Initializable {
     private Tab tabMeldunki;
 
     public void initialize(URL location, ResourceBundle resources) {
-        show(resources, tabMapa, "Mapa");
+        show(resources, tabMapa, "Map");
         show(resources, tabChat, "Chat");
         show(resources, tabVideoChat, "VideoChat");
         show(resources, tabMeldunki, "Meldunki");
@@ -46,7 +46,7 @@ public class TabPaneController implements Initializable {
     public void setSelection(String name) {
         int x = 0;
         switch (name) {
-            case "Mapa":
+            case "Map":
                 x = 0;
                 break;
             case "Chat":

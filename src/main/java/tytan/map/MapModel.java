@@ -1,4 +1,4 @@
-package tytan.mapa;
+package tytan.map;
 
 import com.lynden.gmapsfx.GoogleMapView;
 import com.lynden.gmapsfx.javascript.event.GMapMouseEvent;
@@ -15,7 +15,7 @@ import netscape.javascript.JSObject;
 
 import java.util.ArrayList;
 
-public class MapaModel implements DirectionsServiceCallback {
+public class MapModel implements DirectionsServiceCallback {
     public GoogleMap googleMap;
     private GoogleMapView gmv;
     private ArrayList<Marker> locationMarkers;
@@ -26,12 +26,10 @@ public class MapaModel implements DirectionsServiceCallback {
     private boolean placeMarkersVisible;
     private DirectionsService directionsService;
     private DirectionsPane directionsPane;
-    ContextMenu contextMenu;
+    private ContextMenu contextMenu;
 
-    public MapaModel(GoogleMapView googleMapView) {
-        googleMapView.addMapInializedListener(() -> {
-            configureMap(googleMapView);
-        });
+    public MapModel(GoogleMapView googleMapView) {
+        googleMapView.addMapInializedListener(() -> configureMap(googleMapView));
         locationMarkersVisible = true;
         placeMarkersVisible = true;
         locationMarkers = new ArrayList<>();
@@ -42,7 +40,7 @@ public class MapaModel implements DirectionsServiceCallback {
         contextMenu.getItems().addAll(new MenuItem("bhgjh"), new MenuItem("sdf"));
     }
 
-    public void setLocationVisable(boolean visible) {
+    public void setLocationVisible(boolean visible) {
         if (!locationMarkers.isEmpty()) {
             locationMarkersVisible = visible;
             for (Marker m : locationMarkers) {
@@ -51,16 +49,18 @@ public class MapaModel implements DirectionsServiceCallback {
         }
     }
 
-    public void setPlaceVisable(boolean visable) {
-        placeMarkersVisible = visable;
+    public void setPlaceVisible(boolean visible) {
+        placeMarkersVisible = visible;
         if (!placeMarkers.isEmpty()) {
             for (Marker m : placeMarkers) {
-                m.setVisible(visable);
+                m.setVisible(visible);
             }
         }
     }
 
-    public void addDirection(String from, String to){
+    public void addRoute(String from, String to) {
+        directionsService = new DirectionsService();
+        directionsPane = gmv.getDirec();
         DirectionsRequest request = new DirectionsRequest(from, to, TravelModes.DRIVING);
         DirectionsRenderer directionsRenderer = new DirectionsRenderer(true, gmv.getMap(), directionsPane);
         directionsService.getRoute(request, this, directionsRenderer);
@@ -74,10 +74,8 @@ public class MapaModel implements DirectionsServiceCallback {
                 .visible(locationMarkersVisible));
         googleMap.addMarker(marker);
         locationMarkers.add(marker);
-        Circle circle = addCircle(latLong);
-        googleMap.addUIEventHandler(marker, UIEventType.mouseover, (JSObject obj) -> {
-            circle.setVisible(true);
-        });
+        Circle circle = addCircleArea(latLong,300);
+        googleMap.addUIEventHandler(marker, UIEventType.mouseover, (JSObject obj) -> circle.setVisible(true));
         googleMap.addUIEventHandler(marker, UIEventType.mouseout, (JSObject obj) -> {
             circle.setVisible(false);
         });
@@ -93,15 +91,15 @@ public class MapaModel implements DirectionsServiceCallback {
         placeMarkers.add(marker);
     }
 
-    public Circle addCircle(LatLong latLong) {
-        CircleOptions circleOptions = new CircleOptions().center(latLong).radius(200).visible(false).fillOpacity(0.5);
+    public Circle addCircleArea(LatLong latLong, int radius) {
+        CircleOptions circleOptions = new CircleOptions().center(latLong).radius(radius).visible(false).fillOpacity(0.5);
         Circle circle = new Circle(circleOptions);
         circles.add(circle);
         googleMap.addMapShape(circle);
         return circle;
     }
 
-    public void addFireSector(LatLong l1, LatLong l2) {
+    public void addFireLine(LatLong l1, LatLong l2) {
         PolylineOptions line_opt;
         Polyline line;
 
@@ -120,10 +118,10 @@ public class MapaModel implements DirectionsServiceCallback {
         googleMap.addMapShape(line);
     }
 
-    public void setFireLinesVisable(boolean visable) {
+    public void setFireLinesVisible(boolean visible) {
         if (!fireLines.isEmpty()) {
             for (Polyline p : fireLines) {
-                p.setVisible(visable);
+                p.setVisible(visible);
             }
         }
     }
@@ -134,27 +132,24 @@ public class MapaModel implements DirectionsServiceCallback {
         mapOptions.center(new LatLong(52.13, 21.00))
                 .mapType(MapTypeIdEnum.ROADMAP)
                 .zoom(10)
-                .streetViewControl(false).overviewMapControl(false);
+                .overviewMapControl(false)
+                .panControl(false)
+                .streetViewControl(false)
+                .mapType(MapTypeIdEnum.TERRAIN);
         googleMapView.setKey("AIzaSyC5U5zdeCQ-i0JjG6TV1lbiWiA98LASJ2E");
         googleMap = googleMapView.createMap(mapOptions, false);
-        googleMap.addMouseEventHandler(UIEventType.dblclick, (GMapMouseEvent event) -> {
-            LatLong latLong = event.getLatLong();
-            addLocationMarker(latLong);
-        });
-        googleMap.addMouseEventHandler(UIEventType.rightclick, (GMapMouseEvent event) -> {
-            LatLong latLong = event.getLatLong();
-            addPlaceMarker(latLong);
-        });
+//        googleMap.addMouseEventHandler(UIEventType.dblclick, (GMapMouseEvent event) -> {
+//            LatLong latLong = event.getLatLong();
+//            addLocationMarker(latLong);
+//        });
+//        googleMap.addMouseEventHandler(UIEventType.rightclick, (GMapMouseEvent event) -> {
+//            LatLong latLong = event.getLatLong();
+//            addPlaceMarker(latLong);
+//        });
         addLocationMarker(new LatLong(52.13, 21.00));
         addPlaceMarker(new LatLong(52.20, 21.10));
-        addFireSector(new LatLong(52.13, 21.00),new LatLong(52.20, 21.10));
-        addDirection("Warsaw","Berlin");
-    }
-
-    public void setCirclesOpacity() {
-        for (Circle c : circles) {
-
-        }
+        addFireLine(new LatLong(52.13, 21.00), new LatLong(52.20, 21.10));
+        addRoute("Warszawa, Wojskowa Akademia Techniczna", "Warszawa, Dworzec Zachodni");
     }
 
     @Override
