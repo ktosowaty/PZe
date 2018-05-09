@@ -1,4 +1,4 @@
-package tytan.mapa;
+package tytan.map;
 
 import com.jfoenix.controls.JFXDrawer;
 import com.jfoenix.controls.events.JFXDrawerEvent;
@@ -14,9 +14,9 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class MapaController implements Initializable {
+public class MapController implements Initializable {
 
-    MapaModel mapaModel;
+    MapModel mapModel;
     @FXML
     private GoogleMapView googleMapView;
     @FXML
@@ -28,11 +28,11 @@ public class MapaController implements Initializable {
         try {
             FXMLLoader loader = new FXMLLoader();
             loader.setResources(resources);
-            Pane vBox = loader.load(getClass().getResource("/fxml/mapa/MapaSettings.fxml").openStream());
+            Pane vBox = loader.load(getClass().getResource("/fxml/map/MapSettings.fxml").openStream());
             drawer.setSidePane(vBox);
-            MapaSettingsController settings = loader.getController();
-            settings.setMapa(this);
-            mapaModel = new MapaModel(googleMapView);
+            MapSettingsController settings = loader.getController();
+            settings.setMap(this);
+            mapModel = new MapModel(googleMapView);
         } catch (IOException e) {
             e.printStackTrace();
         }

@@ -17,7 +17,7 @@
                 <Tab fx:id="tabMapa">
                     <graphic>
                         <VBox alignment="CENTER">
-                            <Label text="%menu.mapa"/>
+                            <Label text="%menu.map"/>
                             <ImageView>
                                 <image>
                                     <Image url="@/images/map_24.png"/>

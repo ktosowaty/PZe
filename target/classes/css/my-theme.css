@@ -56,4 +56,9 @@
     -fx-background-color: transparent;
 }
 
+.jfx-toggle-button {
+    -jfx-toggle-color: #2e7d32;
+    -jfx-toggle-line-color:#78c285;
+}
+
 
