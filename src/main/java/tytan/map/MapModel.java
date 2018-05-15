@@ -92,7 +92,7 @@ public class MapModel implements DirectionsServiceCallback {
                 .animation(Animation.DROP)
                 .icon("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADeSURBVEhL3dU7CsJAGATgrQTFAyh4HhVP4+sAdjYWnsGj+ajs1U5nIIFlmcFk3TQOfCAy/78hhhj+Lgu4wjsTZ+dgcwE12MYZbNRADhtVpgcsYVRZwxNUl2xUmVaQhoeoLtmoMvGq04xBdclGlYnL0hQ9QN2iLagu2agy8UfmPedV0wZeoLpko8o5bFQ5h01avMMBZjCBfoWfp7CHG6RzNnHpBEP4lh4cIZ61iUtNltcZQDxrE5d+YaPKOWw6f13zz4IFNdgEZ/nEtc4O0mX8rmjiQ4ovr8PFnS3PSAgf2xsPkja7LTgAAAAASUVORK5CYII=")
                 .visible(locationMarkersVisible)
-                .title("My location"));
+                .title("Moja pozycja"));
         googleMap.addMarker(personalMarker);
         locationMarkers.add(personalMarker);
     }
