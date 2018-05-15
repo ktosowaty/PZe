@@ -99,6 +99,7 @@
   <thread>14</thread>
   <message>Sending register message from 8164</message>
 </record>
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE log SYSTEM "logger.dtd">
 <log>
@@ -875,3 +876,4 @@
   <thread>14</thread>
   <message>Sending brodcast message</message>
 </record>
+
