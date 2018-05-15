@@ -28,18 +28,10 @@ public class MeldunkiController implements Initializable {
     private Label meldunkiLabel;
     @FXML
     private TextArea messageField;
-    @FXML
-    private ChoiceBox reportChoice;
 
     private ClientMVC client;
 
     public void initialize(URL location, ResourceBundle resources) {
-        reportChoice.getItems().addAll("Mapa", "Chat", "Meldunki");
-        reportChoice.getSelectionModel().selectedItemProperty().addListener(
-                (observable, oldValue, newValue) -> {
-                    MenuController.tabPaneController.setSelection(newValue.toString());
-                }
-        );
 
         try {
             FXMLLoader loader = new FXMLLoader();
@@ -48,8 +40,8 @@ public class MeldunkiController implements Initializable {
             drawer.setSidePane(vBox);
             MeldunkiSettingsController settings = loader.getController();
             settings.setMeldunki(this);
-            client = new ClientMVC();
-            client.getController().setMeldunkiHandler(this);
+            //client = new ClientMVC();
+            //client.getController().setMeldunkiHandler(this);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -75,6 +67,11 @@ public class MeldunkiController implements Initializable {
     private void sendMessage() {
 
         client.getController().sendBrodcastMessage("test");
+    }
+    
+    @FXML
+    private void test() {
+    	 MenuController.tabPaneController.setSelection("Map");
     }
 
     public void printMessage(String text) {

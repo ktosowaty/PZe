@@ -99,3 +99,18 @@
   <thread>14</thread>
   <message>Sending register message from 8164</message>
 </record>
+<?xml version="1.0" encoding="windows-1250" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2018-05-15T10:43:25</date>
+  <millis>1526373805569</millis>
+  <sequence>0</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>WARNING</level>
+  <class>tytan.client.ClientMVC</class>
+  <method>&lt;init&gt;</method>
+  <thread>12</thread>
+  <message>Failed to start client</message>
+</record>
+</log>

@@ -2,6 +2,18 @@
     -fx-background-color: #FFFFFF;
 }
 
+#my {
+    -fx-font-size: 28px;
+    -jfx-button-type: RAISED;
+    -fx-background-color: rgb(66, 70, 45);
+    -fx-font-weight: bold;
+    -fx-pref-width: 200;
+    -fx-pref-height: 200;
+    -fx-text-fill: WHITE;
+    -fx-background-image: url("../images/camo50.jpg");
+}
+
+
 .tab-header-background {
     -fx-background-image: url("../images/camo3.jpg");
 }
