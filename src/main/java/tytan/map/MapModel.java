@@ -13,7 +13,6 @@ import javafx.scene.control.MenuItem;
 import netscape.javascript.JSObject;
 import tytan.Main;
 import tytan.meldunki.MeldunkiController;
-import tytan.meldunki.MeldunkiPersonalLocation;
 import tytan.meldunki.MeldunkiType;
 
 import java.util.ArrayList;
@@ -175,9 +174,14 @@ public class MapModel implements DirectionsServiceCallback {
             switch (MeldunkiController.meldunkiType) {
                 case PersonalLocation:
                     latLong = me.getLatLong();
+                    String msg = MeldunkiType.valueOf(MeldunkiController.meldunkiType.toString()) + ";" +
+                            me.getLatLong().getLatitude() + ";" + me.getLatLong().getLongitude();
                     System.out.println("Latitude: " + latLong.getLatitude());
                     System.out.println("Longitude: " + latLong.getLongitude());
-                    MeldunkiPersonalLocation.setPersonalLocation(googleMap);
+                    addPersonalLocationMarker(latLong);
+                    Main.getClient().getController().sendBrodcastMessage(msg);
+                    MeldunkiController.meldunkiType=null;
+                   // MeldunkiPersonalLocation.setPersonalLocation(googleMap);
                     break;
                 case FireSupport:
                     String message = MeldunkiType.valueOf(MeldunkiController.meldunkiType.toString()) + ";" +

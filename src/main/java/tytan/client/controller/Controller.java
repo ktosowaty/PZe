@@ -6,6 +6,7 @@ import tytan.client.ClientMVC;
 import tytan.client.model.AbstractModel;
 import tytan.client.model.SendDataModel;
 import tytan.map.MapController;
+import tytan.map.MapModel;
 import tytan.meldunki.MeldunkiController;
 import tytan.meldunki.MeldunkiType;
 import tytan.serwer.beans.Message;
@@ -18,11 +19,12 @@ import java.util.logging.Logger;
 
 public class Controller extends AbstractController {
 	private final String usernick;
-	
+	public double lat, lng;
+
 	private final static Logger LOGGER = Logger.getLogger(ClientMVC.class.getName());
 	private Map<String, AbstractModel> modelsMap;
 	private MeldunkiController meldunkiController;
-	private  MapController mapController;
+	private MapController mapController;
 
 	public void setMeldunkiController(MeldunkiController meldunkiController) {
 		this.meldunkiController = meldunkiController;
@@ -34,7 +36,7 @@ public class Controller extends AbstractController {
 
 	public Controller() {
 		Random rand = new Random();
-		modelsMap = new HashMap<String, AbstractModel>();		
+		modelsMap = new HashMap<String, AbstractModel>();
 		usernick = new Integer(rand.nextInt(10000)).toString();
 	}
 
@@ -43,14 +45,13 @@ public class Controller extends AbstractController {
 		modelsMap.put(name, model);
 		model.addPropertyChangeListener(this);
 	}
-	
+
 	public void sendBrodcastMessage(Object messageContent) {
 		LOGGER.info("Sending brodcast message");
 		Message message = new Message("broadcast", usernick, messageContent);
 		((SendDataModel) modelsMap.get("sendDataModel")).sendData(message);
 	}
-	
-	
+
 	public void sendMessageTo(Object messageContent, String messageRecipient) {
 
 		Message message = new Message(messageRecipient, usernick, messageContent);
@@ -81,23 +82,27 @@ public class Controller extends AbstractController {
 				MeldunkiType meldunkiType = MeldunkiType.valueOf(messageSplit[0]);
 
 				switch (meldunkiType) {
-					case FireSupport:
-						double lat = Double.parseDouble(messageSplit[1]);
-						double lng = Double.parseDouble(messageSplit[2]);
-						LOGGER.info("Placing requirement of fire support");
-						Platform.runLater( () -> mapController.addLocationMarker(new LatLong(lat, lng)));
+				case FireSupport:
+					lat = Double.parseDouble(messageSplit[1]);
+					lng = Double.parseDouble(messageSplit[2]);
+					LOGGER.info("Placing requirement of fire support");
+					Platform.runLater(() -> mapController.addLocationMarker(new LatLong(lat, lng)));
 
-						break;
-					case PersonalLocation:
-						break;
-					case MedicalHelp:
-						break;
-					case EnemyForce:
-						break;
+					break;
+				case PersonalLocation:
+					lat = Double.parseDouble(messageSplit[1]);
+					lng = Double.parseDouble(messageSplit[2]);
+					Platform.runLater(() -> MapModel.addFriendlyLocationMarker(new LatLong(lat, lng)));
+
+					break;
+				case MedicalHelp:
+					break;
+				case EnemyForce:
+					break;
 				}
-			} catch(Exception e) {
+			} catch (Exception e) {
 				LOGGER.warning("Wrong format of message");
-				//e.printStackTrace();
+				// e.printStackTrace();
 			}
 
 		}
