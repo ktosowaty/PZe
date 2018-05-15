@@ -80,7 +80,11 @@ public class MeldunkiController implements Initializable {
     	 MenuController.tabPaneController.setSelection("Map");
     	 MeldunkiPersonalLocation.personal=true;
     }
-
+    @FXML
+    private void pomocMedyczna() {
+    	 MenuController.tabPaneController.setSelection("Map");
+    	 MeldunkiMedicalHelpLocation.medHelp=true;
+    }
 
     public void printMessage(String text) {
         messageField.setText(text + "\n" + messageField.getText());

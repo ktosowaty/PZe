@@ -13,6 +13,7 @@ import javafx.scene.control.MenuItem;
 import netscape.javascript.JSObject;
 
 import tytan.Main;
+import tytan.meldunki.MeldunkiMedicalHelpLocation;
 import tytan.meldunki.MeldunkiPersonalLocation;
 
 
@@ -32,6 +33,7 @@ public class MapModel implements DirectionsServiceCallback {
     private ContextMenu contextMenu;
     public static LatLong latLong;
     public static Marker personalMarker;
+    public static Marker medicalHelpMarker;
 
     public MapModel(GoogleMapView googleMapView) {
         googleMapView.addMapInializedListener(() -> configureMap(googleMapView));
@@ -97,6 +99,18 @@ public class MapModel implements DirectionsServiceCallback {
                 .title("Moja pozycja"));
         googleMap.addMarker(personalMarker);
         locationMarkers.add(personalMarker);
+    }
+    public static void addMedicalHelpMarker(LatLong latLong) {
+    	if(medicalHelpMarker != null) googleMap.removeMarker(personalMarker);
+    	
+        medicalHelpMarker = new Marker(new MarkerOptions()
+                .position(latLong)
+                .animation(Animation.DROP)
+                .icon("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABUSURBVDhPY6AWaAXin0D8nwgMUtcCxCgAJCgIYRIEIHUg9SgAZDIpAEM9LgOIFh9cBoDYuDAMILPBAEMACogWH7wG4AIY6ilOiaTmhSYgHhSAgQEAVJA67J3A5PkAAAAASUVORK5CYII=")
+                .visible(locationMarkersVisible)
+                .title("Pomoc medyczna"));
+        googleMap.addMarker(medicalHelpMarker);
+        locationMarkers.add(medicalHelpMarker);
     }
     public static void addFriendlyLocationMarker(LatLong latLong) {
         Marker marker = new Marker(new MarkerOptions()
@@ -175,6 +189,14 @@ public class MapModel implements DirectionsServiceCallback {
       	   MeldunkiPersonalLocation.setPersonalLocation(googleMap);
 
         	}
+            else  if(MeldunkiMedicalHelpLocation.medHelp==true) {
+           	   latLong = me.getLatLong();
+
+           	   System.out.println("Latitude: " + latLong.getLatitude());
+           	   System.out.println("Longitude: " + latLong.getLongitude());
+           	   MeldunkiMedicalHelpLocation.setMedicalHelpLocation(googleMap);
+
+             	}
       	   
       	});
 
