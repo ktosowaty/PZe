@@ -14,6 +14,7 @@ import javafx.scene.layout.Pane;
 import tytan.Main;
 import tytan.MenuController;
 import tytan.client.ClientMVC;
+import tytan.map.MapModel;
 
 import java.io.IOException;
 import java.net.URL;
@@ -83,6 +84,8 @@ public class MeldunkiController implements Initializable {
     @FXML
     private void pomocMedyczna() {
     	 MenuController.tabPaneController.setSelection("Map");
+    	 MapModel.googleMap.removeMarkers(MapModel.medicalHelpMarkerList);
+    	 MapModel.medicalHelpMarkerList.clear();
     	 MeldunkiMedicalHelpLocation.medHelp=true;
     }
 

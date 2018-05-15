@@ -12,7 +12,7 @@ public class MeldunkiMedicalHelpLocation {
 		//gMap.clearMarkers();
 		if(medHelp==true) {
 		MapModel.addMedicalHelpMarker(MapModel.latLong);
-		medHelp=false;
+		//medHelp=false;
 		}
 
 	}

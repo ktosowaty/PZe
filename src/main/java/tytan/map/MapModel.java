@@ -18,6 +18,7 @@ import tytan.meldunki.MeldunkiPersonalLocation;
 
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 
 public class MapModel implements DirectionsServiceCallback {
     public static GoogleMap googleMap;
@@ -33,8 +34,8 @@ public class MapModel implements DirectionsServiceCallback {
     private ContextMenu contextMenu;
     public static LatLong latLong;
     public static Marker personalMarker;
-    public static Marker medicalHelpMarker;
-
+    public static LinkedList<Marker> medicalHelpMarkerList=new LinkedList<Marker>();
+    
     public MapModel(GoogleMapView googleMapView) {
         googleMapView.addMapInializedListener(() -> configureMap(googleMapView));
         locationMarkersVisible = true;
@@ -101,16 +102,17 @@ public class MapModel implements DirectionsServiceCallback {
         locationMarkers.add(personalMarker);
     }
     public static void addMedicalHelpMarker(LatLong latLong) {
-    	if(medicalHelpMarker != null) googleMap.removeMarker(medicalHelpMarker);
+    	//if(medicalHelpMarker != null) googleMap.removeMarker(medicalHelpMarker);
     	
-        medicalHelpMarker = new Marker(new MarkerOptions()
+        medicalHelpMarkerList.add(new Marker(new MarkerOptions()
                 .position(latLong)
                 .animation(Animation.DROP)
                 .icon("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABUSURBVDhPY6AWaAXin0D8nwgMUtcCxCgAJCgIYRIEIHUg9SgAZDIpAEM9LgOIFh9cBoDYuDAMILPBAEMACogWH7wG4AIY6ilOiaTmhSYgHhSAgQEAVJA67J3A5PkAAAAASUVORK5CYII=")
                 .visible(locationMarkersVisible)
-                .title("Pomoc medyczna"));
-        googleMap.addMarker(medicalHelpMarker);
-        locationMarkers.add(medicalHelpMarker);
+                .title("Pomoc medyczna")));
+        for(Marker m : medicalHelpMarkerList)
+        googleMap.addMarker(m);
+        locationMarkers.addAll(medicalHelpMarkerList);
     }
     public static void addFriendlyLocationMarker(LatLong latLong) {
         Marker marker = new Marker(new MarkerOptions()

@@ -1471,3 +1471,476 @@
   <thread>16</thread>
   <message>Showing message from 8011</message>
 </record>
+<?xml version="1.0" encoding="windows-1250" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2018-05-15T13:36:01</date>
+  <millis>1526384161343</millis>
+  <sequence>0</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>registerUser</method>
+  <thread>13</thread>
+  <message>Sending register message from 6230</message>
+</record>
+<record>
+  <date>2018-05-15T13:36:04</date>
+  <millis>1526384164451</millis>
+  <sequence>1</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>16</thread>
+  <message>Adding new user</message>
+</record>
+<record>
+  <date>2018-05-15T13:36:36</date>
+  <millis>1526384196498</millis>
+  <sequence>2</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>16</thread>
+  <message>Showing message from 148</message>
+</record>
+<record>
+  <date>2018-05-15T13:36:45</date>
+  <millis>1526384205969</millis>
+  <sequence>3</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>16</thread>
+  <message>Showing message from 148</message>
+</record>
+<record>
+  <date>2018-05-15T13:36:52</date>
+  <millis>1526384212130</millis>
+  <sequence>4</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>sendBrodcastMessage</method>
+  <thread>13</thread>
+  <message>Sending brodcast message</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1250" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2018-05-15T13:51:49</date>
+  <millis>1526385109241</millis>
+  <sequence>0</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>registerUser</method>
+  <thread>13</thread>
+  <message>Sending register message from 7027</message>
+</record>
+<record>
+  <date>2018-05-15T13:51:55</date>
+  <millis>1526385115090</millis>
+  <sequence>1</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>sendBrodcastMessage</method>
+  <thread>13</thread>
+  <message>Sending brodcast message</message>
+</record>
+<record>
+  <date>2018-05-15T13:51:55</date>
+  <millis>1526385115792</millis>
+  <sequence>2</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>sendBrodcastMessage</method>
+  <thread>13</thread>
+  <message>Sending brodcast message</message>
+</record>
+<record>
+  <date>2018-05-15T13:51:56</date>
+  <millis>1526385116603</millis>
+  <sequence>3</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>sendBrodcastMessage</method>
+  <thread>13</thread>
+  <message>Sending brodcast message</message>
+</record>
+<record>
+  <date>2018-05-15T13:52:02</date>
+  <millis>1526385122552</millis>
+  <sequence>4</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>sendBrodcastMessage</method>
+  <thread>13</thread>
+  <message>Sending brodcast message</message>
+</record>
+<record>
+  <date>2018-05-15T13:52:03</date>
+  <millis>1526385123121</millis>
+  <sequence>5</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>sendBrodcastMessage</method>
+  <thread>13</thread>
+  <message>Sending brodcast message</message>
+</record>
+<record>
+  <date>2018-05-15T13:52:03</date>
+  <millis>1526385123466</millis>
+  <sequence>6</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>sendBrodcastMessage</method>
+  <thread>13</thread>
+  <message>Sending brodcast message</message>
+</record>
+<record>
+  <date>2018-05-15T13:52:05</date>
+  <millis>1526385125447</millis>
+  <sequence>7</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>sendBrodcastMessage</method>
+  <thread>13</thread>
+  <message>Sending brodcast message</message>
+</record>
+<record>
+  <date>2018-05-15T13:52:05</date>
+  <millis>1526385125877</millis>
+  <sequence>8</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>sendBrodcastMessage</method>
+  <thread>13</thread>
+  <message>Sending brodcast message</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1250" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2018-05-15T13:55:53</date>
+  <millis>1526385353254</millis>
+  <sequence>0</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>registerUser</method>
+  <thread>13</thread>
+  <message>Sending register message from 4225</message>
+</record>
+<record>
+  <date>2018-05-15T13:55:53</date>
+  <millis>1526385353322</millis>
+  <sequence>1</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>16</thread>
+  <message>Adding new user</message>
+</record>
+<record>
+  <date>2018-05-15T13:55:53</date>
+  <millis>1526385353324</millis>
+  <sequence>2</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>16</thread>
+  <message>User removed from list model</message>
+</record>
+<record>
+  <date>2018-05-15T13:55:53</date>
+  <millis>1526385353328</millis>
+  <sequence>3</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>16</thread>
+  <message>User removed from list model</message>
+</record>
+<record>
+  <date>2018-05-15T13:55:58</date>
+  <millis>1526385358117</millis>
+  <sequence>4</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>sendBrodcastMessage</method>
+  <thread>13</thread>
+  <message>Sending brodcast message</message>
+</record>
+<record>
+  <date>2018-05-15T13:55:59</date>
+  <millis>1526385359391</millis>
+  <sequence>5</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>sendBrodcastMessage</method>
+  <thread>13</thread>
+  <message>Sending brodcast message</message>
+</record>
+<record>
+  <date>2018-05-15T13:56:01</date>
+  <millis>1526385361537</millis>
+  <sequence>6</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>sendBrodcastMessage</method>
+  <thread>13</thread>
+  <message>Sending brodcast message</message>
+</record>
+<record>
+  <date>2018-05-15T13:56:03</date>
+  <millis>1526385363958</millis>
+  <sequence>7</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>sendBrodcastMessage</method>
+  <thread>13</thread>
+  <message>Sending brodcast message</message>
+</record>
+<record>
+  <date>2018-05-15T13:56:04</date>
+  <millis>1526385364330</millis>
+  <sequence>8</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>sendBrodcastMessage</method>
+  <thread>13</thread>
+  <message>Sending brodcast message</message>
+</record>
+<record>
+  <date>2018-05-15T13:56:04</date>
+  <millis>1526385364670</millis>
+  <sequence>9</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>sendBrodcastMessage</method>
+  <thread>13</thread>
+  <message>Sending brodcast message</message>
+</record>
+<record>
+  <date>2018-05-15T13:56:06</date>
+  <millis>1526385366732</millis>
+  <sequence>10</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>sendBrodcastMessage</method>
+  <thread>13</thread>
+  <message>Sending brodcast message</message>
+</record>
+<record>
+  <date>2018-05-15T13:56:07</date>
+  <millis>1526385367070</millis>
+  <sequence>11</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>sendBrodcastMessage</method>
+  <thread>13</thread>
+  <message>Sending brodcast message</message>
+</record>
+<record>
+  <date>2018-05-15T13:56:07</date>
+  <millis>1526385367445</millis>
+  <sequence>12</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>sendBrodcastMessage</method>
+  <thread>13</thread>
+  <message>Sending brodcast message</message>
+</record>
+<record>
+  <date>2018-05-15T13:56:08</date>
+  <millis>1526385368463</millis>
+  <sequence>13</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>sendBrodcastMessage</method>
+  <thread>13</thread>
+  <message>Sending brodcast message</message>
+</record>
+<record>
+  <date>2018-05-15T13:56:09</date>
+  <millis>1526385369478</millis>
+  <sequence>14</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>sendBrodcastMessage</method>
+  <thread>13</thread>
+  <message>Sending brodcast message</message>
+</record>
+<record>
+  <date>2018-05-15T13:56:12</date>
+  <millis>1526385372038</millis>
+  <sequence>15</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>sendBrodcastMessage</method>
+  <thread>13</thread>
+  <message>Sending brodcast message</message>
+</record>
+<record>
+  <date>2018-05-15T13:56:12</date>
+  <millis>1526385372408</millis>
+  <sequence>16</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>sendBrodcastMessage</method>
+  <thread>13</thread>
+  <message>Sending brodcast message</message>
+</record>
+<record>
+  <date>2018-05-15T13:56:12</date>
+  <millis>1526385372739</millis>
+  <sequence>17</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>sendBrodcastMessage</method>
+  <thread>13</thread>
+  <message>Sending brodcast message</message>
+</record>
+<record>
+  <date>2018-05-15T13:56:14</date>
+  <millis>1526385374645</millis>
+  <sequence>18</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>sendBrodcastMessage</method>
+  <thread>13</thread>
+  <message>Sending brodcast message</message>
+</record>
+<record>
+  <date>2018-05-15T13:56:15</date>
+  <millis>1526385375205</millis>
+  <sequence>19</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>sendBrodcastMessage</method>
+  <thread>13</thread>
+  <message>Sending brodcast message</message>
+</record>
+<record>
+  <date>2018-05-15T13:56:15</date>
+  <millis>1526385375612</millis>
+  <sequence>20</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>sendBrodcastMessage</method>
+  <thread>13</thread>
+  <message>Sending brodcast message</message>
+</record>
+<record>
+  <date>2018-05-15T13:56:15</date>
+  <millis>1526385375977</millis>
+  <sequence>21</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>sendBrodcastMessage</method>
+  <thread>13</thread>
+  <message>Sending brodcast message</message>
+</record>
+<record>
+  <date>2018-05-15T13:56:16</date>
+  <millis>1526385376335</millis>
+  <sequence>22</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>sendBrodcastMessage</method>
+  <thread>13</thread>
+  <message>Sending brodcast message</message>
+</record>
+<record>
+  <date>2018-05-15T13:56:16</date>
+  <millis>1526385376687</millis>
+  <sequence>23</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>sendBrodcastMessage</method>
+  <thread>13</thread>
+  <message>Sending brodcast message</message>
+</record>
+<record>
+  <date>2018-05-15T13:56:17</date>
+  <millis>1526385377157</millis>
+  <sequence>24</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>sendBrodcastMessage</method>
+  <thread>13</thread>
+  <message>Sending brodcast message</message>
+</record>
+<record>
+  <date>2018-05-15T13:56:17</date>
+  <millis>1526385377488</millis>
+  <sequence>25</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>sendBrodcastMessage</method>
+  <thread>13</thread>
+  <message>Sending brodcast message</message>
+</record>
+<record>
+  <date>2018-05-15T13:56:17</date>
+  <millis>1526385377844</millis>
+  <sequence>26</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>sendBrodcastMessage</method>
+  <thread>13</thread>
+  <message>Sending brodcast message</message>
+</record>
+<record>
+  <date>2018-05-15T13:56:18</date>
+  <millis>1526385378210</millis>
+  <sequence>27</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>sendBrodcastMessage</method>
+  <thread>13</thread>
+  <message>Sending brodcast message</message>
+</record>
