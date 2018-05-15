@@ -11,8 +11,8 @@ public class MeldunkiPersonalLocation {
 		
 		//gMap.clearMarkers();
 		if(personal==true) {
-		MapModel.addPersonalLocationMarker(MapModel.latLong);
-		personal=false;
+			MapModel.addPersonalLocationMarker(MapModel.latLong);
+			personal=false;
 		}
 
 	}

@@ -6,9 +6,6 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextArea;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import tytan.Main;
@@ -19,18 +16,22 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+
 public class MeldunkiController implements Initializable {
 
     @FXML
     private Button settingsButton;
     @FXML
     private JFXDrawer drawer;
-    @FXML
-    private Label meldunkiLabel;
-    @FXML
-    private TextArea messageField;
 
     private ClientMVC client;
+
+    public static MeldunkiType meldunkiType;
+
+    public MeldunkiController() {
+        client = Main.getClient();
+        client.getController().setMeldunkiController(this);
+    }
 
     public void initialize(URL location, ResourceBundle resources) {
 
@@ -41,8 +42,6 @@ public class MeldunkiController implements Initializable {
             drawer.setSidePane(vBox);
             MeldunkiSettingsController settings = loader.getController();
             settings.setMeldunki(this);
-            client = Main.getClient();
-            client.getController().setMeldunkiHandler(this);
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -66,23 +65,27 @@ public class MeldunkiController implements Initializable {
     }
 
     @FXML
-    private void sendMessage() {
-
-        client.getController().sendBrodcastMessage("test");
+    private void personalLocation() {
+        meldunkiType = MeldunkiType.PersonalLocation;
+        MenuController.tabPaneController.setSelection("Map");
     }
-    
+
     @FXML
-    private void test() {
-    	 MenuController.tabPaneController.setSelection("Map");
+    private void fireSupport() {
+        meldunkiType = MeldunkiType.FireSupport;
+        MenuController.tabPaneController.setSelection("Map");
     }
+
     @FXML
-    private void wlasnaPozycja() {
-    	 MenuController.tabPaneController.setSelection("Map");
-    	 MeldunkiPersonalLocation.personal=true;
+    private void medicalHelp() {
+        meldunkiType = MeldunkiType.MedicalHelp;
+        MenuController.tabPaneController.setSelection("Map");
     }
 
-
-    public void printMessage(String text) {
-        messageField.setText(text + "\n" + messageField.getText());
+    @FXML
+    private void enemyForce() {
+        meldunkiType = MeldunkiType.EnemyForce;
+        MenuController.tabPaneController.setSelection("Map");
     }
+
 }

@@ -877,3 +877,1409 @@
   <message>Sending brodcast message</message>
 </record>
 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2018-05-15T12:14:29</date>
+  <millis>1526379269090</millis>
+  <sequence>0</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>registerUser</method>
+  <thread>14</thread>
+  <message>Sending register message from 1075</message>
+</record>
+<record>
+  <date>2018-05-15T12:14:38</date>
+  <millis>1526379278006</millis>
+  <sequence>12</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>sendBrodcastMessage</method>
+  <thread>14</thread>
+  <message>Sending brodcast message</message>
+</record>
+<record>
+  <date>2018-05-15T12:14:55</date>
+  <millis>1526379295291</millis>
+  <sequence>13</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>sendBrodcastMessage</method>
+  <thread>14</thread>
+  <message>Sending brodcast message</message>
+</record>
+<record>
+  <date>2018-05-15T12:14:56</date>
+  <millis>1526379296386</millis>
+  <sequence>14</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>sendBrodcastMessage</method>
+  <thread>14</thread>
+  <message>Sending brodcast message</message>
+</record>
+<record>
+  <date>2018-05-15T12:14:57</date>
+  <millis>1526379297593</millis>
+  <sequence>15</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>sendBrodcastMessage</method>
+  <thread>14</thread>
+  <message>Sending brodcast message</message>
+</record>
+<record>
+  <date>2018-05-15T12:14:58</date>
+  <millis>1526379298175</millis>
+  <sequence>16</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>sendBrodcastMessage</method>
+  <thread>14</thread>
+  <message>Sending brodcast message</message>
+</record>
+<record>
+  <date>2018-05-15T12:15:03</date>
+  <millis>1526379303899</millis>
+  <sequence>17</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>sendBrodcastMessage</method>
+  <thread>14</thread>
+  <message>Sending brodcast message</message>
+</record>
+<record>
+  <date>2018-05-15T12:15:04</date>
+  <millis>1526379304410</millis>
+  <sequence>18</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>sendBrodcastMessage</method>
+  <thread>14</thread>
+  <message>Sending brodcast message</message>
+</record>
+<record>
+  <date>2018-05-15T12:15:04</date>
+  <millis>1526379304783</millis>
+  <sequence>19</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>sendBrodcastMessage</method>
+  <thread>14</thread>
+  <message>Sending brodcast message</message>
+</record>
+<record>
+  <date>2018-05-15T12:15:05</date>
+  <millis>1526379305293</millis>
+  <sequence>20</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>sendBrodcastMessage</method>
+  <thread>14</thread>
+  <message>Sending brodcast message</message>
+</record>
+<record>
+  <date>2018-05-15T12:15:06</date>
+  <millis>1526379306655</millis>
+  <sequence>21</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>sendBrodcastMessage</method>
+  <thread>14</thread>
+  <message>Sending brodcast message</message>
+</record>
+<record>
+  <date>2018-05-15T12:16:03</date>
+  <millis>1526379363805</millis>
+  <sequence>22</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>sendBrodcastMessage</method>
+  <thread>14</thread>
+  <message>Sending brodcast message</message>
+</record>
+<record>
+  <date>2018-05-15T12:16:04</date>
+  <millis>1526379364917</millis>
+  <sequence>23</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>sendBrodcastMessage</method>
+  <thread>14</thread>
+  <message>Sending brodcast message</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2018-05-15T13:49:37</date>
+  <millis>1526384977583</millis>
+  <sequence>0</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>registerUser</method>
+  <thread>14</thread>
+  <message>Sending register message from 440</message>
+</record>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2018-05-15T13:55:56</date>
+  <millis>1526385356137</millis>
+  <sequence>0</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>WARNING</level>
+  <class>tytan.client.ClientMVC</class>
+  <method>&lt;init&gt;</method>
+  <thread>14</thread>
+  <message>Failed to start client</message>
+</record>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2018-05-15T13:56:06</date>
+  <millis>1526385366326</millis>
+  <sequence>0</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>registerUser</method>
+  <thread>14</thread>
+  <message>Sending register message from 3960</message>
+</record>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2018-05-15T14:55:09</date>
+  <millis>1526388909683</millis>
+  <sequence>0</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>registerUser</method>
+  <thread>14</thread>
+  <message>Sending register message from 8738</message>
+</record>
+<record>
+  <date>2018-05-15T14:55:53</date>
+  <millis>1526388953714</millis>
+  <sequence>12</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>sendBrodcastMessage</method>
+  <thread>14</thread>
+  <message>Sending brodcast message</message>
+</record>
+<record>
+  <date>2018-05-15T14:56:05</date>
+  <millis>1526388965890</millis>
+  <sequence>14</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Recived message empty</message>
+</record>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2018-05-15T14:57:33</date>
+  <millis>1526389053377</millis>
+  <sequence>0</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>registerUser</method>
+  <thread>14</thread>
+  <message>Sending register message from 5316</message>
+</record>
+<record>
+  <date>2018-05-15T14:57:38</date>
+  <millis>1526389058515</millis>
+  <sequence>12</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Recived message empty</message>
+</record>
+<record>
+  <date>2018-05-15T14:57:38</date>
+  <millis>1526389058516</millis>
+  <sequence>13</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>WARNING</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Wrong format of message</message>
+</record>
+<record>
+  <date>2018-05-15T14:57:48</date>
+  <millis>1526389068661</millis>
+  <sequence>14</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>sendBrodcastMessage</method>
+  <thread>14</thread>
+  <message>Sending brodcast message</message>
+</record>
+<record>
+  <date>2018-05-15T15:00:36</date>
+  <millis>1526389236969</millis>
+  <sequence>16</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>sendBrodcastMessage</method>
+  <thread>14</thread>
+  <message>Sending brodcast message</message>
+</record>
+<record>
+  <date>2018-05-15T15:00:37</date>
+  <millis>1526389237663</millis>
+  <sequence>18</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>sendBrodcastMessage</method>
+  <thread>14</thread>
+  <message>Sending brodcast message</message>
+</record>
+<record>
+  <date>2018-05-15T15:00:39</date>
+  <millis>1526389239431</millis>
+  <sequence>20</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>sendBrodcastMessage</method>
+  <thread>14</thread>
+  <message>Sending brodcast message</message>
+</record>
+<record>
+  <date>2018-05-15T15:00:39</date>
+  <millis>1526389239841</millis>
+  <sequence>22</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>sendBrodcastMessage</method>
+  <thread>14</thread>
+  <message>Sending brodcast message</message>
+</record>
+<record>
+  <date>2018-05-15T15:00:41</date>
+  <millis>1526389241181</millis>
+  <sequence>24</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>sendBrodcastMessage</method>
+  <thread>14</thread>
+  <message>Sending brodcast message</message>
+</record>
+<record>
+  <date>2018-05-15T15:00:41</date>
+  <millis>1526389241727</millis>
+  <sequence>26</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>sendBrodcastMessage</method>
+  <thread>14</thread>
+  <message>Sending brodcast message</message>
+</record>
+<record>
+  <date>2018-05-15T15:00:49</date>
+  <millis>1526389249911</millis>
+  <sequence>28</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>sendBrodcastMessage</method>
+  <thread>14</thread>
+  <message>Sending brodcast message</message>
+</record>
+<record>
+  <date>2018-05-15T15:00:53</date>
+  <millis>1526389253865</millis>
+  <sequence>30</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>sendBrodcastMessage</method>
+  <thread>14</thread>
+  <message>Sending brodcast message</message>
+</record>
+<record>
+  <date>2018-05-15T15:01:47</date>
+  <millis>1526389307119</millis>
+  <sequence>32</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Recived message empty</message>
+</record>
+<record>
+  <date>2018-05-15T15:01:47</date>
+  <millis>1526389307119</millis>
+  <sequence>33</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>WARNING</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Wrong format of message</message>
+</record>
+<record>
+  <date>2018-05-15T15:01:47</date>
+  <millis>1526389307122</millis>
+  <sequence>34</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Recived message removeUserFromList</message>
+</record>
+<record>
+  <date>2018-05-15T15:01:47</date>
+  <millis>1526389307124</millis>
+  <sequence>35</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>WARNING</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Wrong format of message</message>
+</record>
+<record>
+  <date>2018-05-15T15:01:47</date>
+  <millis>1526389307125</millis>
+  <sequence>36</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Recived message removeUserFromList</message>
+</record>
+<record>
+  <date>2018-05-15T15:01:47</date>
+  <millis>1526389307126</millis>
+  <sequence>37</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>WARNING</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Wrong format of message</message>
+</record>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2018-05-15T15:02:18</date>
+  <millis>1526389338170</millis>
+  <sequence>0</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>registerUser</method>
+  <thread>14</thread>
+  <message>Sending register message from 162</message>
+</record>
+<record>
+  <date>2018-05-15T15:02:24</date>
+  <millis>1526389344942</millis>
+  <sequence>12</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Recived message empty</message>
+</record>
+<record>
+  <date>2018-05-15T15:02:24</date>
+  <millis>1526389344943</millis>
+  <sequence>13</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>WARNING</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Wrong format of message</message>
+</record>
+<record>
+  <date>2018-05-15T15:02:39</date>
+  <millis>1526389359142</millis>
+  <sequence>14</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>sendBrodcastMessage</method>
+  <thread>14</thread>
+  <message>Sending brodcast message</message>
+</record>
+<record>
+  <date>2018-05-15T15:02:42</date>
+  <millis>1526389362649</millis>
+  <sequence>16</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>sendBrodcastMessage</method>
+  <thread>14</thread>
+  <message>Sending brodcast message</message>
+</record>
+<record>
+  <date>2018-05-15T15:03:12</date>
+  <millis>1526389392377</millis>
+  <sequence>18</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Recived message FireSupport;52.23302572545728;20.922518687744173</message>
+</record>
+<record>
+  <date>2018-05-15T15:03:12</date>
+  <millis>1526389392378</millis>
+  <sequence>19</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Placing requirement of fire support</message>
+</record>
+<record>
+  <date>2018-05-15T15:03:12</date>
+  <millis>1526389392378</millis>
+  <sequence>20</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>WARNING</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Wrong format of message</message>
+</record>
+<record>
+  <date>2018-05-15T15:03:12</date>
+  <millis>1526389392918</millis>
+  <sequence>21</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Recived message FireSupport;52.23155382130468;20.92080207397464</message>
+</record>
+<record>
+  <date>2018-05-15T15:03:12</date>
+  <millis>1526389392919</millis>
+  <sequence>22</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Placing requirement of fire support</message>
+</record>
+<record>
+  <date>2018-05-15T15:03:12</date>
+  <millis>1526389392919</millis>
+  <sequence>23</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>WARNING</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Wrong format of message</message>
+</record>
+<record>
+  <date>2018-05-15T15:03:16</date>
+  <millis>1526389396572</millis>
+  <sequence>24</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Recived message FireSupport;52.235338619093056;20.93058677246097</message>
+</record>
+<record>
+  <date>2018-05-15T15:03:16</date>
+  <millis>1526389396573</millis>
+  <sequence>25</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Placing requirement of fire support</message>
+</record>
+<record>
+  <date>2018-05-15T15:03:16</date>
+  <millis>1526389396573</millis>
+  <sequence>26</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>WARNING</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Wrong format of message</message>
+</record>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2018-05-15T15:04:13</date>
+  <millis>1526389453035</millis>
+  <sequence>0</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>registerUser</method>
+  <thread>14</thread>
+  <message>Sending register message from 7297</message>
+</record>
+<record>
+  <date>2018-05-15T15:04:31</date>
+  <millis>1526389471476</millis>
+  <sequence>12</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Recived message empty</message>
+</record>
+<record>
+  <date>2018-05-15T15:04:31</date>
+  <millis>1526389471477</millis>
+  <sequence>13</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>WARNING</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Wrong format of message</message>
+</record>
+<record>
+  <date>2018-05-15T15:04:52</date>
+  <millis>1526389492008</millis>
+  <sequence>14</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>sendBrodcastMessage</method>
+  <thread>14</thread>
+  <message>Sending brodcast message</message>
+</record>
+<record>
+  <date>2018-05-15T15:05:04</date>
+  <millis>1526389504689</millis>
+  <sequence>16</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>sendBrodcastMessage</method>
+  <thread>14</thread>
+  <message>Sending brodcast message</message>
+</record>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2018-05-15T15:06:16</date>
+  <millis>1526389576651</millis>
+  <sequence>0</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>registerUser</method>
+  <thread>14</thread>
+  <message>Sending register message from 3233</message>
+</record>
+<record>
+  <date>2018-05-15T15:06:19</date>
+  <millis>1526389579907</millis>
+  <sequence>3</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Recived message empty</message>
+</record>
+<record>
+  <date>2018-05-15T15:06:19</date>
+  <millis>1526389579909</millis>
+  <sequence>4</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>WARNING</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Wrong format of message</message>
+</record>
+<record>
+  <date>2018-05-15T15:06:34</date>
+  <millis>1526389594736</millis>
+  <sequence>14</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Recived message FireSupport;52.23470784187155;20.93058677246097</message>
+</record>
+<record>
+  <date>2018-05-15T15:06:34</date>
+  <millis>1526389594737</millis>
+  <sequence>15</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Placing requirement of fire support</message>
+</record>
+<record>
+  <date>2018-05-15T15:06:34</date>
+  <millis>1526389594737</millis>
+  <sequence>16</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>WARNING</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Wrong format of message</message>
+</record>
+<record>
+  <date>2018-05-15T15:07:50</date>
+  <millis>1526389670284</millis>
+  <sequence>17</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Recived message FireSupport;52.232710321533126;20.924921947021517</message>
+</record>
+<record>
+  <date>2018-05-15T15:07:50</date>
+  <millis>1526389670285</millis>
+  <sequence>18</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Placing requirement of fire support</message>
+</record>
+<record>
+  <date>2018-05-15T15:07:50</date>
+  <millis>1526389670285</millis>
+  <sequence>19</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>WARNING</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Wrong format of message</message>
+</record>
+<record>
+  <date>2018-05-15T15:07:54</date>
+  <millis>1526389674934</millis>
+  <sequence>20</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Recived message FireSupport;52.23586425993024;20.943976359863314</message>
+</record>
+<record>
+  <date>2018-05-15T15:07:54</date>
+  <millis>1526389674934</millis>
+  <sequence>21</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Placing requirement of fire support</message>
+</record>
+<record>
+  <date>2018-05-15T15:07:54</date>
+  <millis>1526389674935</millis>
+  <sequence>22</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>WARNING</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Wrong format of message</message>
+</record>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2018-05-15T15:11:00</date>
+  <millis>1526389860559</millis>
+  <sequence>0</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>registerUser</method>
+  <thread>14</thread>
+  <message>Sending register message from 7304</message>
+</record>
+<record>
+  <date>2018-05-15T15:11:03</date>
+  <millis>1526389863363</millis>
+  <sequence>3</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Recived message empty</message>
+</record>
+<record>
+  <date>2018-05-15T15:11:03</date>
+  <millis>1526389863364</millis>
+  <sequence>4</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>WARNING</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Wrong format of message</message>
+</record>
+<record>
+  <date>2018-05-15T15:11:13</date>
+  <millis>1526389873020</millis>
+  <sequence>14</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Recived message FireSupport;52.23092299029907;20.911189036865267</message>
+</record>
+<record>
+  <date>2018-05-15T15:11:13</date>
+  <millis>1526389873021</millis>
+  <sequence>15</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Placing requirement of fire support</message>
+</record>
+<record>
+  <date>2018-05-15T15:11:14</date>
+  <millis>1526389874604</millis>
+  <sequence>16</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Recived message FireSupport;52.236915522930104;20.930415111084017</message>
+</record>
+<record>
+  <date>2018-05-15T15:11:14</date>
+  <millis>1526389874605</millis>
+  <sequence>17</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Placing requirement of fire support</message>
+</record>
+<record>
+  <date>2018-05-15T15:12:33</date>
+  <millis>1526389953663</millis>
+  <sequence>18</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Recived message FireSupport;52.23397192378377;20.910502391357454</message>
+</record>
+<record>
+  <date>2018-05-15T15:12:33</date>
+  <millis>1526389953664</millis>
+  <sequence>19</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Placing requirement of fire support</message>
+</record>
+<record>
+  <date>2018-05-15T15:12:34</date>
+  <millis>1526389954368</millis>
+  <sequence>20</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Recived message FireSupport;52.23744114509282;20.93384833862308</message>
+</record>
+<record>
+  <date>2018-05-15T15:12:34</date>
+  <millis>1526389954368</millis>
+  <sequence>21</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Placing requirement of fire support</message>
+</record>
+<record>
+  <date>2018-05-15T15:12:35</date>
+  <millis>1526389955350</millis>
+  <sequence>22</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Recived message FireSupport;52.23319387392611;20.92057792733317</message>
+</record>
+<record>
+  <date>2018-05-15T15:12:35</date>
+  <millis>1526389955350</millis>
+  <sequence>23</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Placing requirement of fire support</message>
+</record>
+<record>
+  <date>2018-05-15T15:12:35</date>
+  <millis>1526389955950</millis>
+  <sequence>24</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Recived message FireSupport;52.226780244603816;20.931392594081217</message>
+</record>
+<record>
+  <date>2018-05-15T15:12:35</date>
+  <millis>1526389955951</millis>
+  <sequence>25</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Placing requirement of fire support</message>
+</record>
+<record>
+  <date>2018-05-15T15:12:36</date>
+  <millis>1526389956532</millis>
+  <sequence>26</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Recived message FireSupport;52.23827383934792;20.918262729168873</message>
+</record>
+<record>
+  <date>2018-05-15T15:12:36</date>
+  <millis>1526389956532</millis>
+  <sequence>27</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Placing requirement of fire support</message>
+</record>
+<record>
+  <date>2018-05-15T15:12:36</date>
+  <millis>1526389956852</millis>
+  <sequence>28</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Recived message FireSupport;52.23953528347411;20.91311288786028</message>
+</record>
+<record>
+  <date>2018-05-15T15:12:36</date>
+  <millis>1526389956853</millis>
+  <sequence>29</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Placing requirement of fire support</message>
+</record>
+<record>
+  <date>2018-05-15T15:12:38</date>
+  <millis>1526389958430</millis>
+  <sequence>30</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Recived message FireSupport;52.24208263320352;20.941405567305083</message>
+</record>
+<record>
+  <date>2018-05-15T15:12:38</date>
+  <millis>1526389958431</millis>
+  <sequence>31</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Placing requirement of fire support</message>
+</record>
+<record>
+  <date>2018-05-15T15:13:00</date>
+  <millis>1526389980499</millis>
+  <sequence>32</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Recived message FireSupport;51.961306630084266;21.400653029632508</message>
+</record>
+<record>
+  <date>2018-05-15T15:13:00</date>
+  <millis>1526389980500</millis>
+  <sequence>33</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Placing requirement of fire support</message>
+</record>
+<record>
+  <date>2018-05-15T15:13:43</date>
+  <millis>1526390023398</millis>
+  <sequence>34</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Recived message FireSupport;51.90245624027927;21.502276564788758</message>
+</record>
+<record>
+  <date>2018-05-15T15:13:43</date>
+  <millis>1526390023398</millis>
+  <sequence>35</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Placing requirement of fire support</message>
+</record>
+<record>
+  <date>2018-05-15T15:13:47</date>
+  <millis>1526390027361</millis>
+  <sequence>36</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Recived message FireSupport;51.970638942443266;21.42472010960205</message>
+</record>
+<record>
+  <date>2018-05-15T15:13:47</date>
+  <millis>1526390027362</millis>
+  <sequence>37</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Placing requirement of fire support</message>
+</record>
+<record>
+  <date>2018-05-15T15:13:49</date>
+  <millis>1526390029079</millis>
+  <sequence>38</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Recived message FireSupport;52.000689453384304;21.421849370699988</message>
+</record>
+<record>
+  <date>2018-05-15T15:13:49</date>
+  <millis>1526390029080</millis>
+  <sequence>39</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Placing requirement of fire support</message>
+</record>
+<record>
+  <date>2018-05-15T15:13:50</date>
+  <millis>1526390030104</millis>
+  <sequence>40</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Recived message FireSupport;51.992868178706935;21.37687408993827</message>
+</record>
+<record>
+  <date>2018-05-15T15:13:50</date>
+  <millis>1526390030104</millis>
+  <sequence>41</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Placing requirement of fire support</message>
+</record>
+<record>
+  <date>2018-05-15T15:13:50</date>
+  <millis>1526390030452</millis>
+  <sequence>42</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Recived message FireSupport;52.01083393586818;21.394726873141394</message>
+</record>
+<record>
+  <date>2018-05-15T15:13:50</date>
+  <millis>1526390030452</millis>
+  <sequence>43</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Placing requirement of fire support</message>
+</record>
+<record>
+  <date>2018-05-15T15:13:50</date>
+  <millis>1526390030804</millis>
+  <sequence>44</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Recived message FireSupport;52.011467889676915;21.45171845028983</message>
+</record>
+<record>
+  <date>2018-05-15T15:13:50</date>
+  <millis>1526390030804</millis>
+  <sequence>45</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Placing requirement of fire support</message>
+</record>
+<record>
+  <date>2018-05-15T15:13:51</date>
+  <millis>1526390031124</millis>
+  <sequence>46</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Recived message FireSupport;51.978490380801716;21.462361455660925</message>
+</record>
+<record>
+  <date>2018-05-15T15:13:51</date>
+  <millis>1526390031124</millis>
+  <sequence>47</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Placing requirement of fire support</message>
+</record>
+<record>
+  <date>2018-05-15T15:13:51</date>
+  <millis>1526390031477</millis>
+  <sequence>48</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Recived message FireSupport;51.963896426476694;21.427342534762488</message>
+</record>
+<record>
+  <date>2018-05-15T15:13:51</date>
+  <millis>1526390031478</millis>
+  <sequence>49</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Placing requirement of fire support</message>
+</record>
+<record>
+  <date>2018-05-15T15:14:55</date>
+  <millis>1526390095014</millis>
+  <sequence>50</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Recived message FireSupport;51.93055868044018;21.301519373228643</message>
+</record>
+<record>
+  <date>2018-05-15T15:14:55</date>
+  <millis>1526390095014</millis>
+  <sequence>51</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Placing requirement of fire support</message>
+</record>
+<record>
+  <date>2018-05-15T15:14:55</date>
+  <millis>1526390095483</millis>
+  <sequence>52</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Recived message FireSupport;51.93923747258805;21.306669214537237</message>
+</record>
+<record>
+  <date>2018-05-15T15:14:55</date>
+  <millis>1526390095484</millis>
+  <sequence>53</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Placing requirement of fire support</message>
+</record>
+<record>
+  <date>2018-05-15T15:14:57</date>
+  <millis>1526390097030</millis>
+  <sequence>54</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Recived message FireSupport;51.92419886319833;21.34078861944772</message>
+</record>
+<record>
+  <date>2018-05-15T15:14:57</date>
+  <millis>1526390097030</millis>
+  <sequence>55</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Placing requirement of fire support</message>
+</record>
+<record>
+  <date>2018-05-15T15:14:57</date>
+  <millis>1526390097542</millis>
+  <sequence>56</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Recived message FireSupport;51.91551716224283;21.315039412904753</message>
+</record>
+<record>
+  <date>2018-05-15T15:14:57</date>
+  <millis>1526390097542</millis>
+  <sequence>57</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Placing requirement of fire support</message>
+</record>
+<record>
+  <date>2018-05-15T15:14:58</date>
+  <millis>1526390098015</millis>
+  <sequence>58</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Recived message FireSupport;51.95615845616693;21.298216597963346</message>
+</record>
+<record>
+  <date>2018-05-15T15:14:58</date>
+  <millis>1526390098016</millis>
+  <sequence>59</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Placing requirement of fire support</message>
+</record>
+<record>
+  <date>2018-05-15T15:14:58</date>
+  <millis>1526390098434</millis>
+  <sequence>60</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Recived message FireSupport;51.92737467578831;21.34353520147897</message>
+</record>
+<record>
+  <date>2018-05-15T15:14:58</date>
+  <millis>1526390098434</millis>
+  <sequence>61</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Placing requirement of fire support</message>
+</record>
+<record>
+  <date>2018-05-15T15:14:59</date>
+  <millis>1526390099212</millis>
+  <sequence>62</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Recived message FireSupport;51.929915164072575;21.299933211732878</message>
+</record>
+<record>
+  <date>2018-05-15T15:14:59</date>
+  <millis>1526390099212</millis>
+  <sequence>63</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Placing requirement of fire support</message>
+</record>
+<record>
+  <date>2018-05-15T15:15:49</date>
+  <millis>1526390149623</millis>
+  <sequence>64</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Recived message removeUserFromList</message>
+</record>
+<record>
+  <date>2018-05-15T15:15:49</date>
+  <millis>1526390149623</millis>
+  <sequence>65</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>WARNING</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Wrong format of message</message>
+</record>
+<record>
+  <date>2018-05-15T15:15:49</date>
+  <millis>1526390149624</millis>
+  <sequence>66</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Recived message removeUserFromList</message>
+</record>
+<record>
+  <date>2018-05-15T15:15:49</date>
+  <millis>1526390149624</millis>
+  <sequence>67</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>WARNING</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Wrong format of message</message>
+</record>

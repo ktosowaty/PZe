@@ -1,10 +1,13 @@
 package tytan.client.controller;
 
+import com.lynden.gmapsfx.javascript.object.LatLong;
+import javafx.application.Platform;
 import tytan.client.ClientMVC;
 import tytan.client.model.AbstractModel;
 import tytan.client.model.SendDataModel;
-import tytan.client.model.UsersListModel;
+import tytan.map.MapController;
 import tytan.meldunki.MeldunkiController;
+import tytan.meldunki.MeldunkiType;
 import tytan.serwer.beans.Message;
 
 import java.beans.PropertyChangeEvent;
@@ -18,13 +21,16 @@ public class Controller extends AbstractController {
 	
 	private final static Logger LOGGER = Logger.getLogger(ClientMVC.class.getName());
 	private Map<String, AbstractModel> modelsMap;
+	private MeldunkiController meldunkiController;
+	private  MapController mapController;
 
-	public void setMeldunkiHandler(MeldunkiController meldunkiHandler) {
-		this.meldunkiHandler = meldunkiHandler;
+	public void setMeldunkiController(MeldunkiController meldunkiController) {
+		this.meldunkiController = meldunkiController;
 	}
 
-	private MeldunkiController meldunkiHandler;
-
+	public void setMapController(MapController mapController) {
+		this.mapController = mapController;
+	}
 
 	public Controller() {
 		Random rand = new Random();
@@ -58,6 +64,7 @@ public class Controller extends AbstractController {
 		LOGGER.info("Sending register message from " + usernick);
 		((SendDataModel) modelsMap.get("sendDataModel")).sendData(message);
 	}
+
 	@Override
 	public void propertyChange(PropertyChangeEvent evt) {
 		String propertyName = evt.getPropertyName();
@@ -67,42 +74,33 @@ public class Controller extends AbstractController {
 			Message message = (Message) evt.getNewValue();
 			String nickTo = message.getNickTo();
 			String messageContent = (String) message.getMessage();
-			if(meldunkiHandler!=null) {
-				meldunkiHandler.printMessage(messageContent);
+			LOGGER.info("Recived message " + messageContent);
+
+			String[] messageSplit = messageContent.split(";");
+			try {
+				MeldunkiType meldunkiType = MeldunkiType.valueOf(messageSplit[0]);
+
+				switch (meldunkiType) {
+					case FireSupport:
+						double lat = Double.parseDouble(messageSplit[1]);
+						double lng = Double.parseDouble(messageSplit[2]);
+						LOGGER.info("Placing requirement of fire support");
+						Platform.runLater( () -> mapController.addLocationMarker(new LatLong(lat, lng)));
+
+						break;
+					case PersonalLocation:
+						break;
+					case MedicalHelp:
+						break;
+					case EnemyForce:
+						break;
+				}
+			} catch(Exception e) {
+				LOGGER.warning("Wrong format of message");
+				//e.printStackTrace();
 			}
-			if (nickTo.equals("addNewUser")) {
-				LOGGER.info("Adding new user");
-				((UsersListModel) modelsMap.get("userListModel")).addNewUser(message);
 
-			} else if (messageContent.equals("uniqueNick")) {
-				LOGGER.info("User register successfully");
-				String username = message.getNickFrom();
-
-
-			} else if (messageContent.equals("wrongNick")) {
-				LOGGER.info("User nick is not unique");
-
-			} else if (messageContent.equals("removeUserFromList")) {
-				LOGGER.info("User removed from list model");
-				((UsersListModel) modelsMap.get("userListModel")).removeUser(message);
-
-			} else if (!nickTo.equals("empty") && !message.getNickFrom().equals("empty")) {
-				LOGGER.info("Showing message from " + message.getNickFrom());
-
-			}
-		} else if (propertyName.equals("removeUserFromList")) {
-			String username = (String) evt.getNewValue();
-			LOGGER.info("User removed from list");
-
-		} else if (propertyName.equals("addNewUserToList")) {
-			String username = (String) evt.getNewValue();
-			LOGGER.info("Adding new user to list " + username);
-		} 
-	}
-
-	public void receivedLoginData(String username) {
-		Message message = new Message(username, "empty", "empty");
-		((SendDataModel) modelsMap.get("sendDataModel")).sendData(message);
+		}
 	}
 
 }

@@ -21,9 +21,9 @@
                 </ImageView>
             </graphic>
         </Button>
-	  <Button id="my" fx:id="WsparcieOgniowe" layoutX="65.0" layoutY="260.0" mnemonicParsing="false" onAction="#test" text="Wsparcie&#xA;Ogniowe" styleClass="Button" stylesheets="@/css/my-theme.css" />
-      <Button id="my" fx:id="PomocMedyczna" layoutX="65.0" layoutY="25.0" mnemonicParsing="false" onAction="#test" text="Pomoc&#xA;Medyczna" styleClass="Button" stylesheets="@/css/my-theme.css" />
-      <Button id="my" fx:id="WlasnaPozycja" layoutX="360.0" layoutY="260.0" mnemonicParsing="false" onAction="#wlasnaPozycja" text="Wlasna&#xA;Pozycja" styleClass="Button" stylesheets="@/css/my-theme.css" />
-      <Button id="my" fx:id="SilyWroga" layoutX="360.0" layoutY="25.0" mnemonicParsing="false" onAction="#test" text="Sily&#xA;Wroga" styleClass="Button" stylesheets="@/css/my-theme.css" />
+	  <Button id="my" fx:id="WsparcieOgniowe" layoutX="65.0" layoutY="260.0" mnemonicParsing="false" onAction="#fireSupport" text="Wsparcie&#xA;Ogniowe" styleClass="Button" stylesheets="@/css/my-theme.css" />
+      <Button id="my" fx:id="PomocMedyczna" layoutX="65.0" layoutY="25.0" mnemonicParsing="false" onAction="#medicalHelp" text="Pomoc&#xA;Medyczna" styleClass="Button" stylesheets="@/css/my-theme.css" />
+      <Button id="my" fx:id="WlasnaPozycja" layoutX="360.0" layoutY="260.0" mnemonicParsing="false" onAction="#personalLocation" text="Wlasna&#xA;Pozycja" styleClass="Button" stylesheets="@/css/my-theme.css" />
+      <Button id="my" fx:id="SilyWroga" layoutX="360.0" layoutY="25.0" mnemonicParsing="false" onAction="#enemyForce" text="Sily&#xA;Wroga" styleClass="Button" stylesheets="@/css/my-theme.css" />
     </children>
 </AnchorPane>

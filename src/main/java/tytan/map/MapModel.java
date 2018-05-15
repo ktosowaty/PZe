@@ -11,14 +11,16 @@ import com.lynden.gmapsfx.shapes.PolylineOptions;
 import javafx.scene.control.ContextMenu;
 import javafx.scene.control.MenuItem;
 import netscape.javascript.JSObject;
-
 import tytan.Main;
+import tytan.meldunki.MeldunkiController;
 import tytan.meldunki.MeldunkiPersonalLocation;
-
+import tytan.meldunki.MeldunkiType;
 
 import java.util.ArrayList;
+import java.util.logging.Logger;
 
 public class MapModel implements DirectionsServiceCallback {
+    private final static Logger LOGGER = Logger.getLogger(MapModel.class.getName());
     public static GoogleMap googleMap;
     private GoogleMapView gmv;
     private static ArrayList<Marker> locationMarkers;
@@ -72,7 +74,7 @@ public class MapModel implements DirectionsServiceCallback {
     }
 
     public void addLocationMarker(LatLong latLong) {
-    	
+
         Marker marker = new Marker(new MarkerOptions()
                 .position(latLong)
                 .animation(Animation.DROP)
@@ -80,15 +82,16 @@ public class MapModel implements DirectionsServiceCallback {
                 .visible(locationMarkersVisible));
         googleMap.addMarker(marker);
         locationMarkers.add(marker);
-        Circle circle = addCircleArea(latLong,300);
+        Circle circle = addCircleArea(latLong, 300);
         googleMap.addUIEventHandler(marker, UIEventType.mouseover, (JSObject obj) -> circle.setVisible(true));
         googleMap.addUIEventHandler(marker, UIEventType.mouseout, (JSObject obj) -> {
             circle.setVisible(false);
         });
     }
+
     public static void addPersonalLocationMarker(LatLong latLong) {
-    	if(personalMarker != null) googleMap.removeMarker(personalMarker);
-    	
+        if (personalMarker != null) googleMap.removeMarker(personalMarker);
+
         personalMarker = new Marker(new MarkerOptions()
                 .position(latLong)
                 .animation(Animation.DROP)
@@ -98,6 +101,7 @@ public class MapModel implements DirectionsServiceCallback {
         googleMap.addMarker(personalMarker);
         locationMarkers.add(personalMarker);
     }
+
     public static void addFriendlyLocationMarker(LatLong latLong) {
         Marker marker = new Marker(new MarkerOptions()
                 .position(latLong)
@@ -107,6 +111,7 @@ public class MapModel implements DirectionsServiceCallback {
         googleMap.addMarker(marker);
         locationMarkers.add(marker);
     }
+
     public void addPlaceMarker(LatLong latLong) {
         Marker marker = new Marker(new MarkerOptions()
                 .position(latLong)
@@ -166,17 +171,28 @@ public class MapModel implements DirectionsServiceCallback {
         googleMap = googleMapView.createMap(mapOptions, false);
 
         googleMap.addMouseEventHandler(UIEventType.click, (me) -> {
-            Main.getClient().getController().sendBrodcastMessage(me.getLatLong().toString());
-            if(MeldunkiPersonalLocation.personal==true) {
-      	   latLong = me.getLatLong();
 
-      	   System.out.println("Latitude: " + latLong.getLatitude());
-      	   System.out.println("Longitude: " + latLong.getLongitude());
-      	   MeldunkiPersonalLocation.setPersonalLocation(googleMap);
+            switch (MeldunkiController.meldunkiType) {
+                case PersonalLocation:
+                    latLong = me.getLatLong();
+                    System.out.println("Latitude: " + latLong.getLatitude());
+                    System.out.println("Longitude: " + latLong.getLongitude());
+                    MeldunkiPersonalLocation.setPersonalLocation(googleMap);
+                    break;
+                case FireSupport:
+                    String message = MeldunkiType.valueOf(MeldunkiController.meldunkiType.toString()) + ";" +
+                            me.getLatLong().getLatitude() + ";" + me.getLatLong().getLongitude();
+                    Main.getClient().getController().sendBrodcastMessage(message);
+                    LOGGER.info("Sending request for fire support " + message);
+                    break;
+                case EnemyForce:
+                    break;
+                case MedicalHelp:
+                    break;
 
-        	}
-      	   
-      	});
+            }
+
+        });
 
         addLocationMarker(new LatLong(52.13, 21.00));
         addPlaceMarker(new LatLong(52.20, 21.10));
