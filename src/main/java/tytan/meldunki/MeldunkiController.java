@@ -6,10 +6,12 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
+import tytan.MenuController;
 import tytan.client.ClientMVC;
 
 import java.io.IOException;
@@ -26,10 +28,19 @@ public class MeldunkiController implements Initializable {
     private Label meldunkiLabel;
     @FXML
     private TextArea messageField;
+    @FXML
+    private ChoiceBox reportChoice;
 
-    ClientMVC client;
+    private ClientMVC client;
 
     public void initialize(URL location, ResourceBundle resources) {
+        reportChoice.getItems().addAll("Mapa", "Chat", "Meldunki");
+        reportChoice.getSelectionModel().selectedItemProperty().addListener(
+                (observable, oldValue, newValue) -> {
+                    MenuController.tabPaneController.setSelection(newValue.toString());
+                }
+        );
+
         try {
             FXMLLoader loader = new FXMLLoader();
             loader.setResources(resources);

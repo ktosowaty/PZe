@@ -2,6 +2,7 @@
 
 <?import com.jfoenix.controls.JFXDrawer?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.image.Image?>
@@ -21,7 +22,8 @@
                 </ImageView>
             </graphic>
         </Button>
-      <Button fx:id="sendButton" layoutX="251.0" layoutY="329.0" mnemonicParsing="false" onAction="#sendMessage" text="Send Meldunek" />
-      <TextArea fx:id="messageField" layoutX="201.0" layoutY="63.0" prefHeight="200.0" prefWidth="200.0" />
+      <TextArea fx:id="messageField" layoutX="224.0" layoutY="99.0" prefHeight="204.0" prefWidth="125.0" />
+      <Button fx:id="sendButton" layoutX="238.0" layoutY="361.0" mnemonicParsing="false" onAction="#sendMessage" text="Send Meldunek" />
+      <ChoiceBox fx:id="reportChoice" layoutX="212.0" layoutY="318.0" prefWidth="150.0" />
     </children>
 </AnchorPane>

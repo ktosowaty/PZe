@@ -32,6 +32,7 @@ public class MenuController implements Initializable {
         rb = resources;
     }
 
+    public static TabPaneController tabPaneController;
     @FXML
     private void click(MouseEvent mouseEvent) {
         try {
@@ -41,8 +42,8 @@ public class MenuController implements Initializable {
             loader.setResources(rb);
             AnchorPane anchorPane = loader.load(getClass().getResource("/fxml/TabPaneLayout.fxml").openStream());
             root.setCenter(anchorPane);
-            TabPaneController controller = loader.getController();
-            controller.setSelection(name);
+            tabPaneController = loader.getController();
+            tabPaneController.setSelection(name);
         } catch (IOException e) {
             e.printStackTrace();
         }

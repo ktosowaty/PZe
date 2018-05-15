@@ -85,3 +85,17 @@
 <!DOCTYPE log SYSTEM "logger.dtd">
 <log>
 </log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2018-05-15T09:05:58</date>
+  <millis>1526367958087</millis>
+  <sequence>7</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>registerUser</method>
+  <thread>14</thread>
+  <message>Sending register message from 8164</message>
+</record>

@@ -25,6 +25,7 @@ public class TabPaneController implements Initializable {
     @FXML
     private Tab tabMeldunki;
 
+
     public void initialize(URL location, ResourceBundle resources) {
         show(resources, tabMapa, "Map");
         show(resources, tabChat, "Chat");
