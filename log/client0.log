@@ -99,3 +99,779 @@
   <thread>14</thread>
   <message>Sending register message from 8164</message>
 </record>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2018-05-15T11:14:43</date>
+  <millis>1526375683142</millis>
+  <sequence>7</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>registerUser</method>
+  <thread>14</thread>
+  <message>Sending register message from 8099</message>
+</record>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2018-05-15T11:21:31</date>
+  <millis>1526376091552</millis>
+  <sequence>0</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>registerUser</method>
+  <thread>14</thread>
+  <message>Sending register message from 9451</message>
+</record>
+<record>
+  <date>2018-05-15T11:23:59</date>
+  <millis>1526376239362</millis>
+  <sequence>12</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Adding new user</message>
+</record>
+<record>
+  <date>2018-05-15T11:23:59</date>
+  <millis>1526376239363</millis>
+  <sequence>13</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>User removed from list model</message>
+</record>
+<record>
+  <date>2018-05-15T11:23:59</date>
+  <millis>1526376239365</millis>
+  <sequence>14</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>User removed from list model</message>
+</record>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2018-05-15T11:27:01</date>
+  <millis>1526376421548</millis>
+  <sequence>0</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>registerUser</method>
+  <thread>14</thread>
+  <message>Sending register message from 3785</message>
+</record>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2018-05-15T11:28:13</date>
+  <millis>1526376493989</millis>
+  <sequence>0</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>registerUser</method>
+  <thread>1</thread>
+  <message>Sending register message from 3650</message>
+</record>
+<record>
+  <date>2018-05-15T11:29:19</date>
+  <millis>1526376559193</millis>
+  <sequence>12</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Adding new user</message>
+</record>
+<record>
+  <date>2018-05-15T11:29:19</date>
+  <millis>1526376559194</millis>
+  <sequence>13</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>User removed from list model</message>
+</record>
+<record>
+  <date>2018-05-15T11:29:19</date>
+  <millis>1526376559195</millis>
+  <sequence>14</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>User removed from list model</message>
+</record>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2018-05-15T11:30:30</date>
+  <millis>1526376630298</millis>
+  <sequence>0</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>registerUser</method>
+  <thread>1</thread>
+  <message>Sending register message from 6285</message>
+</record>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2018-05-15T11:32:27</date>
+  <millis>1526376747194</millis>
+  <sequence>0</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>registerUser</method>
+  <thread>1</thread>
+  <message>Sending register message from 2021</message>
+</record>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2018-05-15T11:34:14</date>
+  <millis>1526376854722</millis>
+  <sequence>0</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>WARNING</level>
+  <class>tytan.client.ClientMVC</class>
+  <method>&lt;init&gt;</method>
+  <thread>1</thread>
+  <message>Failed to start client</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2018-05-15T11:34:30</date>
+  <millis>1526376870183</millis>
+  <sequence>0</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>registerUser</method>
+  <thread>1</thread>
+  <message>Sending register message from 3681</message>
+</record>
+<record>
+  <date>2018-05-15T11:34:39</date>
+  <millis>1526376879019</millis>
+  <sequence>12</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Adding new user</message>
+</record>
+<record>
+  <date>2018-05-15T11:34:39</date>
+  <millis>1526376879020</millis>
+  <sequence>13</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>User removed from list model</message>
+</record>
+<record>
+  <date>2018-05-15T11:34:39</date>
+  <millis>1526376879021</millis>
+  <sequence>14</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>User removed from list model</message>
+</record>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2018-05-15T11:36:21</date>
+  <millis>1526376981207</millis>
+  <sequence>0</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>registerUser</method>
+  <thread>1</thread>
+  <message>Sending register message from 9231</message>
+</record>
+<record>
+  <date>2018-05-15T11:36:39</date>
+  <millis>1526376999773</millis>
+  <sequence>12</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Adding new user</message>
+</record>
+<record>
+  <date>2018-05-15T11:36:39</date>
+  <millis>1526376999775</millis>
+  <sequence>13</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>User removed from list model</message>
+</record>
+<record>
+  <date>2018-05-15T11:36:39</date>
+  <millis>1526376999776</millis>
+  <sequence>14</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>User removed from list model</message>
+</record>
+<record>
+  <date>2018-05-15T11:37:37</date>
+  <millis>1526377057165</millis>
+  <sequence>15</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Adding new user</message>
+</record>
+<record>
+  <date>2018-05-15T11:37:37</date>
+  <millis>1526377057168</millis>
+  <sequence>16</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>User removed from list model</message>
+</record>
+<record>
+  <date>2018-05-15T11:37:37</date>
+  <millis>1526377057169</millis>
+  <sequence>17</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>User removed from list model</message>
+</record>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2018-05-15T11:42:21</date>
+  <millis>1526377341520</millis>
+  <sequence>0</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>registerUser</method>
+  <thread>1</thread>
+  <message>Sending register message from 4374</message>
+</record>
+<record>
+  <date>2018-05-15T11:42:27</date>
+  <millis>1526377347109</millis>
+  <sequence>12</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>sendBrodcastMessage</method>
+  <thread>14</thread>
+  <message>Sending brodcast message</message>
+</record>
+<record>
+  <date>2018-05-15T11:42:37</date>
+  <millis>1526377357840</millis>
+  <sequence>13</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>sendBrodcastMessage</method>
+  <thread>14</thread>
+  <message>Sending brodcast message</message>
+</record>
+<record>
+  <date>2018-05-15T11:42:45</date>
+  <millis>1526377365728</millis>
+  <sequence>14</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Adding new user</message>
+</record>
+<record>
+  <date>2018-05-15T11:42:45</date>
+  <millis>1526377365729</millis>
+  <sequence>15</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>User removed from list model</message>
+</record>
+<record>
+  <date>2018-05-15T11:42:45</date>
+  <millis>1526377365730</millis>
+  <sequence>16</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>User removed from list model</message>
+</record>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2018-05-15T11:43:37</date>
+  <millis>1526377417143</millis>
+  <sequence>0</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>registerUser</method>
+  <thread>1</thread>
+  <message>Sending register message from 5571</message>
+</record>
+<record>
+  <date>2018-05-15T11:43:43</date>
+  <millis>1526377423879</millis>
+  <sequence>12</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Adding new user</message>
+</record>
+<record>
+  <date>2018-05-15T11:43:43</date>
+  <millis>1526377423880</millis>
+  <sequence>13</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>User removed from list model</message>
+</record>
+<record>
+  <date>2018-05-15T11:43:43</date>
+  <millis>1526377423881</millis>
+  <sequence>14</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>User removed from list model</message>
+</record>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2018-05-15T11:44:51</date>
+  <millis>1526377491209</millis>
+  <sequence>0</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>registerUser</method>
+  <thread>14</thread>
+  <message>Sending register message from 837</message>
+</record>
+<record>
+  <date>2018-05-15T11:44:59</date>
+  <millis>1526377499384</millis>
+  <sequence>12</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Adding new user</message>
+</record>
+<record>
+  <date>2018-05-15T11:44:59</date>
+  <millis>1526377499384</millis>
+  <sequence>13</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>User removed from list model</message>
+</record>
+<record>
+  <date>2018-05-15T11:44:59</date>
+  <millis>1526377499385</millis>
+  <sequence>14</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>User removed from list model</message>
+</record>
+<record>
+  <date>2018-05-15T11:46:04</date>
+  <millis>1526377564950</millis>
+  <sequence>15</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>sendBrodcastMessage</method>
+  <thread>14</thread>
+  <message>Sending brodcast message</message>
+</record>
+<record>
+  <date>2018-05-15T11:46:05</date>
+  <millis>1526377565472</millis>
+  <sequence>16</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>sendBrodcastMessage</method>
+  <thread>14</thread>
+  <message>Sending brodcast message</message>
+</record>
+<record>
+  <date>2018-05-15T11:46:06</date>
+  <millis>1526377566555</millis>
+  <sequence>17</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>sendBrodcastMessage</method>
+  <thread>14</thread>
+  <message>Sending brodcast message</message>
+</record>
+<record>
+  <date>2018-05-15T11:46:16</date>
+  <millis>1526377576441</millis>
+  <sequence>18</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>sendBrodcastMessage</method>
+  <thread>14</thread>
+  <message>Sending brodcast message</message>
+</record>
+<record>
+  <date>2018-05-15T11:46:17</date>
+  <millis>1526377577220</millis>
+  <sequence>19</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>sendBrodcastMessage</method>
+  <thread>14</thread>
+  <message>Sending brodcast message</message>
+</record>
+<record>
+  <date>2018-05-15T11:46:17</date>
+  <millis>1526377577787</millis>
+  <sequence>20</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>sendBrodcastMessage</method>
+  <thread>14</thread>
+  <message>Sending brodcast message</message>
+</record>
+<record>
+  <date>2018-05-15T11:46:18</date>
+  <millis>1526377578103</millis>
+  <sequence>21</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>sendBrodcastMessage</method>
+  <thread>14</thread>
+  <message>Sending brodcast message</message>
+</record>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2018-05-15T11:49:41</date>
+  <millis>1526377781323</millis>
+  <sequence>0</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>registerUser</method>
+  <thread>14</thread>
+  <message>Sending register message from 8764</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2018-05-15T11:51:23</date>
+  <millis>1526377883993</millis>
+  <sequence>0</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>registerUser</method>
+  <thread>14</thread>
+  <message>Sending register message from 8193</message>
+</record>
+<record>
+  <date>2018-05-15T11:51:29</date>
+  <millis>1526377889099</millis>
+  <sequence>12</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Adding new user</message>
+</record>
+<record>
+  <date>2018-05-15T11:51:37</date>
+  <millis>1526377897931</millis>
+  <sequence>13</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>sendBrodcastMessage</method>
+  <thread>14</thread>
+  <message>Sending brodcast message</message>
+</record>
+<record>
+  <date>2018-05-15T11:51:49</date>
+  <millis>1526377909930</millis>
+  <sequence>14</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>sendBrodcastMessage</method>
+  <thread>14</thread>
+  <message>Sending brodcast message</message>
+</record>
+<record>
+  <date>2018-05-15T11:51:53</date>
+  <millis>1526377913161</millis>
+  <sequence>15</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>sendBrodcastMessage</method>
+  <thread>14</thread>
+  <message>Sending brodcast message</message>
+</record>
+<record>
+  <date>2018-05-15T11:51:54</date>
+  <millis>1526377914238</millis>
+  <sequence>16</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>sendBrodcastMessage</method>
+  <thread>14</thread>
+  <message>Sending brodcast message</message>
+</record>
+<record>
+  <date>2018-05-15T11:51:54</date>
+  <millis>1526377914628</millis>
+  <sequence>17</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>sendBrodcastMessage</method>
+  <thread>14</thread>
+  <message>Sending brodcast message</message>
+</record>
+<record>
+  <date>2018-05-15T11:51:55</date>
+  <millis>1526377915003</millis>
+  <sequence>18</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>sendBrodcastMessage</method>
+  <thread>14</thread>
+  <message>Sending brodcast message</message>
+</record>
+<record>
+  <date>2018-05-15T11:52:00</date>
+  <millis>1526377920350</millis>
+  <sequence>19</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Showing message from 3423</message>
+</record>
+<record>
+  <date>2018-05-15T11:52:00</date>
+  <millis>1526377920877</millis>
+  <sequence>20</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Showing message from 3423</message>
+</record>
+<record>
+  <date>2018-05-15T11:52:42</date>
+  <millis>1526377962757</millis>
+  <sequence>21</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Adding new user</message>
+</record>
+<record>
+  <date>2018-05-15T11:52:46</date>
+  <millis>1526377966011</millis>
+  <sequence>22</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>User removed from list model</message>
+</record>
+<record>
+  <date>2018-05-15T11:52:46</date>
+  <millis>1526377966013</millis>
+  <sequence>23</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>User removed from list model</message>
+</record>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2018-05-15T11:52:49</date>
+  <millis>1526377969306</millis>
+  <sequence>0</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>registerUser</method>
+  <thread>14</thread>
+  <message>Sending register message from 1475</message>
+</record>
+<record>
+  <date>2018-05-15T11:52:49</date>
+  <millis>1526377969358</millis>
+  <sequence>1</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Adding new user</message>
+</record>
+<record>
+  <date>2018-05-15T11:52:58</date>
+  <millis>1526377978557</millis>
+  <sequence>13</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>sendBrodcastMessage</method>
+  <thread>14</thread>
+  <message>Sending brodcast message</message>
+</record>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2018-05-15T11:53:35</date>
+  <millis>1526378015928</millis>
+  <sequence>0</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>registerUser</method>
+  <thread>14</thread>
+  <message>Sending register message from 184</message>
+</record>
+<record>
+  <date>2018-05-15T11:53:39</date>
+  <millis>1526378019610</millis>
+  <sequence>3</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>17</thread>
+  <message>Adding new user</message>
+</record>
+<record>
+  <date>2018-05-15T11:53:55</date>
+  <millis>1526378035827</millis>
+  <sequence>13</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>sendBrodcastMessage</method>
+  <thread>14</thread>
+  <message>Sending brodcast message</message>
+</record>
+<record>
+  <date>2018-05-15T11:53:57</date>
+  <millis>1526378037025</millis>
+  <sequence>14</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>sendBrodcastMessage</method>
+  <thread>14</thread>
+  <message>Sending brodcast message</message>
+</record>

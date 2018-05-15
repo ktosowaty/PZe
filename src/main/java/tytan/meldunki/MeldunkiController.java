@@ -11,6 +11,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
+import tytan.Main;
 import tytan.MenuController;
 import tytan.client.ClientMVC;
 
@@ -48,7 +49,7 @@ public class MeldunkiController implements Initializable {
             drawer.setSidePane(vBox);
             MeldunkiSettingsController settings = loader.getController();
             settings.setMeldunki(this);
-            client = new ClientMVC();
+            client = Main.getClient();
             client.getController().setMeldunkiHandler(this);
         } catch (IOException e) {
             e.printStackTrace();

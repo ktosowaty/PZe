@@ -33,6 +33,7 @@ public class MapController implements Initializable {
             MapSettingsController settings = loader.getController();
             settings.setMap(this);
             mapModel = new MapModel(googleMapView);
+
         } catch (IOException e) {
             e.printStackTrace();
         }

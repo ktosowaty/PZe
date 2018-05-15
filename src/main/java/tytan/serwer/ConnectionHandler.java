@@ -93,7 +93,7 @@ public class ConnectionHandler implements Runnable {
                     recipientObjectOutputStream.flush();
                 }
             } catch (IOException e) {
-                LOGGER.warning("Exception occured");
+                e.printStackTrace();
             }
         } while (true);
     }

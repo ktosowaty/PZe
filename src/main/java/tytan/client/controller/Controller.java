@@ -67,7 +67,9 @@ public class Controller extends AbstractController {
 			Message message = (Message) evt.getNewValue();
 			String nickTo = message.getNickTo();
 			String messageContent = (String) message.getMessage();
-			meldunkiHandler.printMessage("Reviced message from " + nickTo);
+			if(meldunkiHandler!=null) {
+				meldunkiHandler.printMessage(messageContent);
+			}
 			if (nickTo.equals("addNewUser")) {
 				LOGGER.info("Adding new user");
 				((UsersListModel) modelsMap.get("userListModel")).addNewUser(message);

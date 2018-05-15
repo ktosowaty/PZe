@@ -1,7 +1,6 @@
 package tytan.map;
 
 import com.lynden.gmapsfx.GoogleMapView;
-import com.lynden.gmapsfx.javascript.event.GMapMouseEvent;
 import com.lynden.gmapsfx.javascript.event.UIEventType;
 import com.lynden.gmapsfx.javascript.object.*;
 import com.lynden.gmapsfx.service.directions.*;
@@ -12,6 +11,7 @@ import com.lynden.gmapsfx.shapes.PolylineOptions;
 import javafx.scene.control.ContextMenu;
 import javafx.scene.control.MenuItem;
 import netscape.javascript.JSObject;
+import tytan.Main;
 
 import java.util.ArrayList;
 
@@ -138,14 +138,10 @@ public class MapModel implements DirectionsServiceCallback {
                 .mapType(MapTypeIdEnum.TERRAIN);
         googleMapView.setKey("AIzaSyC5U5zdeCQ-i0JjG6TV1lbiWiA98LASJ2E");
         googleMap = googleMapView.createMap(mapOptions, false);
-//        googleMap.addMouseEventHandler(UIEventType.dblclick, (GMapMouseEvent event) -> {
-//            LatLong latLong = event.getLatLong();
-//            addLocationMarker(latLong);
-//        });
-//        googleMap.addMouseEventHandler(UIEventType.rightclick, (GMapMouseEvent event) -> {
-//            LatLong latLong = event.getLatLong();
-//            addPlaceMarker(latLong);
-//        });
+        googleMap.addMouseEventHandler(UIEventType.click, (me) -> {
+            Main.getClient().getController().sendBrodcastMessage(me.getLatLong().toString());
+        });
+
         addLocationMarker(new LatLong(52.13, 21.00));
         addPlaceMarker(new LatLong(52.20, 21.10));
         addFireLine(new LatLong(52.13, 21.00), new LatLong(52.20, 21.10));

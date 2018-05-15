@@ -6,6 +6,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
+import tytan.client.ClientMVC;
 
 import java.util.Locale;
 import java.util.ResourceBundle;
@@ -13,6 +14,8 @@ import java.util.ResourceBundle;
 public class Main extends Application {
     private ResourceBundle rb;
     private Stage primaryStage;
+    private final static ClientMVC client = new ClientMVC();
+
 
     public static void main(String[] args) {
         launch(args);
@@ -32,5 +35,9 @@ public class Main extends Application {
         scene.getStylesheets().add(getClass().getResource("/css/my-theme.css").toExternalForm());
         primaryStage.setScene(scene);
         primaryStage.show();
+    }
+
+    public static ClientMVC getClient() {
+        return Main.client;
     }
 }
