@@ -73,6 +73,12 @@ public class MeldunkiController implements Initializable {
     private void test() {
     	 MenuController.tabPaneController.setSelection("Map");
     }
+    @FXML
+    private void wlasnaPozycja() {
+    	 MenuController.tabPaneController.setSelection("Map");
+    	 MeldunkiPersonalLocation.personal=true;
+    }
+
 
     public void printMessage(String text) {
         messageField.setText(text + "\n" + messageField.getText());
