@@ -96,6 +96,9 @@ public class Controller extends AbstractController {
 
 					break;
 				case MedicalHelp:
+					lat = Double.parseDouble(messageSplit[1]);
+					lng = Double.parseDouble(messageSplit[2]);
+					Platform.runLater(() -> MapModel.addMedicalHelpMarker(new LatLong(lat, lng)));
 					break;
 				case EnemyForce:
 					break;

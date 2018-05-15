@@ -11,6 +11,7 @@ import javafx.scene.layout.Pane;
 import tytan.Main;
 import tytan.MenuController;
 import tytan.client.ClientMVC;
+import tytan.map.MapModel;
 
 import java.io.IOException;
 import java.net.URL;
@@ -68,6 +69,7 @@ public class MeldunkiController implements Initializable {
     private void personalLocation() {
         meldunkiType = MeldunkiType.PersonalLocation;
         MenuController.tabPaneController.setSelection("Map");
+
     }
 
     @FXML
@@ -80,6 +82,8 @@ public class MeldunkiController implements Initializable {
     private void medicalHelp() {
         meldunkiType = MeldunkiType.MedicalHelp;
         MenuController.tabPaneController.setSelection("Map");
+        //MapModel.googleMap.removeMarkers(MapModel.medicalHelpMarkerList);
+        //MapModel.medicalHelpMarkerList.clear();
     }
 
     @FXML
