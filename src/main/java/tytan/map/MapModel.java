@@ -101,7 +101,7 @@ public class MapModel implements DirectionsServiceCallback {
         locationMarkers.add(personalMarker);
     }
     public static void addMedicalHelpMarker(LatLong latLong) {
-    	if(medicalHelpMarker != null) googleMap.removeMarker(personalMarker);
+    	if(medicalHelpMarker != null) googleMap.removeMarker(medicalHelpMarker);
     	
         medicalHelpMarker = new Marker(new MarkerOptions()
                 .position(latLong)
@@ -189,7 +189,7 @@ public class MapModel implements DirectionsServiceCallback {
       	   MeldunkiPersonalLocation.setPersonalLocation(googleMap);
 
         	}
-            else  if(MeldunkiMedicalHelpLocation.medHelp==true) {
+            if(MeldunkiMedicalHelpLocation.medHelp==true) {
            	   latLong = me.getLatLong();
 
            	   System.out.println("Latitude: " + latLong.getLatitude());
