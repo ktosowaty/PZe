@@ -19,6 +19,16 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.logging.Logger;
 
+import javafx.scene.layout.StackPane;
+import javafx.scene.control.Label;
+import javafx.stage.Modality;
+import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.stage.Stage;
+
 public class MapModel implements DirectionsServiceCallback {
 	private final static Logger LOGGER = Logger.getLogger(MapModel.class.getName());
 	public static GoogleMap googleMap;
@@ -40,6 +50,9 @@ public class MapModel implements DirectionsServiceCallback {
 	private int newcircle=0;
 	String msg1;
 	public static LinkedList<Marker> medicalHelpMarkerList = new LinkedList<Marker>();
+	private static MapModel window;
+	private static String meldunekName = new String();
+	private static int addCircle=0;
 	
 	public MapModel(GoogleMapView googleMapView) {
 		googleMapView.addMapInializedListener(() -> configureMap(googleMapView));
@@ -188,38 +201,75 @@ switch (MeldunkiController.meldunkiType) {
 						+ me.getLatLong().getLatitude() + ";" + me.getLatLong().getLongitude();
 				System.out.println("Latitude: " + latLong.getLatitude());
 				System.out.println("Longitude: " + latLong.getLongitude());
-				addPersonalLocationMarker(latLong);
-				Main.getClient().getController().sendBrodcastMessage(msg);
+			    meldunekName = "Oznacz swoje po³o¿enie";
+			    MapModel.newWindow(msg,meldunekName,0);
+				//addPersonalLocationMarker(latLong);
 				MeldunkiController.meldunkiType = null;
 				// MeldunkiPersonalLocation.setPersonalLocation(googleMap);
 				break;
 			case FireSupport:
 				String message = MeldunkiType.valueOf(MeldunkiController.meldunkiType.toString()) + ";"
 						+ me.getLatLong().getLatitude() + ";" + me.getLatLong().getLongitude();
-				Main.getClient().getController().sendBrodcastMessage(message);
+				meldunekName = "Oznacz pozycje wsparcia ogniowego";
+				MapModel.newWindow(message,meldunekName,2);
 				LOGGER.info("Sending request for fire support " + message);
 				break;
 			case EnemyForce:
+				
 				latLong = me.getLatLong();
 				System.out.println("Latitude: " + latLong.getLatitude());
 				System.out.println("Longitude: " + latLong.getLongitude());
-				if(mousemove==true){
-				circle1=addCircleArea(latLong, 250);
-				mousemoved=false;
-				}
-				googleMap.addMouseEventHandler(UIEventType.mousemove, (de) -> {
-					if(mousemove==true){
-					circle1.setRadius(me.getLatLong().distanceFrom(de.getLatLong()));
-					msg1= MeldunkiType.valueOf(MeldunkiController.meldunkiType.toString()) + ";"
-							+ me.getLatLong().getLatitude() + ";" + me.getLatLong().getLongitude()+ ";" + me.getLatLong().distanceFrom(de.getLatLong());
-					
-					mousemoved=true;
-					}
-				});
-				if(mousemove==false)
-				Main.getClient().getController().sendBrodcastMessage(msg1);
-				//if(mousemove==false)
-				//MeldunkiController.meldunkiType = null;
+				Stage newWindow = new Stage();
+				
+				LatLong x = MapModel.latLong;
+				Button button = new Button();
+				Label Label = new Label(x.toString());
+			    button.setText("Potwierdz");
+			    button.setTranslateY(30);
+			    Label.setTranslateY(-30);
+			    
+		        StackPane secondaryLayout = new StackPane();
+		        secondaryLayout.getChildren().add(button);
+		        secondaryLayout.getChildren().add(Label);
+
+		        Scene secondScene = new Scene(secondaryLayout, 230, 100);
+
+		        // New window (Stage)
+		        newWindow.setTitle(meldunekName);
+		        newWindow.setScene(secondScene);
+
+		        // Specifies the modality for new window.
+		        newWindow.initModality(Modality.WINDOW_MODAL);
+		        newWindow.initOwner(Main.primaryStage);
+		        // Set position of second window, related to primary window.
+		        newWindow.setX(360);
+		        newWindow.setY(240);
+		        newWindow.setResizable(false);
+		        newWindow.show();
+		        
+		        button.setOnAction(new EventHandler<ActionEvent>() 
+		        {
+		            public void handle(ActionEvent event) 
+		            {
+		            	newWindow.close();
+		            	
+		            	if(mousemove==true){
+							circle1=addCircleArea(latLong, 250);
+							mousemoved=false;
+							}
+							googleMap.addMouseEventHandler(UIEventType.mousemove, (de) -> {
+								if(mousemove==true){
+								circle1.setRadius(me.getLatLong().distanceFrom(de.getLatLong()));
+								msg1= MeldunkiType.valueOf(MeldunkiController.meldunkiType.toString()) + ";"
+										+ me.getLatLong().getLatitude() + ";" + me.getLatLong().getLongitude()+ ";" + me.getLatLong().distanceFrom(de.getLatLong());
+								
+								mousemoved=true;
+								}
+							});
+							if(mousemove==false)
+							Main.getClient().getController().sendBrodcastMessage(msg1);
+		            }
+		         });
 				break;
 			case MedicalHelp:
 				latLong = me.getLatLong();
@@ -227,22 +277,69 @@ switch (MeldunkiController.meldunkiType) {
 						+ me.getLatLong().getLatitude() + ";" + me.getLatLong().getLongitude();
 				System.out.println("Latitude: " + latLong.getLatitude());
 				System.out.println("Longitude: " + latLong.getLongitude());
-				addMedicalHelpMarker(latLong);
-				Main.getClient().getController().sendBrodcastMessage(medMessage);
+				meldunekName = "Wska¿ miejsce pomocy medycznej";
+				MapModel.newWindow(medMessage,meldunekName, 1);
 				break;
 
 			}
 
 		});
-
-		addLocationMarker(new LatLong(52.13, 21.00));
-		addPlaceMarker(new LatLong(52.20, 21.10));
-		addFireLine(new LatLong(52.13, 21.00), new LatLong(52.20, 21.10));
-		addRoute("Warszawa, Wojskowa Akademia Techniczna", "Warszawa, Dworzec Zachodni");
 	}
 
 	@Override
 	public void directionsReceived(DirectionsResult results, DirectionStatus status) {
 
+	}
+	
+	public static void newWindow(String msg, String meldunekName, int i)
+	{
+		Stage newWindow = new Stage();
+		
+		LatLong x = MapModel.latLong;
+		Button button = new Button();
+		Label Label = new Label(x.toString());
+	    button.setText("Potwierdz");
+	    button.setTranslateY(30);
+	    Label.setTranslateY(-30);
+	    
+        StackPane secondaryLayout = new StackPane();
+        secondaryLayout.getChildren().add(button);
+        secondaryLayout.getChildren().add(Label);
+
+        Scene secondScene = new Scene(secondaryLayout, 230, 100);
+
+        // New window (Stage)
+        newWindow.setTitle(meldunekName);
+        newWindow.setScene(secondScene);
+
+        // Specifies the modality for new window.
+        newWindow.initModality(Modality.WINDOW_MODAL);
+        newWindow.initOwner(Main.primaryStage);
+        // Set position of second window, related to primary window.
+        newWindow.setX(360);
+        newWindow.setY(240);
+        newWindow.setResizable(false);
+        newWindow.show();
+        
+        button.setOnAction(new EventHandler<ActionEvent>() 
+        {
+            public void handle(ActionEvent event) 
+            {
+				Main.getClient().getController().sendBrodcastMessage(msg);
+				if(i==0)
+				{	
+					MapModel.addPersonalLocationMarker(MapModel.latLong);
+				}
+				else if(i==1)
+				{
+					addMedicalHelpMarker(latLong);
+				}
+				else if(i==2)
+				{
+					
+				}
+            	newWindow.close();
+            }
+         });
 	}
 }

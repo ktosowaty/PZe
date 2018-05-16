@@ -4686,3 +4686,1239 @@
   <thread>16</thread>
   <message>Recived message MedicalHelp;52.22766355396436;20.937624888916048</message>
 </record>
+<?xml version="1.0" encoding="windows-1250" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2018-05-16T16:47:56</date>
+  <millis>1526482076387</millis>
+  <sequence>0</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>registerUser</method>
+  <thread>12</thread>
+  <message>Sending register message from 2461</message>
+</record>
+<record>
+  <date>2018-05-16T16:48:10</date>
+  <millis>1526482090267</millis>
+  <sequence>1</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Recived message empty</message>
+</record>
+<record>
+  <date>2018-05-16T16:48:10</date>
+  <millis>1526482090277</millis>
+  <sequence>2</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>WARNING</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Wrong format of message</message>
+</record>
+<record>
+  <date>2018-05-16T16:50:32</date>
+  <millis>1526482232453</millis>
+  <sequence>3</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Recived message PersonalLocation;52.24122544091095;20.92080207397464</message>
+</record>
+<record>
+  <date>2018-05-16T16:50:56</date>
+  <millis>1526482256044</millis>
+  <sequence>4</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>sendBrodcastMessage</method>
+  <thread>12</thread>
+  <message>Sending brodcast message</message>
+</record>
+<record>
+  <date>2018-05-16T16:50:59</date>
+  <millis>1526482259187</millis>
+  <sequence>5</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>sendBrodcastMessage</method>
+  <thread>12</thread>
+  <message>Sending brodcast message</message>
+</record>
+<record>
+  <date>2018-05-16T16:51:12</date>
+  <millis>1526482272967</millis>
+  <sequence>6</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>sendBrodcastMessage</method>
+  <thread>12</thread>
+  <message>Sending brodcast message</message>
+</record>
+<record>
+  <date>2018-05-16T16:51:19</date>
+  <millis>1526482279825</millis>
+  <sequence>7</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>sendBrodcastMessage</method>
+  <thread>12</thread>
+  <message>Sending brodcast message</message>
+</record>
+<record>
+  <date>2018-05-16T16:51:21</date>
+  <millis>1526482281988</millis>
+  <sequence>9</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>sendBrodcastMessage</method>
+  <thread>12</thread>
+  <message>Sending brodcast message</message>
+</record>
+<record>
+  <date>2018-05-16T16:51:23</date>
+  <millis>1526482283884</millis>
+  <sequence>11</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>sendBrodcastMessage</method>
+  <thread>12</thread>
+  <message>Sending brodcast message</message>
+</record>
+<record>
+  <date>2018-05-16T16:51:33</date>
+  <millis>1526482293747</millis>
+  <sequence>13</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>sendBrodcastMessage</method>
+  <thread>12</thread>
+  <message>Sending brodcast message</message>
+</record>
+<record>
+  <date>2018-05-16T16:59:29</date>
+  <millis>1526482769004</millis>
+  <sequence>15</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Recived message empty</message>
+</record>
+<record>
+  <date>2018-05-16T16:59:29</date>
+  <millis>1526482769008</millis>
+  <sequence>16</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>WARNING</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Wrong format of message</message>
+</record>
+<record>
+  <date>2018-05-16T16:59:48</date>
+  <millis>1526482788687</millis>
+  <sequence>17</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Recived message PersonalLocation;52.241330555633006;20.91857047607425</message>
+</record>
+<record>
+  <date>2018-05-16T17:00:36</date>
+  <millis>1526482836842</millis>
+  <sequence>18</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Recived message empty</message>
+</record>
+<record>
+  <date>2018-05-16T17:00:36</date>
+  <millis>1526482836844</millis>
+  <sequence>19</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>WARNING</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Wrong format of message</message>
+</record>
+<record>
+  <date>2018-05-16T17:00:57</date>
+  <millis>1526482857839</millis>
+  <sequence>20</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Recived message PersonalLocation;52.235969387350714;20.92732520629886</message>
+</record>
+<record>
+  <date>2018-05-16T17:01:10</date>
+  <millis>1526482870143</millis>
+  <sequence>21</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Recived message empty</message>
+</record>
+<record>
+  <date>2018-05-16T17:01:10</date>
+  <millis>1526482870146</millis>
+  <sequence>22</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>WARNING</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Wrong format of message</message>
+</record>
+<record>
+  <date>2018-05-16T17:01:42</date>
+  <millis>1526482902854</millis>
+  <sequence>23</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Recived message PersonalLocation;52.23901797423246;20.925951915283235</message>
+</record>
+<record>
+  <date>2018-05-16T17:27:49</date>
+  <millis>1526484469885</millis>
+  <sequence>24</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Recived message empty</message>
+</record>
+<record>
+  <date>2018-05-16T17:27:49</date>
+  <millis>1526484469887</millis>
+  <sequence>25</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>WARNING</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Wrong format of message</message>
+</record>
+<record>
+  <date>2018-05-16T17:27:59</date>
+  <millis>1526484479113</millis>
+  <sequence>26</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Recived message empty</message>
+</record>
+<record>
+  <date>2018-05-16T17:27:59</date>
+  <millis>1526484479114</millis>
+  <sequence>27</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>WARNING</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Wrong format of message</message>
+</record>
+<record>
+  <date>2018-05-16T17:28:32</date>
+  <millis>1526484512695</millis>
+  <sequence>28</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Recived message PersonalLocation;52.2420663517159;20.931273417968782</message>
+</record>
+<record>
+  <date>2018-05-16T17:32:49</date>
+  <millis>1526484769237</millis>
+  <sequence>29</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Recived message empty</message>
+</record>
+<record>
+  <date>2018-05-16T17:32:49</date>
+  <millis>1526484769239</millis>
+  <sequence>30</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>WARNING</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Wrong format of message</message>
+</record>
+<record>
+  <date>2018-05-16T17:33:08</date>
+  <millis>1526484788063</millis>
+  <sequence>31</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Recived message empty</message>
+</record>
+<record>
+  <date>2018-05-16T17:33:08</date>
+  <millis>1526484788072</millis>
+  <sequence>32</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>WARNING</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Wrong format of message</message>
+</record>
+<record>
+  <date>2018-05-16T17:33:34</date>
+  <millis>1526484814800</millis>
+  <sequence>33</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Recived message MedicalHelp;52.21085690103041;20.93682861328125</message>
+</record>
+<record>
+  <date>2018-05-16T17:33:41</date>
+  <millis>1526484821208</millis>
+  <sequence>34</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Recived message PersonalLocation;52.16033855898997;21.12359619140625</message>
+</record>
+<record>
+  <date>2018-05-16T17:33:45</date>
+  <millis>1526484825068</millis>
+  <sequence>35</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Recived message PersonalLocation;52.145171863164805;20.90936279296875</message>
+</record>
+<record>
+  <date>2018-05-16T17:33:48</date>
+  <millis>1526484828749</millis>
+  <sequence>36</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Recived message PersonalLocation;52.20580764940904;21.075531005859375</message>
+</record>
+<record>
+  <date>2018-05-16T17:37:30</date>
+  <millis>1526485050776</millis>
+  <sequence>37</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Recived message empty</message>
+</record>
+<record>
+  <date>2018-05-16T17:37:30</date>
+  <millis>1526485050779</millis>
+  <sequence>38</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>WARNING</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Wrong format of message</message>
+</record>
+<record>
+  <date>2018-05-16T17:37:40</date>
+  <millis>1526485060525</millis>
+  <sequence>39</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Recived message empty</message>
+</record>
+<record>
+  <date>2018-05-16T17:37:40</date>
+  <millis>1526485060533</millis>
+  <sequence>40</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>WARNING</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Wrong format of message</message>
+</record>
+<record>
+  <date>2018-05-16T17:38:16</date>
+  <millis>1526485096662</millis>
+  <sequence>41</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Recived message MedicalHelp;52.19570742462614;20.9615478515625</message>
+</record>
+<record>
+  <date>2018-05-16T17:58:18</date>
+  <millis>1526486298779</millis>
+  <sequence>42</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Recived message empty</message>
+</record>
+<record>
+  <date>2018-05-16T17:58:18</date>
+  <millis>1526486298802</millis>
+  <sequence>43</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>WARNING</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Wrong format of message</message>
+</record>
+<record>
+  <date>2018-05-16T18:00:01</date>
+  <millis>1526486401298</millis>
+  <sequence>44</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Recived message empty</message>
+</record>
+<record>
+  <date>2018-05-16T18:00:01</date>
+  <millis>1526486401674</millis>
+  <sequence>45</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>WARNING</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Wrong format of message</message>
+</record>
+<record>
+  <date>2018-05-16T18:04:36</date>
+  <millis>1526486676143</millis>
+  <sequence>46</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Recived message empty</message>
+</record>
+<record>
+  <date>2018-05-16T18:04:36</date>
+  <millis>1526486676161</millis>
+  <sequence>47</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>WARNING</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Wrong format of message</message>
+</record>
+<record>
+  <date>2018-05-16T18:04:57</date>
+  <millis>1526486697494</millis>
+  <sequence>48</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Recived message PersonalLocation;52.18813074958913;20.98077392578125</message>
+</record>
+<record>
+  <date>2018-05-16T18:06:27</date>
+  <millis>1526486787430</millis>
+  <sequence>49</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Recived message empty</message>
+</record>
+<record>
+  <date>2018-05-16T18:06:27</date>
+  <millis>1526486787431</millis>
+  <sequence>50</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>WARNING</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Wrong format of message</message>
+</record>
+<record>
+  <date>2018-05-16T18:08:05</date>
+  <millis>1526486885421</millis>
+  <sequence>51</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Recived message PersonalLocation;52.17381572894044;21.01373291015625</message>
+</record>
+<record>
+  <date>2018-05-16T18:09:59</date>
+  <millis>1526486999356</millis>
+  <sequence>52</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Recived message empty</message>
+</record>
+<record>
+  <date>2018-05-16T18:09:59</date>
+  <millis>1526486999560</millis>
+  <sequence>53</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>WARNING</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Wrong format of message</message>
+</record>
+<record>
+  <date>2018-05-16T18:11:17</date>
+  <millis>1526487077103</millis>
+  <sequence>54</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Recived message PersonalLocation;52.19149832013619;21.009613037109375</message>
+</record>
+<record>
+  <date>2018-05-16T18:11:25</date>
+  <millis>1526487085963</millis>
+  <sequence>55</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Recived message PersonalLocation;52.18055278321208;20.740447998046875</message>
+</record>
+<record>
+  <date>2018-05-16T18:11:42</date>
+  <millis>1526487102526</millis>
+  <sequence>56</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Recived message empty</message>
+</record>
+<record>
+  <date>2018-05-16T18:11:42</date>
+  <millis>1526487102553</millis>
+  <sequence>57</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>WARNING</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Wrong format of message</message>
+</record>
+<record>
+  <date>2018-05-16T18:11:48</date>
+  <millis>1526487108443</millis>
+  <sequence>58</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Recived message PersonalLocation;52.20244116286411;20.897003173828125</message>
+</record>
+<record>
+  <date>2018-05-16T18:12:40</date>
+  <millis>1526487160161</millis>
+  <sequence>59</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Recived message PersonalLocation;52.09542257372467;20.89837646484375</message>
+</record>
+<record>
+  <date>2018-05-16T18:29:24</date>
+  <millis>1526488164742</millis>
+  <sequence>60</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Recived message empty</message>
+</record>
+<record>
+  <date>2018-05-16T18:29:25</date>
+  <millis>1526488165604</millis>
+  <sequence>61</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>WARNING</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Wrong format of message</message>
+</record>
+<record>
+  <date>2018-05-16T18:30:24</date>
+  <millis>1526488224783</millis>
+  <sequence>62</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Recived message MedicalHelp;52.1965491976995;20.94781494140625</message>
+</record>
+<record>
+  <date>2018-05-16T18:31:17</date>
+  <millis>1526488277822</millis>
+  <sequence>63</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Recived message empty</message>
+</record>
+<record>
+  <date>2018-05-16T18:31:18</date>
+  <millis>1526488278344</millis>
+  <sequence>64</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>WARNING</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Wrong format of message</message>
+</record>
+<record>
+  <date>2018-05-16T18:32:27</date>
+  <millis>1526488347761</millis>
+  <sequence>65</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Recived message empty</message>
+</record>
+<record>
+  <date>2018-05-16T18:32:28</date>
+  <millis>1526488348263</millis>
+  <sequence>66</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>WARNING</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Wrong format of message</message>
+</record>
+<record>
+  <date>2018-05-16T18:32:46</date>
+  <millis>1526488366033</millis>
+  <sequence>67</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Recived message empty</message>
+</record>
+<record>
+  <date>2018-05-16T18:32:46</date>
+  <millis>1526488366271</millis>
+  <sequence>68</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>WARNING</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Wrong format of message</message>
+</record>
+<record>
+  <date>2018-05-16T18:34:21</date>
+  <millis>1526488461131</millis>
+  <sequence>69</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Recived message PersonalLocation;52.1965491976995;21.004119873046875</message>
+</record>
+<record>
+  <date>2018-05-16T18:34:34</date>
+  <millis>1526488474457</millis>
+  <sequence>70</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Recived message PersonalLocation;52.06757248092097;21.160675048828125</message>
+</record>
+<record>
+  <date>2018-05-16T18:34:45</date>
+  <millis>1526488485934</millis>
+  <sequence>71</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Recived message MedicalHelp;52.14348635578097;21.017852783203125</message>
+</record>
+<record>
+  <date>2018-05-16T18:34:49</date>
+  <millis>1526488489574</millis>
+  <sequence>72</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Recived message MedicalHelp;52.108919394160665;20.92584228515625</message>
+</record>
+<record>
+  <date>2018-05-16T18:34:52</date>
+  <millis>1526488492958</millis>
+  <sequence>73</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Recived message MedicalHelp;52.206649231195094;20.90936279296875</message>
+</record>
+<record>
+  <date>2018-05-16T18:34:55</date>
+  <millis>1526488495661</millis>
+  <sequence>74</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Recived message MedicalHelp;52.178868615307856;20.7967529296875</message>
+</record>
+<record>
+  <date>2018-05-16T18:35:04</date>
+  <millis>1526488504236</millis>
+  <sequence>75</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Recived message PersonalLocation;52.108919394160665;20.809112548828125</message>
+</record>
+<record>
+  <date>2018-05-16T18:35:11</date>
+  <millis>1526488511067</millis>
+  <sequence>76</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Recived message MedicalHelp;52.19318200975731;20.89288330078125</message>
+</record>
+<record>
+  <date>2018-05-16T18:35:28</date>
+  <millis>1526488528507</millis>
+  <sequence>77</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Recived message MedicalHelp;52.16707765422018;21.059051513671875</message>
+</record>
+<record>
+  <date>2018-05-16T18:35:45</date>
+  <millis>1526488545483</millis>
+  <sequence>78</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Recived message MedicalHelp;52.14053656435125;21.01603509192023</message>
+</record>
+<record>
+  <date>2018-05-16T18:36:47</date>
+  <millis>1526488607239</millis>
+  <sequence>79</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Recived message empty</message>
+</record>
+<record>
+  <date>2018-05-16T18:36:47</date>
+  <millis>1526488607341</millis>
+  <sequence>80</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>WARNING</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Wrong format of message</message>
+</record>
+<record>
+  <date>2018-05-16T18:47:00</date>
+  <millis>1526489220690</millis>
+  <sequence>81</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Recived message FireSupport;52.1559288412562;20.846512939561876</message>
+</record>
+<record>
+  <date>2018-05-16T18:47:14</date>
+  <millis>1526489234396</millis>
+  <sequence>82</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Placing requirement of fire support</message>
+</record>
+<record>
+  <date>2018-05-16T18:48:03</date>
+  <millis>1526489283641</millis>
+  <sequence>83</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Recived message EnemyForce;52.17951354680548;20.937150146593126;8587.237261908895</message>
+</record>
+<record>
+  <date>2018-05-16T18:48:07</date>
+  <millis>1526489287237</millis>
+  <sequence>84</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Recived message EnemyForce;52.02936924651466;20.91655078135875;5846.772177513917</message>
+</record>
+<record>
+  <date>2018-05-16T18:48:46</date>
+  <millis>1526489326513</millis>
+  <sequence>85</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Recived message removeUserFromList</message>
+</record>
+<record>
+  <date>2018-05-16T18:48:47</date>
+  <millis>1526489327731</millis>
+  <sequence>86</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>WARNING</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Wrong format of message</message>
+</record>
+<record>
+  <date>2018-05-16T18:48:51</date>
+  <millis>1526489331673</millis>
+  <sequence>87</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Recived message removeUserFromList</message>
+</record>
+<record>
+  <date>2018-05-16T18:48:51</date>
+  <millis>1526489331780</millis>
+  <sequence>88</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>WARNING</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Wrong format of message</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1250" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2018-05-16T19:08:00</date>
+  <millis>1526490480663</millis>
+  <sequence>0</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>WARNING</level>
+  <class>tytan.client.ClientMVC</class>
+  <method>&lt;init&gt;</method>
+  <thread>12</thread>
+  <message>Failed to start client</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1250" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2018-05-16T19:08:21</date>
+  <millis>1526490501160</millis>
+  <sequence>0</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>WARNING</level>
+  <class>tytan.client.ClientMVC</class>
+  <method>&lt;init&gt;</method>
+  <thread>12</thread>
+  <message>Failed to start client</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1250" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2018-05-16T19:08:45</date>
+  <millis>1526490525286</millis>
+  <sequence>0</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>registerUser</method>
+  <thread>12</thread>
+  <message>Sending register message from 3014</message>
+</record>
+<record>
+  <date>2018-05-16T19:08:45</date>
+  <millis>1526490525669</millis>
+  <sequence>1</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Recived message empty</message>
+</record>
+<record>
+  <date>2018-05-16T19:08:45</date>
+  <millis>1526490525673</millis>
+  <sequence>2</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>WARNING</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Wrong format of message</message>
+</record>
+<record>
+  <date>2018-05-16T19:09:24</date>
+  <millis>1526490564384</millis>
+  <sequence>3</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Recived message PersonalLocation;52.20496605168302;20.894256591796875</message>
+</record>
+<record>
+  <date>2018-05-16T19:09:28</date>
+  <millis>1526490568799</millis>
+  <sequence>4</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Recived message PersonalLocation;52.178868615307856;21.0164794921875</message>
+</record>
+<record>
+  <date>2018-05-16T19:09:34</date>
+  <millis>1526490574242</millis>
+  <sequence>5</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Recived message MedicalHelp;52.20580764940904;20.8626708984375</message>
+</record>
+<record>
+  <date>2018-05-16T19:09:47</date>
+  <millis>1526490587788</millis>
+  <sequence>6</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Recived message PersonalLocation;52.18476292396257;20.847564697265625</message>
+</record>
+<record>
+  <date>2018-05-16T19:09:54</date>
+  <millis>1526490594306</millis>
+  <sequence>7</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Recived message FireSupport;52.183078915492054;20.968414306640625</message>
+</record>
+<record>
+  <date>2018-05-16T19:09:54</date>
+  <millis>1526490594308</millis>
+  <sequence>8</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Placing requirement of fire support</message>
+</record>
+<record>
+  <date>2018-05-16T19:10:01</date>
+  <millis>1526490601225</millis>
+  <sequence>9</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Recived message FireSupport;52.11819608905541;20.946441650390625</message>
+</record>
+<record>
+  <date>2018-05-16T19:10:01</date>
+  <millis>1526490601228</millis>
+  <sequence>10</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Placing requirement of fire support</message>
+</record>
+<record>
+  <date>2018-05-16T19:10:24</date>
+  <millis>1526490624224</millis>
+  <sequence>11</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Recived message EnemyForce;52.24198127403428;20.789886474609375;2233.1993033961194</message>
+</record>
+<record>
+  <date>2018-05-16T19:11:43</date>
+  <millis>1526490703848</millis>
+  <sequence>12</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Recived message empty</message>
+</record>
+<record>
+  <date>2018-05-16T19:11:43</date>
+  <millis>1526490703851</millis>
+  <sequence>13</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>WARNING</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Wrong format of message</message>
+</record>
+<record>
+  <date>2018-05-16T19:12:04</date>
+  <millis>1526490724756</millis>
+  <sequence>14</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Recived message EnemyForce;52.17465791652892;20.9285888671875;14760.57068606808</message>
+</record>
+<record>
+  <date>2018-05-16T19:12:14</date>
+  <millis>1526490734200</millis>
+  <sequence>15</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Recived message EnemyForce;52.00421217268354;20.7747802734375;3745.325409071703</message>
+</record>
+<record>
+  <date>2018-05-16T19:16:21</date>
+  <millis>1526490981762</millis>
+  <sequence>16</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Recived message empty</message>
+</record>
+<record>
+  <date>2018-05-16T19:16:21</date>
+  <millis>1526490981765</millis>
+  <sequence>17</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>WARNING</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Wrong format of message</message>
+</record>
+<record>
+  <date>2018-05-16T19:19:33</date>
+  <millis>1526491173709</millis>
+  <sequence>18</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Recived message empty</message>
+</record>
+<record>
+  <date>2018-05-16T19:19:33</date>
+  <millis>1526491173712</millis>
+  <sequence>19</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>WARNING</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Wrong format of message</message>
+</record>
+<record>
+  <date>2018-05-16T19:19:48</date>
+  <millis>1526491188514</millis>
+  <sequence>20</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Recived message empty</message>
+</record>
+<record>
+  <date>2018-05-16T19:19:48</date>
+  <millis>1526491188518</millis>
+  <sequence>21</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>WARNING</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Wrong format of message</message>
+</record>
+<record>
+  <date>2018-05-16T19:20:57</date>
+  <millis>1526491257354</millis>
+  <sequence>22</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Recived message EnemyForce;52.15949610032851;20.8626708984375;4783.89523808173</message>
+</record>
+<record>
+  <date>2018-05-16T19:21:11</date>
+  <millis>1526491271974</millis>
+  <sequence>23</sequence>
+  <logger>tytan.client.ClientMVC</logger>
+  <level>INFO</level>
+  <class>tytan.client.controller.Controller</class>
+  <method>propertyChange</method>
+  <thread>15</thread>
+  <message>Recived message EnemyForce;52.0701050256541;20.946441650390625;6184.6721845641205</message>
+</record>

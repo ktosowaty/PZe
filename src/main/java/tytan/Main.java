@@ -13,7 +13,7 @@ import java.util.ResourceBundle;
 
 public class Main extends Application {
     private ResourceBundle rb;
-    private Stage primaryStage;
+    public static Stage primaryStage;
     private final static ClientMVC client = new ClientMVC();
 
 
