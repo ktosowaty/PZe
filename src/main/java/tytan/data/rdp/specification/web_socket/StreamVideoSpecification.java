@@ -16,7 +16,7 @@ public class StreamVideoSpecification implements StreamWebSocketSpecification {
 
     public StreamVideoSpecification(String clientId) {
         this.clientId = clientId;
-        String url = Config.getInstance().getApiUrl() + "/clients/list/" + clientId + "?operator=";
+        String url = Config.getInstance().getApiUrl() + "/clients/list/" + clientId + "/false";
         try {
             clientsListEndpoint = new ClientsListEndpoint(new URI(url));
         } catch (URISyntaxException e) {
@@ -39,6 +39,5 @@ public class StreamVideoSpecification implements StreamWebSocketSpecification {
     @Override
     public void sendMessage(ByteBuffer byteBuffer) {
         clientsListEndpoint.sendMessage(byteBuffer);
-        System.out.println("Sending bytes to server.");
     }
 }

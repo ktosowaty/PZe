@@ -92,7 +92,7 @@ public class VideoChatOperatorController implements Initializable {
     private Webcam selWebCam = null;
     private boolean stopCamera = false;
     private ObjectProperty<Image> imageProperty = new SimpleObjectProperty<Image>();
-    private StreamVideoSpecification streamVideoSpecification = new StreamVideoSpecification("Klient1");;
+    private StreamVideoSpecification streamVideoSpecification = new StreamVideoSpecification("Client_3");
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -158,7 +158,6 @@ public class VideoChatOperatorController implements Initializable {
 //                                    streamWebSocketRepository.streamQuery().subscribe();
                                     if (streamVideoSpecification != null)
                                         streamVideoSpecification.sendMessage(byteBuffer);
-                                    System.out.println("Bytes length: " + bytes.length);
                                 } catch (IOException exception) {
                                     exception.printStackTrace();
                                 }
