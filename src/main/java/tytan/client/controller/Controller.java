@@ -19,7 +19,7 @@ import java.util.logging.Logger;
 
 public class Controller extends AbstractController {
 	private final String usernick;
-	public double lat, lng;
+	public double lat, lng, radius;
 
 	private final static Logger LOGGER = Logger.getLogger(ClientMVC.class.getName());
 	private Map<String, AbstractModel> modelsMap;
@@ -101,6 +101,10 @@ public class Controller extends AbstractController {
 					Platform.runLater(() -> MapModel.addMedicalHelpMarker(new LatLong(lat, lng)));
 					break;
 				case EnemyForce:
+					lat = Double.parseDouble(messageSplit[1]);
+					lng = Double.parseDouble(messageSplit[2]);
+					radius = Double.parseDouble(messageSplit[3]);
+					Platform.runLater(() -> MapModel.addCircleArea(new LatLong(lat, lng), radius));
 					break;
 				}
 			} catch (Exception e) {

@@ -25,7 +25,7 @@ public class MapModel implements DirectionsServiceCallback {
 	private GoogleMapView gmv;
 	private static ArrayList<Marker> locationMarkers;
 	private ArrayList<Marker> placeMarkers;
-	private ArrayList<Circle> circles;
+	private static ArrayList<Circle> circles;
 	private ArrayList<Polyline> fireLines;
 	private static boolean locationMarkersVisible;
 	private boolean placeMarkersVisible;
@@ -34,8 +34,13 @@ public class MapModel implements DirectionsServiceCallback {
 	private ContextMenu contextMenu;
 	public static LatLong latLong;
 	public static Marker personalMarker;
+	private Circle circle1;
+	private boolean mousemoved=false;
+	private boolean mousemove=true;
+	private int newcircle=0;
+	String msg1;
 	public static LinkedList<Marker> medicalHelpMarkerList = new LinkedList<Marker>();
-
+	
 	public MapModel(GoogleMapView googleMapView) {
 		googleMapView.addMapInializedListener(() -> configureMap(googleMapView));
 		locationMarkersVisible = true;
@@ -126,14 +131,13 @@ public class MapModel implements DirectionsServiceCallback {
 		placeMarkers.add(marker);
 	}
 
-	public Circle addCircleArea(LatLong latLong, int radius) {
-		CircleOptions circleOptions = new CircleOptions().center(latLong).radius(radius).visible(false)
-				.fillOpacity(0.5);
-		Circle circle = new Circle(circleOptions);
-		circles.add(circle);
-		googleMap.addMapShape(circle);
-		return circle;
-	}
+	 public static Circle addCircleArea(LatLong latLong, double radius) {
+	        CircleOptions circleOptions = new CircleOptions().center(latLong).clickable(false).radius(radius).visible(false).strokeWeight(0).fillColor("RED").fillOpacity(0.2);
+	        Circle circle = new Circle(circleOptions);
+	        circles.add(circle);
+	        googleMap.addMapShape(circle);
+	        return circle;
+	 }
 
 	public void addFireLine(LatLong l1, LatLong l2) {
 		PolylineOptions line_opt;
@@ -159,6 +163,7 @@ public class MapModel implements DirectionsServiceCallback {
 
 	private void configureMap(GoogleMapView googleMapView) {
 		gmv = googleMapView;
+		
 		MapOptions mapOptions = new MapOptions();
 		mapOptions.center(new LatLong(52.13, 21.00)).mapType(MapTypeIdEnum.ROADMAP).zoom(10).overviewMapControl(false)
 				.panControl(false).streetViewControl(false).mapType(MapTypeIdEnum.TERRAIN);
@@ -166,8 +171,17 @@ public class MapModel implements DirectionsServiceCallback {
 		googleMap = googleMapView.createMap(mapOptions, false);
 
 		googleMap.addMouseEventHandler(UIEventType.click, (me) -> {
-
-			switch (MeldunkiController.meldunkiType) {
+			if(newcircle==1 && MeldunkiController.meldunkiType==MeldunkiType.EnemyForce){
+				mousemove=true;
+				mousemoved=false;
+				newcircle=0;
+			}
+			if(mousemoved==true && MeldunkiController.meldunkiType==MeldunkiType.EnemyForce){
+				mousemove=false;
+				newcircle=1;
+			}
+			
+switch (MeldunkiController.meldunkiType) {
 			case PersonalLocation:
 				latLong = me.getLatLong();
 				String msg = MeldunkiType.valueOf(MeldunkiController.meldunkiType.toString()) + ";"
@@ -186,6 +200,26 @@ public class MapModel implements DirectionsServiceCallback {
 				LOGGER.info("Sending request for fire support " + message);
 				break;
 			case EnemyForce:
+				latLong = me.getLatLong();
+				System.out.println("Latitude: " + latLong.getLatitude());
+				System.out.println("Longitude: " + latLong.getLongitude());
+				if(mousemove==true){
+				circle1=addCircleArea(latLong, 250);
+				mousemoved=false;
+				}
+				googleMap.addMouseEventHandler(UIEventType.mousemove, (de) -> {
+					if(mousemove==true){
+					circle1.setRadius(me.getLatLong().distanceFrom(de.getLatLong()));
+					msg1= MeldunkiType.valueOf(MeldunkiController.meldunkiType.toString()) + ";"
+							+ me.getLatLong().getLatitude() + ";" + me.getLatLong().getLongitude()+ ";" + me.getLatLong().distanceFrom(de.getLatLong());
+					
+					mousemoved=true;
+					}
+				});
+				if(mousemove==false)
+				Main.getClient().getController().sendBrodcastMessage(msg1);
+				//if(mousemove==false)
+				//MeldunkiController.meldunkiType = null;
 				break;
 			case MedicalHelp:
 				latLong = me.getLatLong();
