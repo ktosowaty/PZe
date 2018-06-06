@@ -12,7 +12,7 @@ public class Config {
     }
 
     public String getApiUrl() {
-//        return "ws://localhost:8181/tytan_api";
-        return "ws://skyesoftware.pl:8181/tytan_api";
+        return "ws://localhost:8181/tytan_api";
+//        return "ws://skyesoftware.pl:8181/tytan_api";
     }
 }

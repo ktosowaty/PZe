@@ -10,6 +10,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
+<?import com.jfoenix.controls.JFXButton?>
 <AnchorPane fx:id="chatLabel" prefHeight="400.0" prefWidth="600.0" stylesheets="@/css/my-theme.css" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tytan.videochat.VideoChatClientController">
     <children>
         <JFXDrawer fx:id="drawer" defaultDrawerSize="250.0" direction="RIGHT" onDrawerClosed="#drawerClosed" onDrawerOpening="#drawerOpening" resizableOnDrag="true" resizeContent="true" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
@@ -23,8 +24,8 @@
                 </AnchorPane>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" styleClass="jfx-list-view">
                <children>
-                  <Canvas id="displayStreamCanvas" fx:id="displayStreamCanvas" height="230.0" pickOnBounds="true" width="300.0" />
-                  <ImageView id="displayStreamImage" fx:id="displayStreamImage" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                  <Canvas id="displayStreamCanvas" fx:id="displayStreamCanvas" height="800.0" pickOnBounds="true" width="800.0" />
+                  <JFXButton fx:id="connectClientButton" onAction="#connectClient" text="%videochat.connect" layoutX="200.0" layoutY="343.0" mnemonicParsing="false"  />
                </children>
                 </AnchorPane>
             </items>

@@ -23,6 +23,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
+import tytan.data.rdp.manager.StreamManager;
 import tytan.data.rdp.repository.web_socket.ClientWebSocketRepository;
 import tytan.data.rdp.repository.web_socket.StreamWebSocketRepository;
 import tytan.data.rdp.specification.web_socket.CreateClientConnectionSpecification;
@@ -30,18 +31,17 @@ import tytan.data.rdp.specification.web_socket.StreamVideoSpecification;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
+import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.net.URL;
 import java.nio.ByteBuffer;
+import java.nio.charset.Charset;
 import java.util.ResourceBundle;
 import java.util.concurrent.TimeUnit;
 
 //TODO NEEDS REFACTOR
 public class VideoChatOperatorController implements Initializable {
-
-    private StreamWebSocketRepository streamWebSocketRepository = new StreamWebSocketRepository();
-    private ClientWebSocketRepository clientWebSocketRepository = new ClientWebSocketRepository();
 
     private AnchorPane menuPane;
     private boolean isStreaming = false;
@@ -59,7 +59,13 @@ public class VideoChatOperatorController implements Initializable {
     ImageView imgWebCamCapturedImage;
 
     @FXML
+    ImageView testImage;
+
+    @FXML
     Button streamingButton;
+
+    @FXML
+    Button connectOperatorButton;
 
     @FXML
     private void openSettings(MouseEvent mouseEvent) {
@@ -92,7 +98,7 @@ public class VideoChatOperatorController implements Initializable {
     private Webcam selWebCam = null;
     private boolean stopCamera = false;
     private ObjectProperty<Image> imageProperty = new SimpleObjectProperty<Image>();
-    private StreamVideoSpecification streamVideoSpecification = new StreamVideoSpecification("Client_3");
+    private StreamVideoSpecification streamVideoSpecification = null;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -103,12 +109,6 @@ public class VideoChatOperatorController implements Initializable {
             drawer.setSidePane(vBox);
             VideoChatOperatorSettingsController settings = loader.getController();
             settings.setVideoChat(this);
-            clientWebSocketRepository.streamQuery(new CreateClientConnectionSpecification()).subscribe(onNext -> {
-//                streamVideoSpecification =
-            }, error -> {
-                error.printStackTrace();
-                System.out.println("Getting exception: " + error.getMessage());
-            });
             Platform.runLater(new Runnable() {
 
                 @Override
@@ -155,9 +155,11 @@ public class VideoChatOperatorController implements Initializable {
                                     ImageIO.write(image, "jpg", baos);
                                     byte[] bytes = baos.toByteArray();
                                     ByteBuffer byteBuffer = ByteBuffer.wrap(bytes);
-//                                    streamWebSocketRepository.streamQuery().subscribe();
-                                    if (streamVideoSpecification != null)
-                                        streamVideoSpecification.sendMessage(byteBuffer);
+                                    Charset charset = Charset.forName("ISO-8859-1");
+                                    String text = charset.decode(byteBuffer).toString();
+                                    if (streamVideoSpecification != null) {
+                                        streamVideoSpecification.sendMessage(text);
+                                    }
                                 } catch (IOException exception) {
                                     exception.printStackTrace();
                                 }
@@ -174,6 +176,8 @@ public class VideoChatOperatorController implements Initializable {
 
         new Thread(webCamIntilizer).start();
     }
+
+
 
     protected void startWebCamStream() {
 
@@ -223,6 +227,15 @@ public class VideoChatOperatorController implements Initializable {
             streamingButton.setText("Stop stream");
         }
         isStreaming = !isStreaming;
+    }
+
+    public void connectOperator(ActionEvent event) {
+        new CreateClientConnectionSpecification().getResults().subscribe(onNext -> {
+            streamVideoSpecification = new StreamVideoSpecification(onNext);
+        }, error -> {
+            error.printStackTrace();
+            System.out.println("Getting exception: " + error.getMessage());
+        });
     }
 
 }

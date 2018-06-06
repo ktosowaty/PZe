@@ -16,6 +16,8 @@ public class StreamManager {
     private URI uri;
     private String clientId;
     private StreamDataListener streamDataListener;
+    private Session userSession = null;
+    private MessageHandler messageHandler;
 
     private StreamManager(URI uri, String clientId, StreamDataListener streamDataListener) {
         this.uri = uri;
@@ -24,17 +26,8 @@ public class StreamManager {
         initialize();
     }
 
-    private Session userSession = null;
-    private MessageHandler messageHandler;
-
     public void initialize() {
         try {
-            Endpoint endpoint =new Endpoint() {
-                @Override
-                public void onOpen(Session session, javax.websocket.EndpointConfig endpointConfig) {
-                    System.out.println("StreamManager onOpen");
-                }
-            };
             System.out.println("StreamManager uri: " + uri.toString());
             WebSocketContainer container = ContainerProvider
                     .getWebSocketContainer();
@@ -65,11 +58,8 @@ public class StreamManager {
         streamDataListener.onStreamReceived(message);
     }
 
-    public void addMessageHandler(MessageHandler msgHandler) {
-        this.messageHandler = msgHandler;
-    }
 
-    private static String byteBuffer2String(ByteBuffer buf, Charset charset) {
+    public static String byteBuffer2String(ByteBuffer buf, Charset charset) {
         byte[] bytes;
         if (buf.hasArray()) {
             bytes = buf.array();

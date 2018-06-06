@@ -1,6 +1,7 @@
 package tytan.data.rdp.specification.web_socket;
 
 import io.reactivex.Observable;
+import org.json.JSONObject;
 import tytan.config.Config;
 
 import java.net.URI;
@@ -15,7 +16,9 @@ public class CreateClientConnectionSpecification implements WebSocketSpecificati
             clientsListEndpoint.addMessageHandler(new MessageHandler() {
                 @Override
                 public void handleMessage(String message) {
-
+                    JSONObject messageJO = new JSONObject(message);
+                    String clientId = messageJO.getString("clientId");
+                    observableEmitter.onNext(clientId);
                 }
             });
         });

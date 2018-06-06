@@ -33,8 +33,8 @@
                 <RowConstraints vgrow="SOMETIMES" />
             </rowConstraints>
             <children>
-                <JFXButton fx:id="streamingButton" alignment="CENTER" contentDisplay="CENTER" layoutX="137.0" layoutY="46.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onAction="#startCamera" text="%videochat.start" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
-                </JFXButton>
+                <JFXButton fx:id="connectOperatorButton" alignment="CENTER" contentDisplay="CENTER" layoutX="137.0" layoutY="46.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onAction="#connectOperator" text="%videochat.connect" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER"/>
+                <JFXButton fx:id="streamingButton" alignment="CENTER" contentDisplay="CENTER" layoutX="137.0" layoutY="46.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onAction="#startCamera" text="%videochat.start" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER"/>
             </children>
             <padding>
                 <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />

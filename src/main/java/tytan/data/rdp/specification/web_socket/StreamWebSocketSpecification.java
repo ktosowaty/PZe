@@ -10,6 +10,6 @@ public interface StreamWebSocketSpecification extends Specification {
 
 
     Completable establishConnection();
-    void sendMessage(ByteBuffer byteBuffer);
+    void sendMessage(String stream);
 
 }

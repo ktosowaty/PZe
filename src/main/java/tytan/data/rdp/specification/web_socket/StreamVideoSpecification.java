@@ -37,7 +37,7 @@ public class StreamVideoSpecification implements StreamWebSocketSpecification {
     }
 
     @Override
-    public void sendMessage(ByteBuffer byteBuffer) {
-        clientsListEndpoint.sendMessage(byteBuffer);
+    public void sendMessage(String stream) {
+        clientsListEndpoint.sendMessage(stream);
     }
 }
