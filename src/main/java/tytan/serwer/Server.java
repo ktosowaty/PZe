@@ -1,9 +1,14 @@
 package tytan.serwer;
 
 import javax.net.ServerSocketFactory;
+
+import com.lynden.gmapsfx.javascript.object.Marker;
+
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.logging.Logger;
@@ -18,7 +23,7 @@ public class Server {
     private ExecutorService clientsThreads;
     private ServerSocket ServerSocket;
     private ServerSocketFactory ServerSocketfactory;
-
+    public static Map<String,Marker> friendlyMarkers = new HashMap();
     private Server() throws IOException {
 
         portNumber = 8000;

@@ -74,6 +74,7 @@ public class Controller extends AbstractController {
 
 			Message message = (Message) evt.getNewValue();
 			String nickTo = message.getNickTo();
+			String nickFrom = message.getNickFrom();
 			String messageContent = (String) message.getMessage();
 			LOGGER.info("Recived message " + messageContent);
 
@@ -92,7 +93,7 @@ public class Controller extends AbstractController {
 				case PersonalLocation:
 					lat = Double.parseDouble(messageSplit[1]);
 					lng = Double.parseDouble(messageSplit[2]);
-					Platform.runLater(() -> MapModel.addFriendlyLocationMarker(new LatLong(lat, lng)));
+					Platform.runLater(() -> MapModel.addFriendlyLocationMarker(new LatLong(lat, lng),nickFrom));
 
 					break;
 				case MedicalHelp:

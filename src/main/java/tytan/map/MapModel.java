@@ -14,6 +14,7 @@ import netscape.javascript.JSObject;
 import tytan.Main;
 import tytan.meldunki.MeldunkiController;
 import tytan.meldunki.MeldunkiType;
+import tytan.serwer.Server;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -128,12 +129,15 @@ public class MapModel implements DirectionsServiceCallback {
 		locationMarkers.addAll(medicalHelpMarkerList);
 	}
 
-	public static void addFriendlyLocationMarker(LatLong latLong) {
-		Marker marker = new Marker(new MarkerOptions().position(latLong).animation(Animation.DROP).icon(
+	public static void addFriendlyLocationMarker(LatLong latLong,String nick) {
+		Marker marker;
+		if(Server.friendlyMarkers.containsKey(nick)) MapModel.googleMap.removeMarker(Server.friendlyMarkers.get(nick));
+		marker = new Marker(new MarkerOptions().position(latLong).animation(Animation.DROP).icon(
 				"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANgSURBVEhLvVZLTxNRFCbxlajRuHJr3LlmS2xop+20QGKgpSLlkRASE1hAAggCiTw2vIP+CWNijC50YQSUQB9UwqNEDEYWNAUUaWmnBY3mer7JxbTTsdPW4pd8CZ17zne45557zi3IFH67/ey8IFR6LJYXHlEMugThO4i/F0TxOdZgw83zA4/RaPeaTNvLdnsk0NrKQgMDLDY6KjM0OMjwbcVmO/CYTEGXwVDB3XLHE7v9lNtsfugrKZG+9vSww4mJtIQNbN2iOAlfLpM9PGbzo+XyckkaGlINpEZpeJjBhzI0yWWyA9K7YLXGpJER1QDpiOALtPM5vf4Wl8sMKBI6r5293t4U0Z3OTrbqdDIqKpmrzhr5m9IOaUdd+AoLz3BZbVCBOJZttohS7HNTE/PZbCww/Y6FwzGZgZlZtninWl5T2i+Rxrxeb+ey2sCVQaUmimBXCBr6FmGRHyyJ+IY15c6h4TWbn3FZbeBa4MokiiC92Kky6DEDU29lm0QfaECLy2rDLQhHyqLCeYYP4qpBQaTdY7Um+UADWlxWG3TGP2NjY0kiuQSGBrS4rDZQ0ft9fUkiqzU1ciGpBQW33sykpBoaqGwuqw2vKE5tt7cniaBwUL3pimu3qyvJJ9jWxqiPv+ay2qDmf+9jff1hogh4fJ2wO/k6hSQ5C+9vV7HN5uYkW3C9ri7u1us7uKw2vAbDdWqXMaUQ+KeB0HmCfmogyp2C8fFxpDnu0umucdnMQOn2f+nuThHMlPClNC9xucxB8/Wu3+GQ1EQz4YrDEaUja+RymWNap7voNhqjYZq3asLpiMbhNpnCvtLS81wuO9CEerBeW5tSZFr84HTGXCZTJ5fJHj5BuEwCkrJ9puN+fz+jf/hgyWi8wGVyA7W8+2tVVVG1IGpcqayMkE8Ld88dL0XxHJ1XUO3KKLnT0YErtEn1cZq7/xvcBkOJ12KJ4XGnFhDE84iuIBpGMXfLD2iuvtpobPxroVERxukWPObm+YNLr7/qMhrDyuEBollQp9ul1+Ulbp5fUIVXLJaVRRJHJmYuPQqj1HB03OxkQHP56UZDw9Fx4LXq6jiewXz55DBbVHSFUr6HYbHV0vKLKv4TKp8vnyzmiotvYnrRgwH9+Ab//H9AFdyORz//mSUKCn4DQp7pmFaRNZYAAAAASUVORK5CYII=")
 				.visible(locationMarkersVisible));
 		googleMap.addMarker(marker);
 		locationMarkers.add(marker);
+		Server.friendlyMarkers.put(nick, marker);
 	}
 
 	public void addPlaceMarker(LatLong latLong) {
