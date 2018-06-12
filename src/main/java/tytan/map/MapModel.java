@@ -29,6 +29,8 @@ import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
+import javafx.scene.layout.BorderPane;
 
 public class MapModel implements DirectionsServiceCallback {
 	private final static Logger LOGGER = Logger.getLogger(MapModel.class.getName());
@@ -53,7 +55,6 @@ public class MapModel implements DirectionsServiceCallback {
 	public static LinkedList<Marker> medicalHelpMarkerList = new LinkedList<Marker>();
 	private static MapModel window;
 	private static String meldunekName = new String();
-	private static int addCircle=0;
 	
 	public MapModel(GoogleMapView googleMapView) {
 		googleMapView.addMapInializedListener(() -> configureMap(googleMapView));
@@ -224,38 +225,39 @@ switch (MeldunkiController.meldunkiType) {
 				System.out.println("Latitude: " + latLong.getLatitude());
 				System.out.println("Longitude: " + latLong.getLongitude());
 				Stage newWindow = new Stage();
-				
+				meldunekName = "Oznacz pozycje wroga";
 				LatLong x = MapModel.latLong;
 				Button button = new Button();
+				Button button1 = new Button();
 				Label Label = new Label(x.toString());
+				Label Label1 = new Label(meldunekName);
 			    button.setText("Potwierdz");
-			    button.setTranslateY(30);
-			    Label.setTranslateY(-30);
-			    
+			    button1.setText("Anuluj");
+			    button.setTranslateX(50);
+			    button1.setTranslateX(-50);
+			    button.setTranslateY(25);
+			    button1.setTranslateY(25);
+			    Label1.setTranslateY(-30);
+			    Label.setTranslateY(-15);
 		        StackPane secondaryLayout = new StackPane();
-		        secondaryLayout.getChildren().add(button);
 		        secondaryLayout.getChildren().add(Label);
+		        secondaryLayout.getChildren().add(button);
+		        secondaryLayout.getChildren().add(button1);
+		        secondaryLayout.getChildren().add(Label1);
 
 		        Scene secondScene = new Scene(secondaryLayout, 230, 100);
 
 		        // New window (Stage)
-		        newWindow.setTitle(meldunekName);
 		        newWindow.setScene(secondScene);
 
 		        // Specifies the modality for new window.
 		        newWindow.initModality(Modality.WINDOW_MODAL);
 		        newWindow.initOwner(Main.primaryStage);
-		        // Set position of second window, related to primary window.
-		        newWindow.setX(360);
-		        newWindow.setY(240);
-		        newWindow.setResizable(false);
-		        newWindow.show();
 		        
-		        button.setOnAction(new EventHandler<ActionEvent>() 
-		        {
-		            public void handle(ActionEvent event) 
-		            {
-		            	newWindow.close();
+		        newWindow.setX(Main.primaryStage.getX() + (Main.primaryStage.getWidth()/2)-115);
+		        newWindow.setY(Main.primaryStage.getY() + (Main.primaryStage.getHeight()/2)-50);
+		        newWindow.setResizable(false);
+		        newWindow.initStyle(StageStyle.UNDECORATED);
 		            	
 		            	if(mousemove==true){
 							circle1=addCircleArea(latLong, 250);
@@ -271,9 +273,29 @@ switch (MeldunkiController.meldunkiType) {
 								}
 							});
 							if(mousemove==false)
-							Main.getClient().getController().sendBrodcastMessage(msg1);
-		            }
-		         });
+							{	
+							newWindow.show();
+							button.setOnAction(new EventHandler<ActionEvent>() 
+					        {
+								
+					            public void handle(ActionEvent event) 
+					            {
+					            	Main.getClient().getController().sendBrodcastMessage(msg1);
+					            	newWindow.close();
+					            }
+					            
+					         });
+							button1.setOnAction(new EventHandler<ActionEvent>() 
+					        {
+								
+					            public void handle(ActionEvent event) 
+					            {
+					            	circle1.setRadius(0);
+					            	newWindow.close();
+					            }
+					            
+					         });
+							}
 				break;
 			case MedicalHelp:
 				latLong = me.getLatLong();
@@ -301,19 +323,29 @@ switch (MeldunkiController.meldunkiType) {
 		
 		LatLong x = MapModel.latLong;
 		Button button = new Button();
+		Button button1 = new Button();
 		Label Label = new Label(x.toString());
+		Label Label1 = new Label(meldunekName);
 	    button.setText("Potwierdz");
-	    button.setTranslateY(30);
-	    Label.setTranslateY(-30);
+	    button1.setText("Anuluj");
+	    button.setTranslateX(50);
+	    button1.setTranslateX(-50);
+	    button.setTranslateY(25);
+	    button1.setTranslateY(25);
+	    Label1.setTranslateY(-30);
+	    Label.setTranslateY(-15);
 	    
         StackPane secondaryLayout = new StackPane();
-        secondaryLayout.getChildren().add(button);
         secondaryLayout.getChildren().add(Label);
+        secondaryLayout.getChildren().add(button);
+        secondaryLayout.getChildren().add(button1);
+        secondaryLayout.getChildren().add(Label1);
 
         Scene secondScene = new Scene(secondaryLayout, 230, 100);
-
+        newWindow.setX(Main.primaryStage.getX() + (Main.primaryStage.getWidth()/2)-115);
+        newWindow.setY(Main.primaryStage.getY() + (Main.primaryStage.getHeight()/2)-50);
+        newWindow.initStyle(StageStyle.UNDECORATED);
         // New window (Stage)
-        newWindow.setTitle(meldunekName);
         newWindow.setScene(secondScene);
 
         // Specifies the modality for new window.
@@ -342,6 +374,13 @@ switch (MeldunkiController.meldunkiType) {
 				{
 					
 				}
+            	newWindow.close();
+            }
+         });
+        button1.setOnAction(new EventHandler<ActionEvent>() 
+        {
+            public void handle(ActionEvent event) 
+            {
             	newWindow.close();
             }
          });
