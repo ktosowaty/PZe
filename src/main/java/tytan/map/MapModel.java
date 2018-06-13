@@ -38,6 +38,7 @@ public class MapModel implements DirectionsServiceCallback {
     private static ArrayList<Marker> locationMarkers;
     private static ArrayList<Circle> circles;
     private static boolean locationMarkersVisible;
+    private static boolean medicalHelpMarkersVisible;
     private static MapModel window;
     private static String meldunekName = new String();
     String msg1;
@@ -56,6 +57,7 @@ public class MapModel implements DirectionsServiceCallback {
     public MapModel(GoogleMapView googleMapView) {
         googleMapView.addMapInializedListener(() -> configureMap(googleMapView));
         locationMarkersVisible = true;
+        medicalHelpMarkersVisible=true;
         placeMarkersVisible = true;
         locationMarkers = new ArrayList<>();
         placeMarkers = new ArrayList<>();
@@ -94,7 +96,7 @@ public class MapModel implements DirectionsServiceCallback {
                 .visible(locationMarkersVisible).title("Pomoc medyczna")));
         for (Marker m : medicalHelpMarkerList)
             googleMap.addMarker(m);
-        locationMarkers.addAll(medicalHelpMarkerList);
+        //locationMarkers.addAll(medicalHelpMarkerList);
     }
 
     public static void addFriendlyLocationMarker(LatLong latLong, String nick) {
@@ -190,6 +192,15 @@ public class MapModel implements DirectionsServiceCallback {
         if (!locationMarkers.isEmpty()) {
             locationMarkersVisible = visible;
             for (Marker m : locationMarkers) {
+                m.setVisible(visible);
+            }
+        }
+    }
+
+    public void setMedicalHelpVisible(boolean visible) {
+        if (!medicalHelpMarkerList.isEmpty()) {
+            medicalHelpMarkersVisible = visible;
+            for (Marker m : medicalHelpMarkerList) {
                 m.setVisible(visible);
             }
         }

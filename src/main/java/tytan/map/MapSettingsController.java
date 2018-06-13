@@ -13,6 +13,7 @@ public class MapSettingsController {
     public JFXTextField tfTo;
     public JFXTextField tfFrom;
     public JFXToggleButton btnShowRoute;
+    public JFXToggleButton visibleMedicalHelpBtn;
     @FXML
     private JFXToggleButton visibleButton;
     @FXML
@@ -67,5 +68,10 @@ public class MapSettingsController {
         if (selected)
             map.mapModel.googleMap.showDirectionsPane();
         else map.mapModel.googleMap.hideDirectionsPane();
+    }
+
+    public void setVisibleMedicalHelp(ActionEvent actionEvent) {
+        boolean selected = visibleMedicalHelpBtn.isSelected();
+        map.mapModel.setMedicalHelpVisible(selected);
     }
 }
