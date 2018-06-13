@@ -11,7 +11,6 @@ import javafx.scene.layout.Pane;
 import tytan.Main;
 import tytan.MenuController;
 import tytan.client.ClientMVC;
-import tytan.map.MapModel;
 
 import java.io.IOException;
 import java.net.URL;
@@ -20,14 +19,12 @@ import java.util.ResourceBundle;
 
 public class MeldunkiController implements Initializable {
 
+    public static MeldunkiType meldunkiType;
     @FXML
     private Button settingsButton;
     @FXML
     private JFXDrawer drawer;
-
     private ClientMVC client;
-
-    public static MeldunkiType meldunkiType;
 
     public MeldunkiController() {
         client = Main.getClient();

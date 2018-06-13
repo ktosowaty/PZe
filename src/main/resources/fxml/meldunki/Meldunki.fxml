@@ -1,29 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXDrawer?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ChoiceBox?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.*?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@/css/my-theme.css" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tytan.meldunki.MeldunkiController">
+<?import javafx.scene.layout.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="400.0" prefWidth="600.0"
+            stylesheets="@/css/my-theme.css" xmlns="http://javafx.com/javafx/8.0.121"
+            fx:controller="tytan.meldunki.MeldunkiController">
     <children>
-        <JFXDrawer fx:id="drawer" defaultDrawerSize="250.0" direction="RIGHT" onDrawerClosed="#drawerClosed" onDrawerOpening="#drawerOpening" resizableOnDrag="true" resizeContent="true" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-        <Button fx:id="settingsButton" contentDisplay="GRAPHIC_ONLY" layoutX="542.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#openSettings" prefHeight="34.0" prefWidth="31.0" styleClass="jfx-button-settings" stylesheets="@/css/my-theme.css" text=" " AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+        <JFXDrawer fx:id="drawer" defaultDrawerSize="250.0" direction="RIGHT" onDrawerClosed="#drawerClosed"
+                   onDrawerOpening="#drawerOpening" resizableOnDrag="true" resizeContent="true"
+                   AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+        <Button fx:id="settingsButton" contentDisplay="GRAPHIC_ONLY" layoutX="542.0" layoutY="14.0"
+                mnemonicParsing="false" onMouseClicked="#openSettings" prefHeight="34.0" prefWidth="31.0"
+                styleClass="jfx-button-settings" stylesheets="@/css/my-theme.css" text=" " AnchorPane.rightAnchor="5.0"
+                AnchorPane.topAnchor="5.0">
             <graphic>
                 <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@/images/settings_24.png" />
+                        <Image url="@/images/settings_24.png"/>
                     </image>
                 </ImageView>
             </graphic>
         </Button>
-	  <Button id="my" fx:id="WsparcieOgniowe" layoutX="65.0" layoutY="260.0" mnemonicParsing="false" onAction="#fireSupport" text="Wsparcie&#xA;Ogniowe" styleClass="Button" stylesheets="@/css/my-theme.css" />
-      <Button id="my" fx:id="PomocMedyczna" layoutX="65.0" layoutY="25.0" mnemonicParsing="false" onAction="#medicalHelp" text="Pomoc&#xA;Medyczna" styleClass="Button" stylesheets="@/css/my-theme.css" />
-      <Button id="my" fx:id="WlasnaPozycja" layoutX="360.0" layoutY="260.0" mnemonicParsing="false" onAction="#personalLocation" text="Wlasna&#xA;Pozycja" styleClass="Button" stylesheets="@/css/my-theme.css" />
-      <Button id="my" fx:id="SilyWroga" layoutX="360.0" layoutY="25.0" mnemonicParsing="false" onAction="#enemyForce" text="Sily&#xA;Wroga" styleClass="Button" stylesheets="@/css/my-theme.css" />
+        <Button id="my" fx:id="WsparcieOgniowe" layoutX="65.0" layoutY="260.0" mnemonicParsing="false"
+                onAction="#fireSupport" text="Wsparcie&#xA;Ogniowe" styleClass="Button"
+                stylesheets="@/css/my-theme.css"/>
+        <Button id="my" fx:id="PomocMedyczna" layoutX="65.0" layoutY="25.0" mnemonicParsing="false"
+                onAction="#medicalHelp" text="Pomoc&#xA;Medyczna" styleClass="Button" stylesheets="@/css/my-theme.css"/>
+        <Button id="my" fx:id="WlasnaPozycja" layoutX="360.0" layoutY="260.0" mnemonicParsing="false"
+                onAction="#personalLocation" text="Wlasna&#xA;Pozycja" styleClass="Button"
+                stylesheets="@/css/my-theme.css"/>
+        <Button id="my" fx:id="SilyWroga" layoutX="360.0" layoutY="25.0" mnemonicParsing="false" onAction="#enemyForce"
+                text="Sily&#xA;Wroga" styleClass="Button" stylesheets="@/css/my-theme.css"/>
     </children>
 </AnchorPane>

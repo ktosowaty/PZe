@@ -78,7 +78,7 @@ public class ConnectionHandler implements Runnable {
         LOGGER.info("Waiting for client data...");
         do {
             Message clientMessageObject = (Message) inputObject.readObject();
-            LOGGER.info("Received new message from " +clientMessageObject.getNickFrom());
+            LOGGER.info("Received new message from " + clientMessageObject.getNickFrom());
             String receiptNick = clientMessageObject.getNickTo();
             ObjectOutputStream recipientObjectOutputStream = usersOutputMap.get(receiptNick);
             try {

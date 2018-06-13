@@ -8,8 +8,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.Pane;
 import tytan.Main;
 import tytan.client.ClientMVC;
 
@@ -21,11 +21,11 @@ public class MapController implements Initializable {
 
     public MapModel mapModel;
     @FXML
+    public JFXDrawer drawer;
+    @FXML
     private GoogleMapView googleMapView;
     @FXML
     private Button settingsButton;
-    @FXML
-    private JFXDrawer drawer;
     private ClientMVC client;
 
     public void initialize(URL location, ResourceBundle resources) {
@@ -33,7 +33,7 @@ public class MapController implements Initializable {
             client = Main.getClient();
             FXMLLoader loader = new FXMLLoader();
             loader.setResources(resources);
-            Pane vBox = loader.load(getClass().getResource("/fxml/map/MapSettings.fxml").openStream());
+            ScrollPane vBox = loader.load(getClass().getResource("/fxml/map/MapSettings.fxml").openStream());
             drawer.setSidePane(vBox);
             MapSettingsController settings = loader.getController();
             settings.setMap(this);

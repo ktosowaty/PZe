@@ -11,34 +11,34 @@ import java.util.logging.FileHandler;
 import java.util.logging.Logger;
 
 public class ClientMVC {
-	private final static Logger LOGGER = Logger.getLogger(ClientMVC.class.getName());
-	private final static String host = "localhost";
-	private final static int port = 8000;
-	private SendDataModel sendDataModel;
-	public ReceiveDataModel receiveDataModel;
-	private Controller controller;
-	private UsersListModel userListModel;
-	
-	public ClientMVC() {
+    private final static Logger LOGGER = Logger.getLogger(ClientMVC.class.getName());
+    private final static String host = "localhost";
+    private final static int port = 8000;
+    public ReceiveDataModel receiveDataModel;
+    private SendDataModel sendDataModel;
+    private Controller controller;
+    private UsersListModel userListModel;
 
-		try {
-			FileHandler fileHandler = new FileHandler("log/client%g.log", 5242880, 5, true);
-			LOGGER.addHandler(fileHandler);
+    public ClientMVC() {
 
-			AbstractConnection connection = new EstablishConnectionSupport(host, port);
-			controller = new Controller();
+        try {
+            FileHandler fileHandler = new FileHandler("log/client%g.log", 5242880, 5, true);
+            LOGGER.addHandler(fileHandler);
 
-			sendDataModel = new SendDataModel(connection);
-			controller.addModel("sendDataModel", sendDataModel);
+            AbstractConnection connection = new EstablishConnectionSupport(host, port);
+            controller = new Controller();
 
-			userListModel = new UsersListModel();
-			controller.addModel("userListModel", userListModel);
+            sendDataModel = new SendDataModel(connection);
+            controller.addModel("sendDataModel", sendDataModel);
 
-			receiveDataModel = new ReceiveDataModel(connection);
-			controller.addModel("receiveDataModel", receiveDataModel);
-			Thread thread = new Thread(receiveDataModel);
-			thread.start();
-			controller.registerUser();
+            userListModel = new UsersListModel();
+            controller.addModel("userListModel", userListModel);
+
+            receiveDataModel = new ReceiveDataModel(connection);
+            controller.addModel("receiveDataModel", receiveDataModel);
+            Thread thread = new Thread(receiveDataModel);
+            thread.start();
+            controller.registerUser();
 
         } catch (Exception e) {
             LOGGER.warning("Failed to start client");
@@ -47,9 +47,9 @@ public class ClientMVC {
     }
 
 
-	public Controller getController() {
-		return controller;
-	}
+    public Controller getController() {
+        return controller;
+    }
 
-	
+
 }

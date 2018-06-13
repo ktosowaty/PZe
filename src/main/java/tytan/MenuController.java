@@ -15,10 +15,9 @@ import java.util.ResourceBundle;
 
 public class MenuController implements Initializable {
 
+    public static TabPaneController tabPaneController;
     private BorderPane root;
     private ResourceBundle rb;
-
-
     @FXML
     private ImageView menuButton;
     @FXML
@@ -32,7 +31,6 @@ public class MenuController implements Initializable {
         rb = resources;
     }
 
-    public static TabPaneController tabPaneController;
     @FXML
     private void click(MouseEvent mouseEvent) {
         try {

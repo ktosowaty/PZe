@@ -13,7 +13,6 @@
     -fx-background-image: url("../images/camo50.jpg");
 }
 
-
 .tab-header-background {
     -fx-background-image: url("../images/camo3.jpg");
 }
@@ -70,7 +69,7 @@
 
 .jfx-toggle-button {
     -jfx-toggle-color: #2e7d32;
-    -jfx-toggle-line-color:#78c285;
+    -jfx-toggle-line-color: #78c285;
 }
 
 

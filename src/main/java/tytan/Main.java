@@ -12,13 +12,16 @@ import java.util.Locale;
 import java.util.ResourceBundle;
 
 public class Main extends Application {
-    private ResourceBundle rb;
-    public static Stage primaryStage;
     private final static ClientMVC client = new ClientMVC();
-
+    public static Stage primaryStage;
+    private ResourceBundle rb;
 
     public static void main(String[] args) {
         launch(args);
+    }
+
+    public static ClientMVC getClient() {
+        return Main.client;
     }
 
     @Override
@@ -35,9 +38,5 @@ public class Main extends Application {
         scene.getStylesheets().add(getClass().getResource("/css/my-theme.css").toExternalForm());
         primaryStage.setScene(scene);
         primaryStage.show();
-    }
-
-    public static ClientMVC getClient() {
-        return Main.client;
     }
 }
