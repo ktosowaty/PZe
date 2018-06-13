@@ -1,9 +1,13 @@
 package tytan.serwer;
 
+import com.lynden.gmapsfx.javascript.object.Marker;
+
 import javax.net.ServerSocketFactory;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.logging.Logger;
@@ -12,6 +16,7 @@ import java.util.logging.Logger;
 public class Server {
 
     private final static Logger LOGGER = Logger.getLogger(Server.class.getName());
+    public static Map<String, Marker> friendlyMarkers = new HashMap();
     static int threadsNumber;
     private static int portNumber;
     private static Server server;

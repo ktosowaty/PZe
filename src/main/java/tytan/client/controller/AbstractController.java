@@ -5,6 +5,7 @@ import tytan.client.model.AbstractModel;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 
+
 public abstract class AbstractController implements PropertyChangeListener {
 
     public abstract void addModel(String name, AbstractModel model);

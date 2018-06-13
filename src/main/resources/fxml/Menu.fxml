@@ -21,7 +21,7 @@
             <children>
                 <JFXButton fx:id="mapaButton" alignment="CENTER" contentDisplay="CENTER" layoutX="137.0" layoutY="46.0"
                            maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="120.0"
-                           minWidth="120.0" mnemonicParsing="false" onMouseClicked="#click" text="%menu.mapa"
+                           minWidth="120.0" mnemonicParsing="false" onMouseClicked="#click" text="%menu.map"
                            textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                     <graphic>
                         <!--<ImageView fitHeight="96.0" fitWidth="96.0" opacity="0.85" pickOnBounds="true" preserveRatio="true">-->

@@ -6,16 +6,22 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
+import tytan.client.ClientMVC;
 
 import java.util.Locale;
 import java.util.ResourceBundle;
 
 public class Main extends Application {
+    private final static ClientMVC client = new ClientMVC();
+    public static Stage primaryStage;
     private ResourceBundle rb;
-    private Stage primaryStage;
 
     public static void main(String[] args) {
         launch(args);
+    }
+
+    public static ClientMVC getClient() {
+        return Main.client;
     }
 
     @Override

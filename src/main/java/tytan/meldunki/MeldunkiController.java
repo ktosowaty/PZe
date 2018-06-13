@@ -6,24 +6,33 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
+import tytan.Main;
+import tytan.MenuController;
+import tytan.client.ClientMVC;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+
 public class MeldunkiController implements Initializable {
 
+    public static MeldunkiType meldunkiType;
     @FXML
     private Button settingsButton;
     @FXML
     private JFXDrawer drawer;
-    @FXML
-    private Label meldunkiLabel;
+    private ClientMVC client;
+
+    public MeldunkiController() {
+        client = Main.getClient();
+        client.getController().setMeldunkiController(this);
+    }
 
     public void initialize(URL location, ResourceBundle resources) {
+
         try {
             FXMLLoader loader = new FXMLLoader();
             loader.setResources(resources);
@@ -31,6 +40,7 @@ public class MeldunkiController implements Initializable {
             drawer.setSidePane(vBox);
             MeldunkiSettingsController settings = loader.getController();
             settings.setMeldunki(this);
+
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -51,4 +61,32 @@ public class MeldunkiController implements Initializable {
         drawer.toFront();
         settingsButton.toFront();
     }
+
+    @FXML
+    private void personalLocation() {
+        meldunkiType = MeldunkiType.PersonalLocation;
+        MenuController.tabPaneController.setSelection("Map");
+
+    }
+
+    @FXML
+    private void fireSupport() {
+        meldunkiType = MeldunkiType.FireSupport;
+        MenuController.tabPaneController.setSelection("Map");
+    }
+
+    @FXML
+    private void medicalHelp() {
+        meldunkiType = MeldunkiType.MedicalHelp;
+        MenuController.tabPaneController.setSelection("Map");
+        //MapModel.googleMap.removeMarkers(MapModel.medicalHelpMarkerList);
+        //MapModel.medicalHelpMarkerList.clear();
+    }
+
+    @FXML
+    private void enemyForce() {
+        meldunkiType = MeldunkiType.EnemyForce;
+        MenuController.tabPaneController.setSelection("Map");
+    }
+
 }

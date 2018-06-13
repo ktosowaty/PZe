@@ -15,10 +15,9 @@ import java.util.ResourceBundle;
 
 public class MenuController implements Initializable {
 
+    public static TabPaneController tabPaneController;
     private BorderPane root;
     private ResourceBundle rb;
-
-
     @FXML
     private ImageView menuButton;
     @FXML
@@ -41,8 +40,8 @@ public class MenuController implements Initializable {
             loader.setResources(rb);
             AnchorPane anchorPane = loader.load(getClass().getResource("/fxml/TabPaneLayout.fxml").openStream());
             root.setCenter(anchorPane);
-            TabPaneController controller = loader.getController();
-            controller.setSelection(name);
+            tabPaneController = loader.getController();
+            tabPaneController.setSelection(name);
         } catch (IOException e) {
             e.printStackTrace();
         }
